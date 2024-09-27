@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #ecf0f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 360px;
+    margin: 7% auto;
+}
+
+.login-logo {
+    justify-content: center;
+    /* display: flex; */
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-box-body {
+    background: #fff;
+    padding: 20px;
+    border-top: 0;
+    color: #666;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.login-box-msg {
+    margin: 0;
+    text-align: center;
+    padding: 0 20px 20px 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-control {
+    background-color: #ffffff;
+    border: 1px solid #d2d6de;
+    border-radius: 4px;
+    box-shadow: none;
+    color: #666;
+    display: block;
+    width: 270px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    padding-left: 40px; /* Menambahkan padding kiri untuk ikon */
+}
+
+.form-control-feedback {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.input-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.btn {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Adjust button width */
+}
+
+.btn-primary {
+    background-color: #3c8dbc;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #367fa9;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+a {
+    color: #3c8dbc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .login-box {
+        width: 100%;
+    }
+
+    .login-logo {
+        flex-direction: column;
+        font-size: 28px;
+    }
+
+    .login-logo img {
+        margin-bottom: 10px;
+    }
+}
+    </style>
+    <!-- ---------------------------- css ------------------------------>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <!-- ---------------------------- icon ------------------------------>
+    <link rel="icon" href="assets/media/icon.png">
+    <!-- ---------------------------- meta ------------------------------>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ---------------------------- title ------------------------------>
+    <title>Developer MODE</title>
+</head>
+<body>
+    <!-- ---------------------------- main ------------------------------>
+    <div class="login-box">
+        <div class="login-logo">
+            <div>
+                <img width="50px" height="50px" src="../assets/media/icon.png" alt="">
+            </div>
+            <div>
+                <b>Nugra </b>DEV
+            </div>
+        </div>
+        <div class="login-box-body">
+            <p class="login-box-msg">-- -- -- </p>
+            <p class="login-box-msg">Maaf hanya admin yang bisa masuk</p>
+            <p class="login-box-msg">
+                <a href="../index.html">Kembali</a>
+                <p class="login-box-msg">-- -- -- </p>
+            </p>
+            <form id="loginForm">
+                <div class="row">
+
+                </div>
+            </form>
+            <p id="errorMessage" class="error-message"></p>
+        </div>
+    </div>
+    <!-- ---------------------------- main ------------------------------>
+    <!-- ---------------------------- js ------------------------------>
+</body>
+</html>

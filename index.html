@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/css/user.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer MODE</title>
+</head>
+<body>
+    <div class="login-box">
+        <div class="login-logo">
+            <div>
+                <img width="50px" height="50px" src="assets/media/icon.png" alt="">
+            </div>
+            <div>
+                <b>Nugra </b>DEV
+            </div>
+        </div>
+        <div class="login-box-body">
+            <p class="login-box-msg">Sign in to start your session</p>
+            <form id="loginForm">
+                <div class="form-group has-feedback">
+                    <input type="text" id="username" class="form-control" placeholder="Username" required>
+                    <span class="form-control-feedback">
+                        <img src="assets/media/fater/mail.svg" alt="User Icon" class="input-icon">
+                    </span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" id="password" class="form-control" placeholder="Password" required>
+                    <span class="form-control-feedback">
+                        <img src="assets/media/fater/lock.svg" alt="Lock Icon" class="input-icon">
+                    </span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Form for 2FA -->
+            <form id="2faForm" style="display: none;">
+                <p class="login-box-msg">Masukan code verivikasi yang kami kirimkan ke emal</p>
+                <div class="form-group has-feedback">
+                    <input type="text" id="2faCode" class="form-control" placeholder="|0|0|0|0|0|0|" required>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Verify</button>
+                    </div>
+                </div>
+            </form>
+
+            <p id="errorMessage" class="error-message"></p>
+
+            <!-- Chat Button -->
+            <button onclick="toggleChat()" class="btn-bod btn-primary" style="margin-top: 20px;">Bod</button>
+        </div>
+    </div>
+
+    <!-- Chat Popup -->
+    <div id="chatPopup" class="chat-popup">
+        <div style="display: flex; justify-content: space-between;" class="chat-header">
+            <div>
+                Chat Support
+            </div>
+            <div>
+                <button onclick="toggleChat()" class="chat-close">
+                    <!-- <a href="index.html">X</a> -->X
+                </button>
+            </div>
+        </div>
+        <div id="chatMessages" class="chat-messages"></div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Kirim pertanyaan atau ketik /help" required>
+            <button onclick="sendChat()">Send</button>
+        </div>
+    </div>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/usr.js"></script>
+</body>
+</html>
