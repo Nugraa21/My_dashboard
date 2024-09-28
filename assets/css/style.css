@@ -922,11 +922,24 @@
   /*-----------------------------------*\
     #PRODUCTS
   \*-----------------------------------*/
+  .download{
+    padding: 3px;
+    border-radius: 5px;
+    background-color: #ff850c;
+    border-bottom:2px solid #e47036;
+    color: white;
+  }
   
   .product{
     background: linear-gradient(to top, 
     rgb(193, 253, 255),
     rgb(255, 255, 255)
+     );
+  }
+  .product-2{
+    background: linear-gradient(to top, 
+    rgb(255, 255, 255),
+    rgb(193, 253, 255)
      );
   }
   .product-navbar-list {
@@ -1050,7 +1063,7 @@
     justify-content: center;
     align-items: center;
     gap: 2px;
-    font-size: var(--fs-13);
+    font-size: 10px;
   }
   
   .rating-wrapper { margin-block-end: 5px; }
@@ -1072,7 +1085,7 @@
     font-weight: var(--weight-bold);
   }
   
-  .price { font-size: var(--fs-14); }
+  .price { font-size:15px; }
   
   .strike { opacity: 0.6; }
   
@@ -2173,7 +2186,7 @@
   
     .product-action-link { padding: 16px; }
   
-    :is(.price, .strike) { font-size: var(--fs-17); }
+    :is(.price, .strike) { font-size:13px; }
   
     
     /* STATES */
