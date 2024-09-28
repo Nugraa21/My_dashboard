@@ -327,6 +327,13 @@
     border-right: 2px solid rgb(182, 235, 254);
   }
   
+  .img-cover-fotter {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
   .slider-list {
     display: flex;
     justify-content: flex-start;
