@@ -34,3 +34,92 @@
     font-weight: bold;
     cursor: pointer;
 }
+/* ------- */
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: rgb(213, 241, 255); /* Latar belakang putih untuk konten pop-up */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Bayangan untuk efek kedalaman */
+    padding: 20px; /* Jarak dalam pop-up */
+    max-width: 90%; /* Lebar maksimum pop-up */
+    max-height: 90%; /* Tinggi maksimum pop-up */
+    overflow: hidden; /* Mencegah gambar keluar dari batas */
+}
+
+.popup img {
+    max-width: 100%; /* Gambar menyesuaikan lebar pop-up */
+    max-height: 60vh; /* Tinggi maksimum gambar */
+    border-radius: 8px; /* Sudut melengkung pada gambar */
+}
+
+.cinematic-text {
+    font-size: 20px; /* Ukuran font */
+    font-weight: bold; /* Ketebalan font */
+    color: #56e6ff; /* Warna teks putih */
+    text-align: center; /* Pusatkan teks */
+    margin-top: 15px; /* Jarak atas dari gambar */
+    padding: 10px; /* Ruang dalam */
+    width: 100%; /* Lebar 100% untuk memanjang */
+    opacity: 0; /* Awalnya tidak terlihat */
+    animation: fadeIn 1s forwards; /* Animasi muncul */
+    border-top: 2px solid rgb(77, 193, 255);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Akhir animasi menjadi terlihat */
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    color: white;
+    background-color: red; /* Latar belakang merah untuk tombol close */
+    border: none; /* Menghilangkan border */
+    border-radius: 50%; /* Bentuk bulat */
+    width: 40px; /* Lebar tombol */
+    height: 40px; /* Tinggi tombol */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s; /* Efek transisi */
+}
+
+.close-button:hover {
+    background-color: darkred; /* Mengubah warna saat hover */
+    transform: scale(1.1); /* Membesarkan tombol saat hover */
+}
+
+/* Media Query untuk Responsivitas */
+@media (max-width: 600px) {
+    .cinematic-text {
+        font-size: 18px; /* Ukuran font lebih kecil di perangkat seluler */
+    }
+
+    .close-button {
+        font-size: 24px; /* Ukuran tombol lebih kecil di perangkat seluler */
+        width: 35px; /* Lebar tombol */
+        height: 35px; /* Tinggi tombol */
+    }
+}

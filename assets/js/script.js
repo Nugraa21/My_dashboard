@@ -101,3 +101,25 @@ function showCategory(category) {
 document.addEventListener("DOMContentLoaded", function() {
   showCategory('all-portfolio');
 });
+// ---------------------
+const images = document.querySelectorAll('.product-action-link-popup');
+
+images.forEach(image => {
+  image.addEventListener('click', function(event) {
+    event.preventDefault(); // Mencegah aksi default link
+    const img = event.target.closest('.product-card').querySelector('img').src; // Ambil URL gambar
+    document.getElementById('popup-image').src = img; // Set URL gambar di pop-up
+    document.getElementById('image-popup').style.display = 'flex'; // Tampilkan pop-up
+  });
+});
+
+// Menutup pop-up saat mengklik di luar gambar
+document.getElementById('image-popup').addEventListener('click', function(event) {
+  if (event.target === this) { // Pastikan klik di luar gambar
+    closePopup(); // Panggil fungsi untuk menutup pop-up
+  }
+});
+
+function closePopup() {
+  document.getElementById('image-popup').style.display = 'none'; // Sembunyikan pop-up
+}
