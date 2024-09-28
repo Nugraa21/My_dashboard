@@ -314,8 +314,8 @@
   } */
   
   .img-cover-logo {
-    height: 80%;
-    width: 80%;
+    /* height: 100%; */
+    /* width: 100%; */
     object-fit: cover;
   }
   
@@ -359,6 +359,8 @@
     min-width: 100%;
     /* scrollbar-gutter: stable; */
     scroll-snap-align: center;
+    background-color: white;
+    border-radius: 17px;
   }
   
   .has-before::before {
@@ -759,10 +761,10 @@
   
   .feature-list {
     /* display: grid; */
-    background-color: rgba(97, 184, 255, 0.175);
+    /* background-color: rgba(97, 184, 255, 0.175); */
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 119, 255, 0.476);
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.251);
+    border-bottom: 2px solid rgba(0, 119, 255, 0.476);
+    /* box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.251); */
   }
   
   .feature-card {
@@ -935,6 +937,15 @@
     border-radius: 5px;
     background-color: #ff850c;
     border-bottom:2px solid #e47036;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.274);
+    color: white;
+  }
+  .download:hover{
+    padding: 3px;
+    border-radius: 5px;
+    background-color: #0ca6ff;
+    border-bottom:2px solid #3690e4;
+    box-shadow: 0px 0px 10px rgba(255, 30, 0, 0.274);
     color: white;
   }
   
@@ -1205,7 +1216,19 @@
     #BLOG
   \*-----------------------------------*/
   
-  .blog .section-title { margin-block-end: 40px; }
+  .blog {
+    background: linear-gradient(to top, 
+    rgb(255, 255, 255),
+    rgb(193, 253, 255)
+     );
+  }
+  .blog .section-title {
+     margin-block-end: 40px; 
+     /* background-color: #0077ff1f; */
+     color: rgb(21, 25, 90);
+     text-shadow: 0px 10px 0px rgba(0, 0, 0, 0.103);
+     /* border-bottom: 2px solid black; */
+    }
   
   .blog-card {
     box-shadow: var(--shadow-1);
@@ -1287,11 +1310,14 @@
   /*-----------------------------------*\
     #SERVICE
   \*-----------------------------------*/
-  
+  .service{
+    background-color: hsla(188, 63%, 7%, 1);
+  }
   .service-list {
     display: grid;
     margin-inline: 15px;
     box-shadow: var(--shadow-3);
+
   }
   
   .service-card {
@@ -1301,6 +1327,9 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
+    border: 4px solid rgb(17, 33, 46);
+    background-color: #ffffff;
+    border-bottom: 10px solid #37a5ff62;
   }
   
   .service-card .card-banner {
@@ -1311,6 +1340,7 @@
   .service-card .card-text {
     font-size: var(--fs-15);
     padding-block-end: 22px;
+    border-bottom: 2px solid rgb(35, 85, 100);
   }
   
   

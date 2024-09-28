@@ -1,84 +1,2320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="assets/css/user.css">
+    <!-- ---------------------------- css ------------------------------>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/videopopup.css">
+    <!-- ---------------------------- icon ------------------------------>
+    <link rel="icon" href="assets/media/icon.png">
+    <!-- ---------------------------- meta ------------------------------>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer MODE</title>
+    <!-- ---------------------------- title ------------------------------>
+    <title>Nugra.Example</title>
 </head>
-<body>
-    <div class="login-box">
-        <div class="login-logo">
-            <div>
-                <img width="50px" height="50px" src="assets/media/icon.png" alt="">
-            </div>
-            <div>
-                <b>Nugra </b>DEV
-            </div>
+<body id="back-to-top">
+<!-- ------------------------------ Watrmak atas ------------------------------ -->
+    <div class="topbar">
+      <div class="container">
+        <ul class="topbar-info">
+          <li class="topbar-info-item">
+            <!-- <ion-icon name="location-outline" aria-hidden="true"></ion-icon> -->
+  
+            <span class="span">Website masih dalam perkembangan</span>
+          </li>
+  
+          <li class="topbar-info-item">
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+  
+            <span class="span">nugra315@gmail.com</span>
+          </li>
+        </ul>
+  
+        <div class="wrapper">
+          <div class="languages">
+            <span class="span">English</span>
+  
+            <ion-icon name="arrow-down-outline"></ion-icon>
+          </div>
+          <div class="languages">
+            <span class="span">Indonesia</span>
+  
+            <ion-icon name="arrow-down-outline"></ion-icon>
+          </div>
+  
+          <ul class="social-wrapper">
+  
+            <li class="social-item">
+              <ion-icon name="logo-facebook" aria-hidden="true"></ion-icon>
+            </li>
+  
+            <li class="social-item">
+              <ion-icon name="logo-twitter" aria-hidden="true"></ion-icon>
+            </li>
+  
+            <li class="social-item">
+              <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+            </li>
+  
+            <li class="social-item">
+              <ion-icon name="logo-dribbble" aria-hidden="true"></ion-icon>
+            </li>
+          </ul>
         </div>
-        <div class="login-box-body">
-            <p class="login-box-msg">Sign in to start your session</p>
-            <form id="loginForm">
-                <div class="form-group has-feedback">
-                    <input type="text" id="username" class="form-control" placeholder="Username" required>
-                    <span class="form-control-feedback">
-                        <img src="assets/media/fater/mail.svg" alt="User Icon" class="input-icon">
-                    </span>
-                </div>
-                <div class="form-group has-feedback">
-                    <input type="password" id="password" class="form-control" placeholder="Password" required>
-                    <span class="form-control-feedback">
-                        <img src="assets/media/fater/lock.svg" alt="Lock Icon" class="input-icon">
-                    </span>
-                </div>
-                <div class="row">
-                    <div class="col-xs-4">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-                    </div>
-                </div>
-            </form>
-
-            <!-- Form for 2FA -->
-            <form id="2faForm" style="display: none;">
-                <p class="login-box-msg">Masukan code verivikasi yang kami kirimkan ke emal</p>
-                <div class="form-group has-feedback">
-                    <input type="text" id="2faCode" class="form-control" placeholder="|0|0|0|0|0|0|" required>
-                </div>
-                <div class="row">
-                    <div class="col-xs-4">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Verify</button>
-                    </div>
-                </div>
-            </form>
-
-            <p id="errorMessage" class="error-message"></p>
-
-            <!-- Chat Button -->
-            <button onclick="toggleChat()" class="btn-bod btn-primary" style="margin-top: 20px;">Bod</button>
-            <button onclick="window.location.href='web.html'" class="btn-bod btn-primary" style="margin-top: 20px;">PREVEU</button>
-        </div>
+      </div>
     </div>
-
-    <!-- Chat Popup -->
-    <div id="chatPopup" class="chat-popup">
-        <div style="display: flex; justify-content: space-between;" class="chat-header">
-            <div>
-                Chat Support
+<!-- ------------------------------ <> ------------------------------ -->
+<!-- ------------------------------ Navbar  ------------------------------ -->
+    <header class="header" data-header>
+      <div class="container">
+  
+        <a href="#" class="logo">
+          <img style="filter: hue-rotate(290deg)" src="./assets/images/logo-dark.png" width="154" height="42" alt="logo" class="img">
+        </a>
+  
+        <nav class="navbar" data-navbar>
+          <div class="container">
+  
+            <div class="nav-logo-wrapper">
+              <a href="#" class="logo-dar">
+                <img src="./assets/images/logo-dark.png" width="154" height="42" alt="logo" class="img">
+              </a>
+  
+              <button class="nav-close-btn" data-nav-toggler>
+                <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+              </button>
             </div>
-            <div>
-                <button onclick="toggleChat()" class="chat-close">
-                    <!-- <a href="index.html">X</a> -->X
-                </button>
-            </div>
-        </div>
-        <div id="chatMessages" class="chat-messages"></div>
-        <div class="chat-input">
-            <input type="text" id="chatInput" placeholder="Kirim pertanyaan atau ketik /help" required>
-            <button onclick="sendChat()">Send</button>
-        </div>
-    </div>
 
-    <script src="assets/js/api.js"></script>
-    <script src="assets/js/usr.js"></script>
-</body>
+  
+            <ul class="navbar-list">
+  
+              <li class="navbar-item">
+                <a href="#" class="navbar-link">
+                  <span class="span">Beranda</span>
+  
+                </a>
+              </li>
+  
+              <li class="navbar-item">
+                <a href="#tentang-saya" class="navbar-link">
+                  <span class="span">Tentang saya</span>
+  
+                </a>
+              </li>
+  
+              <li class="navbar-item">
+                <a href="portfolio.html#porfolio-saya" class="navbar-link">
+                  <span class="span">Porfolio</span>
+  
+                </a>
+              </li>
+  
+              <li class="navbar-item">
+                <a href="#" class="navbar-link">
+                  <span class="span">Kontak</span>
+  
+                </a>
+              </li>
+  
+              <li class="navbar-item">
+                <a href="pesan.html#pesan" class="navbar-link">
+                  <span class="span">SHOP</span>
+  
+                </a>
+              </li>
+  
+            </ul>
+  
+            <ul class="navbar-action">
+  
+              <li>
+                <a href="#" class="navbar-action-link">
+                  <div class="action-box">
+                    <img src="assets/media/img/nugra.jpg" alt="nugra21" width="20" height="20">
+                  </div>
+  
+                  <span class="span">Ludang Prasetyo Nugroho</span>
+                </a>
+              </li>
+  
+              <li>
+  
+                <a href="#" class="navbar-action-link">
+                  <div class="action-box">
+                    <img src="https://cdn-icons-png.flaticon.com/128/6394/6394441.png" loading="lazy" alt="Case study " title="Case study " width="20" height="20">
+                  </div>
+  
+                  <span class="span">Teknik Komputer</span>
+                </a>
+              </li>
+  
+              <li>
+  
+                <a href="#" class="navbar-action-link">
+                  <div class="action-box">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3074/3074058.png" loading="lazy" alt="Graduation cap " title="Graduation cap " width="20" height="20">
+                  </div>
+  
+                  <span class="span">UTDI</span>
+                </a>
+              </li>
+  
+            </ul>
+  
+            <div class="nav-icon-wrapper">
+  
+              <a href="404.html" class="nav-icon-box">
+                <ion-icon name="logo-facebook" aria-hidden="true"></ion-icon>
+              </a>
+  
+              <a href="404.html" class="nav-icon-box">
+                <ion-icon name="logo-twitter" aria-hidden="true"></ion-icon>
+              </a>
+  
+              <a href="404.html" class="nav-icon-box">
+                <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
+              </a>
+  
+              <a href="https://www.instagram.com/nugraa_21/?__pwa=1" class="nav-icon-box">
+                <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+              </a>
+  
+            </div>
+  
+          </div>
+        </nav>
+  
+        <div class="title-wrapper">
+  
+          <!-- <button class="btn header-btn">
+            <span class="span">beli intro</span>
+          </button> -->
+  
+          <div class="icon-wrapper">
+  
+            <a href="https://discord.gg/gVy6pESVRv" class="icon-box">
+              <img src="assets/media/img/logo/discord.png" loading="lazy" alt="Discord " title="Discord " width="20" height="20">
+            </a>
+  
+            <a href="https://github.com/Nugraa21" class="icon-box">
+              <img src="assets/media/img/logo/github.png" loading="lazy" alt="Instagram " title="Instagram " width="20" height="20">            
+            </a>
+            <a href="https://www.youtube.com/@nugra21" class="icon-box">
+              <img src="assets/media/img/logo/youtube.png" loading="lazy" alt="Github " title="Github " width="20" height="20">
+            </a>
+            <a href="https://www.instagram.com/nugraa_21/?__pwa=1" class="icon-box">
+              <img src="assets/media/img/logo/instagram.png" loading="lazy" alt="Youtube " title="Youtube " width="20" height="20">            
+            </a>
+  
+            <button class="nav-open-btn" data-nav-toggler>
+              <span class="span"></span>
+              <span class="span"></span>
+              <span class="span"></span>
+            </button>
+  
+          </div>
+  
+        </div>
+  
+        <div class="overlay" data-overlay></div>
+  
+      </div>
+    </header>
+<!-- ------------------------------ <> ------------------------------ -->
+<!-- ------------------------------ main content ------------------------------ -->
+    <main>
+<!-- ------------------------------ <> ------------------------------ -->
+<!-- ------------------------------ Hero ------------------------------ -->
+      <div class="home">
+        <section class="section hero">
+          <div class="container">
+  
+            <div class="hero-content">
+  
+              <h1 class="h1 section-title">
+                Nugra21" 
+              </h1>
+              <p class="section-subtitle">
+                <img src="https://cdn-icons-png.flaticon.com/128/6270/6270515.png" loading="lazy" alt="Verify " title="Verify " width="19" height="19">
+                Desine grafis , Video editing , UI/UX
+              </p>
+            <p class="section-text">
+                Hai saya mempunyai keahlian dalam bisang Mendisain dan saya juga ahli dalam Programer saya suka membuat sesuwatu yang berkaitan dengan Desain
+            </p>
+  
+              <button  class="btn btn-primary">
+                <span class="span"> <a href="https://www.youtube.com/@nugra21">Subscribe</a></span>
+              </button>
+  
+            </div>
+  
+            <figure class="hero-banner img-holder" style="--width: 510; --height: 371;">
+              <img style="  filter: hue-rotate(290deg);" src="./assets/images/hero-banner.png" width="510" height="371" alt="hero banner" class="img-cover-logo">
+            </figure>
+  
+          </div>
+        </section>
+<!-- ------------------------------ <> ------------------------------ -->
+<!-- ------------------------------ Fiture ------------------------------ -->
+ 
+        <section class="section feature">
+          <div class="container">
+  
+            <ul class="feature-list">
+  
+              <li>
+                <div class="feature-card">
+                  <figure class="feature-card-banner img-holder">
+                    <img src="assets/media/img/logo/html.webp" loading="lazy" alt="Study " title="Study " width="64" height="64">
+                  </figure>
+                  <figure class="feature-card-banner img-holder">
+                    <img src="assets/media/img/logo/css.webp" loading="lazy" alt="Youtube " title="Youtube " width="64" height="64">
+                  </figure>
+                  
+                  <div class="card-content">
+                    <h4 class="h4 card-title">Html & Css</h4>
+  
+                    <p class="card-text">Saya sangat ahli dalam bahasa pemrograman ini 100%</p>
+                  </div>
+                </div>
+              </li>
+  
+              <li>
+                <div class="feature-card">
+                  <figure class="feature-card-banner img-holder">
+                    <img src="assets/media/img/logo/java Script.webp" loading="lazy" alt="Youtube " title="Youtube " width="64" height="64">
+                  </figure>
+                  <figure class="feature-card-banner img-holder">
+                    <img src="assets/media/img/logo/java.webp" loading="lazy" alt="Youtube " title="Youtube " width="64" height="64">
+                  </figure>
+                  <figure class="feature-card-banner img-holder">
+                    <img src="assets/media/img/logo/js.webp" loading="lazy" alt="Youtube " title="Youtube " width="64" height="64">
+                  </figure>
+  
+                  <div class="card-content">
+                    <h4 class="h4 card-title">JS ,JAVA ,JSON</h4>
+  
+                    <p class="card-text">Kemampuan saya dalam bahasa 70%</p>
+                  </div>
+                </div>
+              </li>
+          </div>
+        </section>
+        <!-- <section class="section feature">
+          <div class="container">
+  
+            <ul class="feature-list">
+  
+              <li>
+                <div class="feature-card">
+                  <figure class="feature-card-banner img-holder">
+                    <img src="./assets/images/feature-1.svg" width="132" height="132" loading="lazy" alt="orders"
+                      class="img">
+                  </figure>
+  
+                  <div class="card-content">
+                    <h4 class="h4 card-title">Free shipping</h4>
+  
+                    <p class="card-text">On all orders over $49.00</p>
+                  </div>
+                </div>
+              </li>
+  
+              <li>
+                <div class="feature-card">
+                  <figure class="feature-card-banner img-holder">
+                    <img src="./assets/images/feature-2.svg" width="132" height="132" loading="lazy" alt="guarantee"
+                      class="img">
+                  </figure>
+  
+                  <div class="card-content">
+                    <h4 class="h4 card-title">15 days returns</h4>
+  
+                    <p class="card-text">Moneyback guarantee</p>
+                  </div>
+                </div>
+              </li>
+  
+              <li>
+                <div class="feature-card">
+                  <figure class="feature-card-banner img-holder">
+                    <img src="./assets/images/feature-3.svg" width="132" height="132" loading="lazy" alt="checkout"
+                      class="img">
+                  </figure>
+  
+                  <div class="card-content">
+                    <h4 class="h4 card-title">Secure checkout</h4>
+  
+                    <p class="card-text">Protected by Paypal</p>
+                  </div>
+                </div>
+              </li>
+  
+              <li>
+                <div class="feature-card">
+                  <figure class="feature-card-banner img-holder">
+                    <img src="./assets/images/feature-4.svg" width="132" height="132" loading="lazy" alt="offer gift"
+                      class="img">
+                  </figure>
+  
+                  <div class="card-content">
+                    <h4 class="h4 card-title">Offer & gift here</h4>
+  
+                    <p class="card-text">On all orders over</p>
+                  </div>
+                </div>
+              </li>
+  
+            </ul>
+  
+          </div>
+        </section> -->
+
+      </div>
+<!-- ------------------------------ <> ------------------------------ -->
+<!-- ------------------------------ Ebaut ------------------------------ -->
+      <section id="tentang-saya" class="section about about-color">
+        <div class="container">
+  
+          <figure class="about-banner img-holder" style="--width: 570; --height: 531;">
+            <img src="./assets/images/about-banner.png" width="570" height="531" loading="lazy" alt="page banner"
+              class="img-cover">
+          </figure>
+  
+          <div class="about-content">
+  
+            <p class="section-subtitle">TENTANG SAYA</p>
+  
+            <h2 class="h2 section-title">
+                Ludang Prasetyo .N
+            </h2>
+  
+            <p class="section-text">
+              Yoww " Semuanya 
+            </p>
+  
+            <span class="span">
+                Saya memiliki pengalaman editing video selama 4 tahun dan keahlian dalam desain UI/UX untuk website. Saya adalah individu yang mampu bekerja sama dengan baik, sangat antusias menghadapi hal baru, dan selalu penasaran untuk mencoba pengalaman baru.
+
+            </span>
+  
+            <ul class="about-author">
+  
+              <li>
+                <div class="author-card">
+                  <h4 class="h4 author-title">-</h4>
+                  <span class="download author-subtitle"><a href="404.html"> - Download CV - </a></span>
+                  <h4 class="h4 author-title">-</h4>
+                </div>
+              </li>
+  
+  
+            </ul>
+  
+          </div>
+  
+        </div>
+      </section>
+
+<!-- ------------------------------ <> ------------------------------ -->
+<!-- ------------------------------ Porfolio ------------------------------ -->
+ 
+  
+      <section id="porfolio-saya" class="section product">
+        <div class="container">
+      
+          <h2 class="h2 section-title">Portfolio</h2>
+      
+          <ul class="product-navbar-list">
+            <li class="product-nav-item">
+              <button onclick="showCategory('all-portfolio')" class="product-nav-link has-before active ">
+                <span class="span">ALL</span>
+              </button>
+            </li>
+            <li class="product-nav-item">
+              <button onclick="showCategory('web-portfolio')" class="product-nav-link has-before">
+                <span class="span">Website</span>
+              </button>
+            </li>
+            <li class="product-nav-item">
+              <button onclick="showCategory('presentasi-portfolio')" class="product-nav-link has-before">
+                <span class="span">MATERI</span>
+              </button>
+            <li class="product-nav-item">
+              <button onclick="showCategory('rendhermc-portfolio')" class="product-nav-link has-before">
+                <span class="span">Rendher Minecraft</span>
+              </button>
+            </li>
+            <li class="product-nav-item">
+              <button onclick="showCategory('intro-portfolio')" class="product-nav-link has-before">
+                <span class="span">Intro</span>
+              </button>
+            </li>
+            <li class="product-nav-item">
+              <button onclick="showCategory('blog-portfolio')" class="product-nav-link has-before">
+                <span class="span">Ilustrasi</span>
+              </button>
+            </li>
+            </li>
+          </ul>
+          <div id="portfolio-container">
+            <div id="all-portfolio">
+              <ul class="product-list">
+<!-- ------------------------------ PRESENTASI MATERI ------------------------------ -->
+                <li id="presentasi-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/presentasi/otientifikasi.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="assets/media/img/presentasi/ludang prasetyo .N.pdf" class="product-action-link">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link">
+                            <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Otientikasi Multi-faktor</h4>
+                      <div class="price-wrapper">
+                        <p class="download price"><a href="assets/media/img/presentasi/ludang prasetyo .N.pdf"> DOWNLOAD </a></p>
+                        <p class="price"></p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+<!-- ------------------------------ ILUSTRASI ------------------------------ -->
+                <li id="blog-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/ilustrasi/eskrim.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Adobe Illustrator</h4>
+                      <div class="price-wrapper">
+                        <p class="price">Icey</p>
+                        <p class="price"></p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="blog-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/ilustrasi/foto1.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Adobe Illustrator</h4>
+                      <div class="price-wrapper">
+                        <p class="price">Jeruk</p>
+                        <p class="price"></p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="blog-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/ilustrasi/FIRE.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Adobe Illustrator</h4>
+                      <div class="price-wrapper">
+                        <p class="price">Fire</p>
+                        <p class="price"></p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="blog-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/ilustrasi/Jamur.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Adobe Illustrator</h4>
+                      <div class="price-wrapper">
+                        <p class="price">Musrom</p>
+                        <p class="price"></p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+<!-- ------------------------------ WEB ------------------------------ -->
+                <li id="web-portfolio" class="product-item">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/web/web1.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="https://nugraa21.github.io/Belajar-HTML/" class="product-action-link">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Website</h4>
+                      <div class="price-wrapper">
+                        <p class="price">Modul html dasar</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="web-portfolio" class="product-item">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/web/web2.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="https://nugraa21.github.io/Himadigi/" class="product-action-link">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Website</h4>
+                      <div class="price-wrapper">
+                        <p class="price">Tugas teman</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="web-portfolio" class="product-item">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/web/web3.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="https://nugraa21.github.io/Game-ular/" class="product-action-link">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Website</h4>
+                      <div class="price-wrapper">
+                        <p class="price">Game web</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="web-portfolio" class="product-item">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/web/web4.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="https://nugraa21.github.io/HIMATEK/" class="product-action-link">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Website</h4>
+                      <div class="price-wrapper">
+                        <p class="price">Himatek</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="web-portfolio" class="product-item">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/web/web5.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="https://nugraa21.github.io/Bisnis-Digital/" class="product-action-link">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Website</h4>
+                      <div class="price-wrapper">
+                        <p class="price">Tugas teman</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+<!-- ------------------------------ RENDHER ------------------------------ -->
+                <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/Rebdher/nugra1.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                      <div class="card-badge">
+                        <span class="span">new</span>
+                      </div>
+                      <h4 class="h4 card-title">Rendher Minecraft</h4>
+                      <div class="price-wrapper">
+                        <p class="price">rendher c4D</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img id="img1" src="assets/media/img/Rebdher/nugra2.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rendher Minecraft</h4>
+                      <div class="price-wrapper">
+                        <p class="price">rendher c4D</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/Rebdher/nugra3.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rendher Minecraft</h4>
+                      <div class="price-wrapper">
+                        <p class="price">rendher c4D</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/Rebdher/nugra4.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rendher Minecraft</h4>
+                      <div class="price-wrapper">
+                        <p class="price">rendher c4D</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/Rebdher/nugra5.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rendher Minecraft</h4>
+                      <div class="price-wrapper">
+                        <p class="price">rendher c4D</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/Rebdher/nugra6.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rendher Minecraft</h4>
+                      <div class="price-wrapper">
+                        <p class="price">rendher c4D</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/Rebdher/11.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rendher Minecraft</h4>
+                      <div class="price-wrapper">
+                        <p class="price">rendher c4D</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/Rebdher/12.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rendher Minecraft</h4>
+                      <div class="price-wrapper">
+                        <p class="price">rendher c4D</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/Rebdher/13.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rendher Minecraft</h4>
+                      <div class="price-wrapper">
+                        <p class="price">rendher c4D</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/Rebdher/14.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rendher Minecraft</h4>
+                      <div class="price-wrapper">
+                        <p class="price">rendher c4D</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/Rebdher/15.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rendher Minecraft</h4>
+                      <div class="price-wrapper">
+                        <p class="price">rendher c4D</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/Rebdher/16.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rendher Minecraft</h4>
+                      <div class="price-wrapper">
+                        <p class="price">rendher c4D</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/Rebdher/17.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rendher Minecraft</h4>
+                      <div class="price-wrapper">
+                        <p class="price">rendher c4D</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/Rebdher/18.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rendher Minecraft</h4>
+                      <div class="price-wrapper">
+                        <p class="price">rendher c4D</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                        <img src="assets/media/img/Rebdher/19.png" width="600" height="600" alt="product" class="img-cover">
+                      </figure>
+                      <ul class="product-action-list">
+                        <li class="product-action-item">
+                          <a href="#" class="product-action-link product-action-link-popup">
+                            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rendher Minecraft</h4>
+                      <div class="price-wrapper">
+                        <p class="price">rendher c4D</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+<!-- ------------------------------ INTRO ------------------------------ -->
+                <li id="intro-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600; position: relative;">
+                        <img class="sampul" src="assets/media/img/tumnail-intro/nugrta.jpg" alt="Sampul Video 1" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="openModal('assets/media/video/n21.mp4');">
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Nugra21</h4>
+                      <div class="price-wrapper">
+                        <p class="price">After effect</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+      
+                <li id="intro-portfolio-2" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600; position: relative;">
+                        <img class="sampul" src="assets/media/img/tumnail-intro/ragh.jpg" alt="Sampul Video 2" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="openModal('assets/media/video/n22.mp4');">
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Ragh2D</h4>
+                      <div class="price-wrapper">
+                        <p class="price">After effect</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+      
+                <li id="intro-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600; position: relative;">
+                        <img class="sampul" src="assets/media/img/tumnail-intro/rere.jpg" alt="Sampul Video 2" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="openModal('assets/media/video/n23.mp4');">
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rere</h4>
+                      <div class="price-wrapper">
+                        <p class="price">AM</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="intro-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600; position: relative;">
+                        <img class="sampul" src="assets/media/img/tumnail-intro/rafi.png" alt="Sampul Video 2" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="openModal('assets/media/video/n24.mp4');">
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Rafi</h4>
+                      <div class="price-wrapper">
+                        <p class="price">C4D & AE</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="intro-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600; position: relative;">
+                        <img class="sampul" src="assets/media/img/tumnail-intro/riski.jpg" alt="Sampul Video 2" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="openModal('assets/media/video/n25.mp4');">
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Riski Pang</h4>
+                      <div class="price-wrapper">
+                        <p class="price">AM & AVU</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="intro-portfolio" class="product-item" style="display:none;">
+                  <div class="product-card">
+                    <div class="card-banner-box">
+                      <figure class="card-banner img-holder" style="--width: 600; --height: 600; position: relative;">
+                        <img class="sampul" src="assets/media/img/tumnail-intro/ardi.jpg" alt="Sampul Video 2" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="openModal('assets/media/video/n26.mp4');">
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                    <div class="card-badge">
+                      <span class="span">new</span>
+                    </div>
+                      <h4 class="h4 card-title">Ardi</h4>
+                      <div class="price-wrapper">
+                        <p class="price">C4D & AM</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+<!-- ------------------------------ PORTFOLIO END ------------------------------ -->
+
+              </ul>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+  
+ 
+      <!-- 
+        - #FETARUED PRODUCTS  ----------------------------------===--------------------
+      -->
+  
+      <!-- <section class="section product-2 product feature-product">
+        <div class="container">
+  
+          <h2 class="h2 section-title">Featured Products</h2>
+  
+          <ul class="product-list">
+  
+            <li class="product-item-1">
+  
+              <div class="product-card">
+  
+                <div class="card-banner-box">
+                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                    <img src="./assets/images/feature-product-1.png" width="600" height="600" loading="lazy"
+                      alt="product svg" class="img-cover">
+                  </figure>
+  
+                  <ul class="product-action-list">
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                  </ul>
+                </div>
+  
+                <div class="card-content">
+                  <div class="card-badge">
+                    <span class="span">new</span>
+                  </div>
+  
+                  <div class="rating-wrapper">
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  </div>
+  
+                  <h4 class="h4 card-title">Carrots Group Scal</h4>
+  
+                  <div class="price-wrapper">
+                    <p class="price">$32.00</p>
+  
+                    <strike class="strike">$46.00</strike>
+                  </div>
+                </div>
+  
+              </div>
+  
+            </li>
+  
+            <li class="product-item-1">
+  
+              <div class="product-card">
+  
+                <div class="card-banner-box">
+                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                    <img src="./assets/images/feature-product-2.png" width="600" height="600" loading="lazy"
+                      alt="product svg" class="img-cover">
+                  </figure>
+  
+                  <ul class="product-action-list">
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                  </ul>
+                </div>
+  
+                <div class="card-content">
+                  <div class="card-badge">
+                    <span class="span">new</span>
+                  </div>
+  
+                  <div class="rating-wrapper">
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  </div>
+  
+                  <h4 class="h4 card-title">Red Not Tomato</h4>
+  
+                  <div class="price-wrapper">
+                    <p class="price">$25.00</p>
+  
+                    <strike class="strike">$35.00</strike>
+                  </div>
+                </div>
+  
+              </div>
+  
+            </li>
+  
+            <li class="product-item-1">
+  
+              <div class="product-card">
+  
+                <div class="card-banner-box">
+                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                    <img src="./assets/images/feature-product-3.png" width="600" height="600" loading="lazy"
+                      alt="product svg" class="img-cover">
+                  </figure>
+  
+                  <ul class="product-action-list">
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                  </ul>
+                </div>
+  
+                <div class="card-content">
+                  <div class="card-badge">
+                    <span class="span">new</span>
+                  </div>
+  
+                  <div class="rating-wrapper">
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  </div>
+  
+                  <h4 class="h4 card-title">Orange Fresh Juice</h4>
+  
+                  <div class="price-wrapper">
+                    <p class="price">$75.00</p>
+  
+                    <strike class="strike">$92.00</strike>
+                  </div>
+                </div>
+  
+              </div>
+  
+            </li>
+  
+            <li class="product-item-1">
+  
+              <div class="product-card">
+  
+                <div class="card-banner-box">
+                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                    <img src="./assets/images/feature-product-4.png" width="600" height="600" loading="lazy"
+                      alt="product svg" class="img-cover">
+                  </figure>
+  
+                  <ul class="product-action-list">
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                  </ul>
+                </div>
+  
+                <div class="card-content">
+                  <div class="card-badge">
+                    <span class="span">new</span>
+                  </div>
+  
+                  <div class="rating-wrapper">
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                  </div>
+  
+                  <h4 class="h4 card-title">Poltry Farm Meat</h4>
+  
+                  <div class="price-wrapper">
+                    <p class="price">$78.00</p>
+  
+                    <strike class="strike">$85.00</strike>
+                  </div>
+                </div>
+  
+              </div>
+  
+            </li>
+  
+            <li class="product-item-1">
+  
+              <div class="product-card">
+  
+                <div class="card-banner-box">
+                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                    <img src="./assets/images/feature-product-5.png" width="600" height="600" loading="lazy"
+                      alt="product svg" class="img-cover">
+                  </figure>
+  
+                  <ul class="product-action-list">
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                  </ul>
+                </div>
+  
+                <div class="card-content">
+                  <div class="card-badge">
+                    <span class="span">new</span>
+                  </div>
+  
+                  <div class="rating-wrapper">
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  </div>
+  
+                  <h4 class="h4 card-title">Frash Butter Cake</h4>
+  
+                  <div class="price-wrapper">
+                    <p class="price">$150.00</p>
+  
+                    <strike class="strike">$180.00</strike>
+                  </div>
+                </div>
+  
+              </div>
+  
+            </li>
+  
+            <li class="product-item-1">
+  
+              <div class="product-card">
+  
+                <div class="card-banner-box">
+                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                    <img src="./assets/images/feature-product-6.png" width="600" height="600" loading="lazy"
+                      alt="product svg" class="img-cover">
+                  </figure>
+  
+                  <ul class="product-action-list">
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                  </ul>
+                </div>
+  
+                <div class="card-content">
+                  <div class="card-badge">
+                    <span class="span">new</span>
+                  </div>
+  
+                  <div class="rating-wrapper">
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                  </div>
+  
+                  <h4 class="h4 card-title">Orange Sliced Mix</h4>
+  
+                  <div class="price-wrapper">
+                    <p class="price">$150.00</p>
+  
+                    <strike class="strike">$180.00</strike>
+                  </div>
+                </div>
+  
+              </div>
+  
+            </li>
+  
+            <li class="product-item-1">
+  
+              <div class="product-card">
+  
+                <div class="card-banner-box">
+                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                    <img src="./assets/images/product-2.png" width="600" height="600" loading="lazy" alt="product svg"
+                      class="img-cover">
+                  </figure>
+  
+                  <ul class="product-action-list">
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                  </ul>
+                </div>
+  
+                <div class="card-content">
+                  <div class="card-badge">
+                    <span class="span">new</span>
+                  </div>
+  
+                  <div class="rating-wrapper">
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  </div>
+  
+                  <h4 class="h4 card-title">Orange Sliced Mix</h4>
+  
+                  <div class="price-wrapper">
+                    <p class="price">$75.00</p>
+  
+                    <strike class="strike">$92.00</strike>
+                  </div>
+                </div>
+  
+              </div>
+  
+            </li>
+  
+            <li class="product-item-1">
+  
+              <div class="product-card">
+  
+                <div class="card-banner-box">
+                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                    <img src="./assets/images/product-4.png" width="600" height="600" loading="lazy" alt="product svg"
+                      class="img-cover">
+                  </figure>
+  
+                  <ul class="product-action-list">
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                    <li class="product-action-item">
+                      <a href="#" class="product-action-link">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </li>
+  
+                  </ul>
+                </div>
+  
+                <div class="card-content">
+                  <div class="card-badge">
+                    <span class="span">new</span>
+                  </div>
+  
+                  <div class="rating-wrapper">
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                  </div>
+  
+                  <h4 class="h4 card-title">Poltry Farm Meat</h4>
+  
+                  <div class="price-wrapper">
+                    <p class="price">$100.00</p>
+  
+                    <strike class="strike">$140.00</strike>
+                  </div>
+                </div>
+  
+              </div>
+  
+            </li>
+  
+          </ul>
+  
+        </div>
+      </section> -->
+  
+  
+  
+  
+  
+      <!-- 
+        - #CONTACT  ----------------------------------===--------------------
+      -->
+  
+      <!-- <section id="pesan" class="section contact" style="background-image: url(assets/media/img/eskrim.png)">
+        <div class="container">
+  
+          <figure class="contact-banner-1 img-holder" style="--width: 631; --height: 500;">
+            <img src="assets/media/img/Rebdher/nugra1.png" width="631" height="500" loading="lazy" alt="contact banner"
+              class="img-cover-fotter">
+          </figure>
+  
+          <div class="contact-content">
+            <p class="contact-subtitle">Mau beli Intro.Rendher,& Website</p>
+  
+            <h2 class="h2 section-title">Nugra21</h2>
+  
+            <div class="contact-btn-wrapper">
+              <button class="btn btn-primary">
+                <a href="pesan.html"><span class="span">Shop</span></a>
+              </button>
+  
+              <button class="btn btn-secondary">
+                <a href="404.html"><span class="span">Contact us</span></a>
+              </button>
+            </div>
+  
+          </div>
+  
+          <figure class="contact-banner-2 img-holder" style="--width: 514; --height: 597;">
+            <img src="assets/media/img/Rebdher/nugra2.png" width="514" height="597" loading="lazy" alt="contact banner"
+              class="img-cover-fotter">
+          </figure>
+  
+        </div>
+      </section> -->
+  
+  
+  
+  
+  
+      <!-- 
+        - #BLOG  ----------------------------------===--------------------
+      -->
+      <!--  -->
+      <section class="section blog">
+        <div class="container">  
+          <div class="contact-content">
+            <h2 class="h2 section-title">Tutorial Youtube</h2>
+            <div class="contact-btn-wrapper">
+              <button class="btn btn-primary">
+                <a href="tutorial.html"><span class="span">Lihat yang lain</span></a>
+              </button>
+          </div>
+            <div class="contact-content">
+            <p class="contact-subtitle">-----------</p>
+            
+            
+          </div>
+          <ul class="blog-list slider-list">
+  
+            <li class="blog-item slider-item">
+  
+              <div class="blog-card">
+                <figure class="card-banner img-holder" style="--width: 800; --height: 562;">
+                  <img src="./assets/media/berita/docker1.png.jpg" width="800" height="562" loading="lazy" alt="blog banner"
+                    class="img-cover">
+                </figure>
+  
+                <div class="card-content">
+  
+                  <ul class="blog-meta-list">
+  
+                    <li>
+                      <a href="" class="blog-author">
+                        <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+  
+                        <span class="span">by: Nugra21</span>
+                      </a>
+                    </li>
+  
+                    <li>
+                      <a href="https://youtu.be/--IZaVqQkyk?si=Sd0c3tjsTfbn2Gf-" class="blog-author">
+                        <ion-icon name="pricetags" aria-hidden="true"></ion-icon>
+  
+                        <span class="span">Tutorial Youtube</span>
+                      </a>
+                    </li>
+  
+                  </ul>
+  
+                  <h4 class="h4 card-title">Cara menggunakan docker untuk deployments Web dengan Xginx</h4>
+  
+                  <div class="blog-wrapper">
+                    <div class="date">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+  
+                      <span class="span">June 12, 2024</span>
+                    </div>
+  
+                    <button class="detail-btn">Download Assets</button>
+                  </div>
+  
+                </div>
+              </div>
+  
+            </li>
+            <li class="blog-item slider-item">
+  
+              <div class="blog-card">
+                <figure class="card-banner img-holder" style="--width: 800; --height: 562;">
+                  <img src="./assets/media/berita/docker1.png.jpg" width="800" height="562" loading="lazy" alt="blog banner"
+                    class="img-cover">
+                </figure>
+  
+                <div class="card-content">
+  
+                  <ul class="blog-meta-list">
+  
+                    <li>
+                      <a href="" class="blog-author">
+                        <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+  
+                        <span class="span">by: Nugra21</span>
+                      </a>
+                    </li>
+  
+                    <li>
+                      <a href="https://youtu.be/--IZaVqQkyk?si=Sd0c3tjsTfbn2Gf-" class="blog-author">
+                        <ion-icon name="pricetags" aria-hidden="true"></ion-icon>
+  
+                        <span class="span">Tutorial Youtube</span>
+                      </a>
+                    </li>
+  
+                  </ul>
+  
+                  <h4 class="h4 card-title">Cara menggunakan docker untuk deployments Web dengan Xginx</h4>
+  
+                  <div class="blog-wrapper">
+                    <div class="date">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+  
+                      <span class="span">June 12, 2024</span>
+                    </div>
+  
+                    <button class="detail-btn">Download Assets</button>
+                  </div>
+  
+                </div>
+              </div>
+  
+            </li>
+            <li class="blog-item slider-item">
+  
+              <div class="blog-card">
+                <figure class="card-banner img-holder" style="--width: 800; --height: 562;">
+                  <img src="./assets/media/berita/docker1.png.jpg" width="800" height="562" loading="lazy" alt="blog banner"
+                    class="img-cover">
+                </figure>
+  
+                <div class="card-content">
+  
+                  <ul class="blog-meta-list">
+  
+                    <li>
+                      <a href="" class="blog-author">
+                        <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+  
+                        <span class="span">by: Nugra21</span>
+                      </a>
+                    </li>
+  
+                    <li>
+                      <a href="https://youtu.be/--IZaVqQkyk?si=Sd0c3tjsTfbn2Gf-" class="blog-author">
+                        <ion-icon name="pricetags" aria-hidden="true"></ion-icon>
+  
+                        <span class="span">Tutorial Youtube</span>
+                      </a>
+                    </li>
+  
+                  </ul>
+  
+                  <h4 class="h4 card-title">Cara menggunakan docker untuk deployments Web dengan Xginx</h4>
+  
+                  <div class="blog-wrapper">
+                    <div class="date">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+  
+                      <span class="span">June 12, 2024</span>
+                    </div>
+  
+                    <button class="detail-btn">Download Assets</button>
+                  </div>
+  
+                </div>
+              </div>
+  
+            </li>
+  
+          </ul>
+  
+        </div>
+      </section>
+   
+      <section id="pesan" class="section contact" style="background-image: url(assets/media/img/eskrim.png)">
+        <div class="container">
+  
+          <figure class="contact-banner-1 img-holder" style="--width: 631; --height: 500;">
+            <img src="assets/media/img/Rebdher/nugra1.png" width="631" height="500" loading="lazy" alt="contact banner"
+              class="img-cover-fotter">
+          </figure>
+  
+          <div class="contact-content">
+            <p class="contact-subtitle">Mau beli Intro.Rendher,& Website</p>
+  
+            <h2 class="h2 section-title">Nugra21</h2>
+  
+            <div class="contact-btn-wrapper">
+              <button class="btn btn-primary">
+                <a href="pesan.html"><span class="span">Shop</span></a>
+              </button>
+  
+              <button class="btn btn-secondary">
+                <a href="404.html"><span class="span">Contact us</span></a>
+              </button>
+            </div>
+  
+          </div>
+  
+          <figure class="contact-banner-2 img-holder" style="--width: 514; --height: 597;">
+            <img src="assets/media/img/Rebdher/nugra2.png" width="514" height="597" loading="lazy" alt="contact banner"
+              class="img-cover-fotter">
+          </figure>
+  
+        </div>
+      </section>
+  
+  
+  
+      <!-- 
+        - #SERVICE  ----------------------------------===--------------------
+      -->
+  
+      <section class="section service">
+        <div class="container">
+  
+          <ul class="service-list">
+  
+            <li>
+  
+              <div class="service-card">
+                <figure class="card-banner img-holder" style="--width: 51; --height: 50;">
+                  <img src="./assets/images/service-1.png" width="51" height="50" loading="lazy" alt="service card banner"
+                    class="img-cover">
+                </figure>
+  
+                <div class="card-content">
+                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+  
+                  <p class="card-text">Rendher minecraft Backgroung transparan 10k</p>
+                </div>
+              </div>
+  
+            </li>
+  
+            <li>
+  
+              <div class="service-card service-card-before">
+                <figure class="card-banner img-holder" style="--width: 51; --height: 50;">
+                  <img src="./assets/images/service-2.png" width="51" height="50" loading="lazy" alt="service card banner"
+                    class="img-cover">
+                </figure>
+  
+                <div class="card-content">
+                  <h4 class="h4 card-title">Intro / Outro</h4>
+  
+                  <p class="card-text">
+                    Intro biasa 15k <br>
+                    Intro Premium 20k <br>
+                    Outro biasa / premium 10k <br>
+                    Overlay / animasi promosi 10k <br>
+                  </p>
+                </div>
+              </div>
+  
+            </li>
+  
+            <li>
+  
+              <div class="service-card">
+                <figure class="card-banner img-holder" style="--width: 51; --height: 50;">
+                  <img src="./assets/images/service-3.png" width="51" height="50" loading="lazy" alt="service card banner"
+                    class="img-cover">
+                </figure>
+  
+                <div class="card-content">
+                  <h4 class="h4 card-title">Website</h4>
+  
+                  <p class="card-text">FrontEnd tergantung style biasanya 100k - 200k ( 200k FulsStak )</p>
+                </div>
+              </div>
+  
+            </li>
+  
+            <li>
+  
+              <div class="service-card service-card-before">
+                <figure class="card-banner img-holder" style="--width: 51; --height: 38;">
+                  <img src="./assets/images/service-4.png" width="51" height="38" loading="lazy" alt="service card banner"
+                    class="img-cover">
+                </figure>
+  
+                <div class="card-content">
+                  <h4 class="h4 card-title">Aplikasi</h4>
+  
+                  <p class="card-text">Sementara ini Close</p>
+                </div>
+              </div>
+  
+            </li>
+  
+          </ul>
+  
+        </div>
+      </section>
+  
+    </main> 
+<!-- ------------------------------ <> ------------------------------ -->
+<!-- ------------------------------ Fotter ------------------------------ -->
+    <footer class="footer">
+  
+      <div class="footer-top">
+  
+        <div class="footer-brand">
+  
+          <a href="#" class="logo">
+            <img src="./assets/images/logo-light.png" alt="logo" class="img">
+          </a>
+  
+          <p class="footer-text">
+            Ini adalah website Porfolio. kalian bisa melihat kumpulan Projeck yang sata sudah kerjakan dan bila kalian mau menghubungi saya bisa Kontak sosial media saya  
+          </p>
+  
+          <ul class="footer-address">
+  
+            <li class="footer-address-item">
+              <a href="#" class="footer-address-link">
+                <ion-icon name="location-outline" aria-hidden="true" class="location-icon"></ion-icon>
+  
+                <address class="address">DIY. Yogyakarta </address>
+              </a>
+            </li>
+  
+            <li class="footer-address-item">
+              <a href="#" class="footer-address-link">
+                <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+  
+                <span class="span">+62 --- ---- ----</span>
+              </a>
+            </li>
+  
+            <li class="footer-address-item">
+              <a href="#" class="footer-address-link">
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Nugra315@gmail.com</span>
+              </a>
+            </li>
+  
+          </ul>
+  
+          <ul class="footer-social-list">
+  
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link">
+                <ion-icon name="logo-facebook" aria-hidden="true"></ion-icon>
+              </a>
+            </li>
+  
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link">
+                <ion-icon name="logo-twitter" aria-hidden="true"></ion-icon>
+              </a>
+            </li>
+  
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link">
+                <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
+              </a>
+            </li>
+  
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link">
+                <ion-icon name="logo-youtube" aria-hidden="true"></ion-icon>
+              </a>
+            </li>
+  
+          </ul>
+  
+        </div>
+  
+        <ul class="footer-list">
+  
+          <li class="footer-list-item">
+            <h5 class="h5 footer-list-title">Website</h5>
+          </li>
+  
+          <li class="footer-list-item">
+            <a href="portfolio.html" class="footer-link">Portfolio</a>
+          </li>
+  
+          <li class="footer-list-item">
+            <a href="pesan.html" class="footer-link">SHOP</a>
+          </li>
+  
+          <li class="footer-list-item">
+            <a href="#" class="footer-link">Belajar Html</a>
+          </li>
+  
+  
+        </ul>
+  
+        <ul class="footer-list">
+  
+          <li class="footer-list-item">
+            <h5 class="h5 footer-list-title">Services.</h5>
+          </li>
+  
+          <li class="footer-list-item">
+            <a href="#" class="footer-link">Desine UI/UX</a>
+          </li>
+  
+          <li class="footer-list-item">
+            <a href="#" class="footer-link">Video Editing</a>
+          </li>
+  
+          <li class="footer-list-item">
+            <a href="#" class="footer-link">Programer FrontEnd</a>
+          </li>
+  
+          <li class="footer-list-item">
+            <a href="#" class="footer-link">Visual Grafis</a>
+          </li>
+
+  
+        </ul>
+  
+        <ul class="footer-list">
+  
+          <li class="footer-list-item">
+            <h5 class="h5 footer-list-title">Friends</h5>
+          </li>
+  
+          <li class="footer-list-item">
+            <a href="#" class="footer-link">- </a>
+          </li>
+          <li class="footer-list-item">
+            <a href="#" class="footer-link">- </a>
+          </li>
+          <li class="footer-list-item">
+            <a href="#" class="footer-link">- </a>
+          </li>
+          <li class="footer-list-item">
+            <a href="#" class="footer-link">- </a>
+          </li>
+  
+        </ul>
+  
+        <div class="footer-widget">
+  
+          <h5 class="h5 footer-list-title">Yow Hai semua</h5>
+  
+          <p class="footer-text">
+            Thanks dah mau mampir Btw jangan lupa selalu berdoa dan tetap semangat dan jangan menyerah 
+          </p>
+  
+          <!-- <span class="span">We Accept</span> -->
+  
+          <!-- <img src="./assets/images/payment-4.png" width="370" height="42" loading="lazy" alt="payment image"
+            class="w-100"> -->
+  
+        </div>
+  
+      </div>
+  
+      <div class="footer-bottom">
+        <a href="#" class="copyright">Ludang Prasetyo Nugroho @Developer 2024</a>
+  
+        <div>
+          <ul class="footer-bottom-list">
+  
+            <li>
+              <a href="#" class="footer-bottom-link">N</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-bottom-link">2</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-bottom-link">1</a>
+            </li>
+  
+          </ul>
+        </div>
+      </div>
+  
+    </footer>
+<!-- ------------------------------ <> ------------------------------ -->
+<!-- ------------------------------ Buton naik ke atas ------------------------------ -->
+    <a href="#back-to-top" class="back-top-btn" data-back-to-top>
+      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+<!-- ------------------------------ <> ------------------------------ -->
+<!-- ------------------------------ js ------------------------------ -->
+    <script src="./assets/js/script.js"></script>
+<!-- ------------------------------ <> ------------------------------ -->
+<!-- ------------------------------ icon link ------------------------------ -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>function openModal(videoSrc) {
+      document.getElementById("videoSource").src = videoSrc; // Set sumber video sesuai yang diklik
+      document.getElementById("videoPlayer").load(); // Muat video baru
+      document.getElementById("videoModal").style.display = "block"; // Tampilkan modal
+      document.getElementById("videoPlayer").play(); // Putar video saat modal dibuka
+  }
+  
+  function closeModal() {
+      document.getElementById("videoModal").style.display = "none"; // Sembunyikan modal
+      document.getElementById("videoPlayer").pause(); // Jeda video saat modal ditutup
+  }
+  </script>
+<!-- ------------------------------ <> ------------------------------ -->
+ <!-- Modal untuk Video -->
+ <div id="videoModal" class="modal" onclick="closeModal();">
+  <div class="modal-content" onclick="event.stopPropagation();">
+      <span class="close" onclick="closeModal();">&times;</span>
+      <div class="video-container">
+          <video width="100%" id="videoPlayer" controls>
+              <source id="videoSource" src="" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+      </div>
+  </div>
+</div>
+<!-- Modal untuk foto -->
+<div id="image-popup" class="popup" style="display:none;">
+  <div class="popup-content">
+    <span class="close-button" onclick="closePopup()">&times;</span>
+    <img id="popup-image" src="" alt="Pop-up Image" />
+    <div class="cinematic-text"></div> <!-- Teks tambahan -->
+  </div>
+</div>
+  </body>
 </html>
