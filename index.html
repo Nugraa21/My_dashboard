@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- ---------------------------- css ------------------------------>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/videopopup.css">
@@ -180,7 +181,7 @@
         <section class="section hero">
           <div class="container">
   
-            <div class="hero-content">
+            <div class="hero-content"data-aos="zoom-in"> <!-- Webanimasi -->
   
               <h1 class="h1 section-title">
                 Nugra21" 
@@ -199,7 +200,7 @@
   
             </div>
   
-            <figure class="hero-banner img-holder" style="--width: 510; --height: 371;">
+            <figure data-aos="flip-right" class="hero-banner img-holder" style="--width: 510; --height: 371;"> <!-- Webanimasi -->
               <img src="./assets/media/logo-home.png" width="510" height="371" alt="hero banner" class="img-cover-logo">
             </figure>
   
@@ -258,12 +259,12 @@
       <section id="tentang-saya" class="section about about-color">
         <div class="container">
   
-          <figure class="about-banner img-holder" style="--width: 570; --height: 531;">
+          <figure data-aos="zoom-in-right" class="about-banner img-holder" style="--width: 570; --height: 531;"><!-- Webanimasi -->
             <img src="./assets/images/about-banner.png" width="570" height="531" loading="lazy" alt="page banner"
               class="img-cover">
           </figure>
   
-          <div class="about-content">
+          <div class="about-content" data-aos="fade-down"><!-- Webanimasi -->
   
             <p class="section-subtitle">TENTANG SAYA</p>
   
@@ -285,7 +286,8 @@
               <li>
                 <div class="author-card">
                   <h4 class="h4 author-title">-</h4>
-                  <span class="download author-subtitle"><a href="404.html"> - Download CV - </a></span>
+                  <span class="">
+                    <a class="btn btn-primary" href="404.html"> - Download CV - </a></span>
                   <h4 class="h4 author-title">-</h4>
                 </div>
               </li>
@@ -302,34 +304,34 @@
       <section id="porfolio-saya" class="section product">
         <div class="container">
       
-          <h2 class="h2 section-title">Portfolio</h2>
+          <h2 data-aos="fade-up" class="h2 section-title">Portfolio</h2><!-- Webanimasi -->
       
-          <ul class="product-navbar-list">
-            <li class="product-nav-item">
+          <ul class="product-navbar-list" >
+            <li class="product-nav-item" data-aos="flip-up"><!-- Webanimasi -->
               <button onclick="showCategory('all-portfolio')" class="product-nav-link has-before active ">
                 <span class="span">ALL</span>
               </button>
             </li>
-            <li class="product-nav-item">
+            <li class="product-nav-item" data-aos="flip-up"><!-- Webanimasi -->
               <button onclick="showCategory('web-portfolio')" class="product-nav-link has-before">
                 <span class="span">Website</span>
               </button>
             </li>
-            <li class="product-nav-item">
+            <li class="product-nav-item" data-aos="flip-up"><!-- Webanimasi -->
               <button onclick="showCategory('presentasi-portfolio')" class="product-nav-link has-before">
                 <span class="span">MATERI</span>
               </button>
-            <li class="product-nav-item">
+            <li class="product-nav-item" data-aos="flip-up"><!-- Webanimasi -->
               <button onclick="showCategory('rendhermc-portfolio')" class="product-nav-link has-before">
                 <span class="span">Rendher Minecraft</span>
               </button>
             </li>
-            <li class="product-nav-item">
+            <li class="product-nav-item" data-aos="flip-up"><!-- Webanimasi -->
               <button onclick="showCategory('intro-portfolio')" class="product-nav-link has-before">
                 <span class="span">Intro</span>
               </button>
             </li>
-            <li class="product-nav-item">
+            <li class="product-nav-item" data-aos="flip-up"><!-- Webanimasi -->
               <button onclick="showCategory('blog-portfolio')" class="product-nav-link has-before">
                 <span class="span">Ilustrasi</span>
               </button>
@@ -338,7 +340,7 @@
           </ul>
           <div id="portfolio-container">
             <div id="all-portfolio">
-              <ul class="product-list">
+              <ul class="product-list" data-aos="fade-up"><!-- Webanimasi -->
 <!-- ------------------------------ PRESENTASI MATERI ------------------------------ -->
                 <li id="presentasi-portfolio" class="product-item" style="display:none;">
                   <div class="product-card">
@@ -1688,7 +1690,7 @@
       <section class="section blog">
         <div class="container">  
           <div class="contact-content">
-            <h2 class="h2 section-title">Tutorial Youtube</h2>
+            <h2 data-aos="fade-up" class="h2 section-title">Tutorial Youtube</h2><!-- Webanimasi -->
             <div class="contact-btn-wrapper">
               <button class="btn btn-primary">
                 <a href="tutorial.html"><span class="span">Lihat yang lain</span></a>
@@ -1880,7 +1882,7 @@
         </div>
       </section>
       <!-- ---------------------------- SERVICE ---------------------------- -->
-      <section class="section service">
+      <section class="section service" >
         <div class="container">
   
           <ul class="service-list">
@@ -2200,4 +2202,8 @@
     <!--  -->
 <div id="scrollpath"></div>
   </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>

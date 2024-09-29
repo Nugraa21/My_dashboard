@@ -222,6 +222,9 @@
     margin-block: 20px;
     overflow: hidden;
     transition: var(--transition-1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.524);
+    border-bottom: 4px solid rgb(139, 210, 255);
+    border-radius: 10px;
   }
   
   .btn .span {
@@ -1259,7 +1262,7 @@
     right: 20px;
     padding: 8px;
     max-width: max-content;
-    background-color: var(--gray);
+    background-color: red;
     transform: translateY(-5px) rotate(45deg);
     transition: var(--transition-1);
     z-index: 10;
