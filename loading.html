@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <style>
+        /* Menyembunyikan konten sampai halaman selesai dimuat */
+.page-content {
+    display: none;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Warna abu-abu muda */
+    border-top: 8px solid #3498db; /* Warna biru */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.page-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Website Loading</title>
+</head>
+<body>
+    <div id="loader" class="loader"></div>
+    <div id="pageContent" class="page-content">
+        <h1>Selamat Datang di Website Kami</h1>
+        <p>Ini adalah konten website yang akan ditampilkan setelah semua elemen selesai dimuat.</p>
+        <img src="path/to/your/image.jpg" alt="Example Image" />
+    </div>
+
+    <script>
+        window.onload = function() {
+            const loader = document.getElementById('loader');
+            const pageContent = document.getElementById('pageContent');
+            
+            // Sembunyikan loader dan tampilkan konten setelah halaman selesai dimuat
+            loader.style.display = 'none';
+            pageContent.style.display = 'block';
+        };
+    </script>
+</body>
+</html>
