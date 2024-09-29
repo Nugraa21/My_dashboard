@@ -1,0 +1,56 @@
+/*  scrol progresbar */
+::-webkit-scrollbar
+{
+    width: 0;
+}
+#scrollpath{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+#progresbar
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 0; /* Updated initial height to 0 */
+    background: linear-gradient(to top , #ff0000 , #ffe100 );
+    animation: animate 2s linear infinite;
+}
+@keyframes animate 
+{
+    0%,100%
+    {
+        filter: hue-rotate(0deg);
+    }
+    50%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+#progresbar::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to top , #ff0000 , #00ff2a );
+    filter: blur(30px);
+}
+#progresbar::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to top , #ff0000 , #11ff00 );
+    filter: blur(30px);
+}

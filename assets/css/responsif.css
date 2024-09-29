@@ -1,0 +1,632 @@
+  
+/* ====================  RESPONFIS ==================== */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* ====================  RESPONFIS ==================== */
+/* == responsive for larger than 550px screen  === */
+
+  @media (min-width: 550px) {
+
+    :root {
+      /* font size */
+      --fs-24: 3rem;
+    }
+  
+/* ====================  RISET STYLE ==================== */
+  
+     .section .container {
+      max-width: 540px;
+      margin-inline: auto;
+    }
+  
+    .btn { margin-block-start: 40px; }
+  
+    .section-title { font-size: var(--fs-24); }
+  
+    .header .container { padding-block-end: 42px; }
+  
+  
+    .languages { margin-inline-start: 35px; }
+  
+/* ====================  NAVBAR NAVUGASI BAR ==================== */
+
+    .navbar {
+      max-width: 395px;
+      transform: translateX(-395px);
+      padding-inline: 40px;
+    }
+
+/* ====================  FEATURE ==================== */
+  
+    .feature-list {
+      max-width: 540px;
+      display: grid;
+      place-content: center;
+    }
+  
+/* ====================  FOOTER ==================== */
+
+    .footer-top { grid-template-columns: 1fr 1fr; }
+  
+    .footer-widget { grid-column: 1 / 3; }
+  
+    .footer-widget img { width: 350px; }
+  
+  
+  }
+  
+  
+/* ====================  RESPONFIS ==================== */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* ====================  RESPONFIS ==================== */
+/* == responsive for larger than 765px screen  === */
+  
+  @media (min-width: 765px) {
+  
+    :root { 
+      /* font size */
+      --fs-24: 4.0rem;
+      --fs-17: 1.8rem;
+      --fs-13: 1.4rem;
+      --fs-12: 1.4rem;
+    
+      --header-height: 140px;
+  
+    }
+  
+  
+  
+  
+/* ==================== RISET STYLE ==================== */
+
+    .section .container {
+      max-width: 765px;
+      padding-inline: 25px;
+    }
+  
+    .section-subtitle { gap: 5px; }
+  
+    :is(.feature-list, .service-list) { grid-template-columns: 1fr 1fr; }
+  
+    .btn {
+      font-size: var(--fs-16);
+      padding: 10px 25px;
+    }
+  
+/* ==================== HEADER ==================== */
+
+    .wrapper { margin-block-start: 0; }
+  
+    .social-wrapper { gap: 16px; }
+  
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: 22px;
+      max-width: 710px;
+      margin-inline: auto;
+    }
+  
+    .logo .img { margin-block: 0; }
+  
+    .navbar .container { display: block; }
+  
+/* ==================== HEADER ABOUT ==================== */
+
+    .hero .container { gap: 30px; }
+  
+    .hero-content { max-width: 440px; }
+  
+    .about-banner { max-width: 565px; }
+  
+    .about-content .section-title { max-width: 290px; }
+  
+    .about-content .section-text { max-width: 450px; }
+  
+/* ==================== PRODUCT & FEATURE PRODUCT ==================== */
+ 
+    .product .container { padding-inline: 40px; }
+  
+    .product-list { grid-template-columns: repeat(2, 1fr); }
+  
+    .product-card .card-title,
+    .price { font-size: var(--fs-16); }
+  
+    .card-badge {
+      padding: 0px 13px;
+      font-size: var(--fs-13);
+    }
+  
+    .feature-product .product-list {
+      grid-template-columns: repeat(3, 1fr);
+      margin-block-end: 50px;
+    }
+  
+/* ====================  FEATURE LIST ==================== */
+
+    :is(.feature-list, .service-list) {
+      grid-template-columns: 1fr 1fr;
+      margin-inline: auto;
+      max-width: max-content;
+    }
+  
+/* ====================  CONTACT & BLOG ==================== */
+  
+    .contact-btn-wrapper { gap: 17px; }
+  
+    .blog-item { min-width: calc(100% - 52%); }
+  
+    .blog-card .card-title {
+      font-size: var(--fs-22);
+      line-height: var(--lineHeight-13);
+    }
+
+/* ====================  SERVICE ==================== */
+  
+    .service .container { padding-block-end: 120px; }
+  
+    
+   .service-card-before::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80px;
+    width: 2px;
+    background-color: var(--azure-web);
+    opacity: 0.4;
+  }
+  
+/* ====================  FOOTER ==================== */
+  
+     .footer-widget { grid-column: 1 / 2; }
+  
+     .footer-bottom {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 30px 15px;
+    }
+  
+    .footer-bottom-list { margin-block-start: 0; }
+  
+  }
+  
+  /* ====================  RESPONFIS ==================== */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* ====================  RESPONFIS ==================== */
+/* == responsive for larger than 1000px screen  === */
+
+  @media (min-width: 1000px) {
+  
+    /**
+     * CUSTOM PROPERTY
+     */
+  
+    :root {
+
+      /* font size */
+      /* --fs-22: 2.6rem; */
+      --fs-24: 5.6rem;
+      --fs-14: 1.6rem;
+      --fs-17: 2.0rem;
+      --fs-50: 5.0rem;
+      --fs-18: 1.8rem;
+      --fs-16: 1.6rem;
+  
+    }
+  
+  /* ====================  RISET STYLE ==================== */
+
+    .header .container,
+    .section .container { max-width: 960px; }
+  
+    .section .container { padding-inline: 15px; }
+  
+    .contact-subtitle { margin-block-start: -35px; }
+  
+    .section-title { font-size: var(--fs-50); }
+  
+    :is(.hero .container, .about .container) {
+      grid-template-columns: 1fr 1fr; 
+    }
+  
+    .btn {
+      padding: 13px 40px;
+      margin-block-start: 30px;
+    }
+  
+  /* ====================  HERO ==================== */
+  
+    .hero-content .section-title { font-size: var(--fs-24); }
+  
+  /* ====================  FEATURE ==================== */
+
+    .feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: rgb(193, 253, 255);
+    }
+  
+  /* ====================  ABOUT ==================== */
+
+    .about .container {
+      gap: 60px;
+      padding-block: 120px;
+    }
+  
+    .about-content .section-title {
+      max-width: unset;
+      padding-inline-end: 85px;
+    }
+  
+  
+  /* ====================  PRODUCT & FEATURE PRODUCT ==================== */
+
+    .product-navbar-list { padding-inline: 25px; }
+  
+    .product-list { grid-template-columns: repeat(3, 1fr); }
+  
+    .feature-product .product-list { grid-template-columns: repeat(4, 1fr); }
+  
+  /* ====================  CONTACT ==================== */
+
+    .contact .container {
+      position: relative;
+      display: grid;
+      grid-template-columns: 0.8fr 1.1fr  0.8fr;
+      align-items: center;
+      padding: 115px 0px 40px;
+    }
+  
+    .contact .img-holder { display: block; }
+  
+    .contact-banner-1 { position: relative; }
+  
+    .contact-banner-1 {
+      top: -17px;
+      left: -13px;
+      height: 263px;
+    }
+  
+    .contact-banner-2 {
+      position: absolute;
+      bottom: 0; 
+      right: -13px;
+      height: auto;
+      width: 275px;
+      z-index: 1;
+    }
+  
+   /* ====================  BLOG ==================== */
+  
+    .blog-card .card-title { font-size: var(--fs-26); }
+  
+  /* ====================  FOOTER ==================== */
+  
+    .footer-text { font-size: var(--fs-16); }
+  
+    .footer-widget .span {
+      margin-block: 30px 15px;
+      font-size: var(--fs-18);
+    }
+  
+    .footer-social-list { gap: 15px; }
+  
+    .footer-widget img {
+      height: auto;
+      width: 365px;
+    }
+  
+    .input-field { padding: 20px 20px; }
+  
+    .footer-bottom {
+      justify-content: space-between;
+      margin-inline: 15px;
+    }
+  
+  }
+  
+  /* ====================  RESPONFIS ==================== */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* ====================  RESPONFIS ==================== */
+/* == responsive for larger than 1200px screen  === */
+
+  @media (min-width: 1200px) {
+
+    :root {
+
+      --header-height: 104px;
+  
+    }
+  
+  /* ====================  RISET STYLE ==================== */
+
+    .header .container,
+    .section .container { max-width: 1200px; }
+  
+    .section-title { font-size: var(--fs-24); }
+  
+    .section-text { padding-inline-start: 30px; }
+  
+    .slider-list::-webkit-scrollbar { display: none; }
+    
+  /* ====================  HEADER ==================== */
+  
+    .header.active {
+      position: fixed;
+      top: 0;
+      animation: fadeInDown 0.3s ease;
+    }
+  
+    @keyframes fadeInDown {
+      from { transform: translateY(-100%); }
+  
+      to { transform: translateY(0); }
+    }
+  
+    .nav-open-btn { display: none; }
+  
+    .navbar,
+    .navbar-list { all: unset; }
+  
+    .logo-dar,
+    .nav-close-btn,
+    .header .input-wrapper,
+    .navbar-action,
+    .nav-icon-wrapper { display: none; }
+  
+    .navbar .container { padding-inline: 0; }
+  
+    .header .container,
+    .header .title-wrapper {
+      padding: 0;
+    }
+  
+    .header { padding-inline: 25px; }
+  
+    .header .title-wrapper { gap: 55px; }
+  
+    .navbar-list,
+    .header .title-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .navbar-list { gap: 25px; }
+  
+    .navbar-link {
+      font-family: var(--fontFamily_Rajdhani_sans-serif);
+      text-transform: capitalize;
+      padding-block: 0;
+    }
+  
+    .navbar-link ion-icon {
+      font-size: var(--fs-10);
+      color: inherit;
+    }
+  
+    .navbar-link:is(:hover, :focus-visible).navbar-link ion-icon { color: var(--apple-green); }
+  
+    .nav-logo-wrapper { display: none; }
+  
+    .header-btn {
+      display: block;
+      padding: 12px 30px;
+    }
+  
+    .header-btn::before { display: none; }
+  
+    .header-btn:is(:hover, :focus-visible) { background-color: hsl(78, 96%, 30%); }
+  
+  /* ====================  HOME FEATURE ==================== */
+  
+    .home { position: relative; }
+  
+    .hero {
+      position: relative;
+      height: 525px;
+    }
+  
+    .hero-banner {
+      width: 500px;
+      position: absolute;
+      bottom: 0;
+      right: 60px;
+    }
+  
+    .hero-content .section-title { font-size: var(--fs-50); }
+  
+    .feature .container {
+      padding: 0;
+      position: absolute;
+      bottom: auto;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .feature-list { min-width: 1200px; }
+  
+  /* ====================  ABOUT ==================== */
+
+    .about .container { margin-block-start: 70px; }
+  
+  /* ====================  PRODUCT & FEATURE PRODUCTS ==================== */
+
+    .product-list { grid-template-columns: repeat(4, 1fr); }
+  
+    .feature-product .product-list { grid-template-columns: repeat(5, 1fr); }
+  
+    .product-action-link { padding: 16px; }
+  
+    :is(.price, .strike) { font-size:13px; }
+
+  /* ====================  CPNTACT ==================== */
+  
+    .contact .container {
+      padding-block: 20px;
+      max-width: 1300px;
+    }
+  
+    .contact-banner-1 {
+      width: 450px;
+      height: auto;
+    }
+  
+    .contact-banner-2 {
+      width: 350px;
+      right: -32px;
+    }
+  
+  /* ====================  BLOG SERVICE ==================== */
+  
+    .blog-list { gap: 24px; }
+  
+    .blog-item { min-width: calc(100% - 68%); }
+  
+    .service-list { grid-template-columns: repeat(4, 1fr); }
+  
+  /* ====================  FOOTER ==================== */
+  
+    .footer-top { grid-template-columns: 1fr 0.5fr 0.7fr 0.6fr 0.5fr; }
+  
+    .footer-widget { grid-column: unset; }
+  
+    .footer-social-list {
+      gap: 20px;
+      margin-block-start: 30px;
+    }
+  
+    .location-btn {
+      width: 55px;
+      font-size: var(--fs-17);
+    }
+  
+    .footer-widget img { width: 300px; }
+  
+    
+  }
+  
+  /* ====================  RESPONFIS ==================== */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* =                                                  = */
+/* ====================  RESPONFIS ==================== */
+/* == responsive for larger than 1200px screen  === */
+
+  @media (min-width: 1400px) {
+
+    :root {
+     /* font size */
+    --fs-50: 72px;
+  
+    }
+  
+  /* ====================  RISET STYLE ==================== */
+  
+    .section-title { font-size: var(--fs-50); }
+  
+  /* ====================  HEADER ==================== */
+
+    .header { padding-block: 28px; }
+  
+    .logo .img { margin-inline-start: 25px; }
+  
+    .header-btn { margin-block: 0; }
+  
+  /* ====================  HOME ABOUT ==================== */
+
+    .hero { 
+      height: 800px; }
+  
+    .hero-banner {
+      width: 710px;
+      right: 150px;
+      top: 165px;
+    }
+    
+    .hero .container { padding-block: 200px; }
+  
+    .hero-content { max-width: 1200px; }
+  
+    .hero-content .section-text { padding-inline-end: 100px; } 
+    
+    .feature-card { gap: 20px; }
+  
+    .author-subtitle { font-size: var(--fs-12); }
+  
+  /* ====================  FEATURE PRODUCT & CONTACT ==================== */
+
+    .feature-product .product-list { grid-template-columns: repeat(4, 1fr); }
+  
+    .contact { overflow: inherit; }
+  
+    .contact .container {
+      max-width: 1550px;
+      padding-block: 0;
+    }
+  
+    .contact-banner-1 {
+      width: 540px;
+      top: 0px;
+    }
+  
+    .contact-banner-2 {
+      height: 495px;
+      width: auto;
+      right: -13px;
+    }
+  
+    .contact-content { margin-block-start: 50px; }
+
+  /* ====================  SERVICE ==================== */
+
+    .service .container {
+      padding-block-start: 0;
+      max-width: 1400px;
+    }
+  
+  /* ====================  FOOTER ==================== */
+  
+    .footer-top { padding: 92px 80px 75px; }
+  
+    .footer-brand .logo .img { margin-inline: 0; }
+  
+    .footer-list { line-height: 2; }
+  
+    .input-field::placeholder { font-size: var(--fs-12); }
+  
+    .footer-widget img { width: 325px; }
+  
+    .footer-bottom { padding: 30px 80px; }
+  
+  
+  }
+
+  /* ====================  END CSS ==================== */
+  /* ====================  CSS TAMBAHAN ==================== */
