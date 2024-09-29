@@ -1,67 +1,1890 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <style>
-        /* Menyembunyikan konten sampai halaman selesai dimuat */
-.page-content {
-    display: none;
-}
-
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    position: relative;
-}
-
-.loader {
-    border: 8px solid #f3f3f3; /* Warna abu-abu muda */
-    border-top: 8px solid #3498db; /* Warna biru */
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1s linear infinite;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.page-content {
-    text-align: center;
-    margin-top: 20px;
-}
-
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Website Loading</title>
+    <title>Media Loading</title>
+    <style>
+        /* Sembunyikan konten sampai halaman selesai dimuat */
+        .page-content {
+            display: none;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <div id="loader" class="loader"></div>
+
     <div id="pageContent" class="page-content">
-        <h1>Selamat Datang di Website Kami</h1>
-        <p>Ini adalah konten website yang akan ditampilkan setelah semua elemen selesai dimuat.</p>
-        <img src="path/to/your/image.jpg" alt="Example Image" />
+        <main>
+            <!-- ------------------------------ <> ------------------------------ -->
+            <!-- ------------------------------ Hero ------------------------------ -->
+                  <div class="home">
+                    <section class="section hero">
+                      <div class="container">
+              
+                        <div class="hero-content"data-aos="zoom-in"> <!-- Webanimasi -->
+              
+                          <h1 class="h1 section-title">
+                            Nugra21" 
+                          </h1>
+                          <p class="section-subtitle">
+                            <img src="https://cdn-icons-png.flaticon.com/128/6270/6270515.png" loading="lazy" alt="Verify " title="Verify " width="19" height="19">
+                            Desine grafis , Video editing , UI/UX
+                          </p>
+                        <p class="section-text">
+                            Hai saya mempunyai keahlian dalam bisang Mendisain dan saya juga ahli dalam Programer saya suka membuat sesuwatu yang berkaitan dengan Desain
+                        </p>
+              
+                          <button  class="btn btn-primary">
+                            <span class="span"> <a href="https://www.youtube.com/@nugra21">Subscribe</a></span>
+                          </button>
+              
+                        </div>
+              
+                        <figure data-aos="flip-right" class="hero-banner img-holder" style="--width: 510; --height: 371;"> <!-- Webanimasi -->
+                          <img src="./assets/media/logo-home.png" width="510" height="371" alt="hero banner" class="img-cover-logo">
+                        </figure>
+              
+                      </div>
+                    </section>
+            <!-- ------------------------------ <> ------------------------------ -->
+            <!-- ------------------------------ Fiture ------------------------------ -->
+             
+                    <section class="section feature">
+                      <div class="container">
+              
+                        <ul class="feature-list">
+              
+                          <li>
+                            <div class="feature-card">
+                              <figure class="feature-card-banner img-holder">
+                                <img src="assets/media/img/logo/html.webp" loading="lazy" alt="Study " title="Study " width="64" height="64">
+                              </figure>
+                              <figure class="feature-card-banner img-holder">
+                                <img src="assets/media/img/logo/css.webp" loading="lazy" alt="Youtube " title="Youtube " width="64" height="64">
+                              </figure>
+                              
+                              <div class="card-content">
+                                <h4 class="h4 card-title">Html & Css</h4>
+              
+                                <p class="card-text">Saya sangat ahli dalam bahasa pemrograman ini 100%</p>
+                              </div>
+                            </div>
+                          </li>
+              
+                          <li>
+                            <div class="feature-card">
+                              <figure class="feature-card-banner img-holder">
+                                <img src="assets/media/img/logo/java Script.webp" loading="lazy" alt="Youtube " title="Youtube " width="64" height="64">
+                              </figure>
+                              <figure class="feature-card-banner img-holder">
+                                <img src="assets/media/img/logo/java.webp" loading="lazy" alt="Youtube " title="Youtube " width="64" height="64">
+                              </figure>
+                              <figure class="feature-card-banner img-holder">
+                                <img src="assets/media/img/logo/js.webp" loading="lazy" alt="Youtube " title="Youtube " width="64" height="64">
+                              </figure>
+              
+                              <div class="card-content">
+                                <h4 class="h4 card-title">JS ,JAVA ,JSON</h4>
+              
+                                <p class="card-text">Kemampuan saya dalam bahasa 70%</p>
+                              </div>
+                            </div>
+                          </li>
+                      </div>
+                    </section>
+            
+                  </div>
+            <!-- ------------------------------ <> ------------------------------ -->
+            <!-- ------------------------------ Ebaut ------------------------------ -->
+                  <section id="tentang-saya" class="section about about-color">
+                    <div class="container">
+              
+                      <figure data-aos="zoom-in-right" class="about-banner img-holder" style="--width: 570; --height: 531;"><!-- Webanimasi -->
+                        <img src="./assets/images/about-banner.png" width="570" height="531" loading="lazy" alt="page banner"
+                          class="img-cover">
+                      </figure>
+              
+                      <div class="about-content" data-aos="fade-down"><!-- Webanimasi -->
+              
+                        <p class="section-subtitle">TENTANG SAYA</p>
+              
+                        <h2 class="h2 section-title">
+                            Ludang Prasetyo .N
+                        </h2>
+              
+                        <p class="section-text">
+                          Yoww " Semuanya 
+                        </p>
+              
+                        <span class="span">
+                            Saya memiliki pengalaman editing video selama 4 tahun dan keahlian dalam desain UI/UX untuk website. Saya adalah individu yang mampu bekerja sama dengan baik, sangat antusias menghadapi hal baru, dan selalu penasaran untuk mencoba pengalaman baru.
+            
+                        </span>
+              
+                        <ul class="about-author">
+              
+                          <li>
+                            <div class="author-card">
+                              <h4 class="h4 author-title">-</h4>
+                              <span class="">
+                                <a class="btn btn-primary" href="404.html"> - Download CV - </a></span>
+                              <h4 class="h4 author-title">-</h4>
+                            </div>
+                          </li>
+              
+              
+                        </ul>
+              
+                      </div>
+              
+                    </div>
+                  </section>
+            <!-- ------------------------------ <> ------------------------------ -->
+            <!-- ------------------------------ Porfolio ------------------------------ -->
+                  <section id="porfolio-saya" class="section product">
+                    <div class="container">
+                  
+                      <h2 data-aos="fade-up" class="h2 section-title">Portfolio</h2><!-- Webanimasi -->
+                  
+                      <ul class="product-navbar-list" >
+                        <li class="product-nav-item" data-aos="flip-up"><!-- Webanimasi -->
+                          <button onclick="showCategory('all-portfolio')" class="product-nav-link has-before active ">
+                            <span class="span">ALL</span>
+                          </button>
+                        </li>
+                        <li class="product-nav-item" data-aos="flip-up"><!-- Webanimasi -->
+                          <button onclick="showCategory('web-portfolio')" class="product-nav-link has-before">
+                            <span class="span">Website</span>
+                          </button>
+                        </li>
+                        <li class="product-nav-item" data-aos="flip-up"><!-- Webanimasi -->
+                          <button onclick="showCategory('presentasi-portfolio')" class="product-nav-link has-before">
+                            <span class="span">MATERI</span>
+                          </button>
+                        <li class="product-nav-item" data-aos="flip-up"><!-- Webanimasi -->
+                          <button onclick="showCategory('rendhermc-portfolio')" class="product-nav-link has-before">
+                            <span class="span">Rendher Minecraft</span>
+                          </button>
+                        </li>
+                        <li class="product-nav-item" data-aos="flip-up"><!-- Webanimasi -->
+                          <button onclick="showCategory('intro-portfolio')" class="product-nav-link has-before">
+                            <span class="span">Intro</span>
+                          </button>
+                        </li>
+                        <li class="product-nav-item" data-aos="flip-up"><!-- Webanimasi -->
+                          <button onclick="showCategory('blog-portfolio')" class="product-nav-link has-before">
+                            <span class="span">Ilustrasi</span>
+                          </button>
+                        </li>
+                        </li>
+                      </ul>
+                      <div id="portfolio-container">
+                        <div id="all-portfolio">
+                          <ul class="product-list" data-aos="fade-up"><!-- Webanimasi -->
+            <!-- ------------------------------ PRESENTASI MATERI ------------------------------ -->
+                            <li id="presentasi-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/presentasi/otientifikasi.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="assets/media/img/presentasi/ludang prasetyo .N.pdf" class="product-action-link">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link">
+                                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Otientikasi Multi-faktor</h4>
+                                  <div class="price-wrapper">
+                                    <p class="download price"><a href="assets/media/img/presentasi/ludang prasetyo .N.pdf"> DOWNLOAD </a></p>
+                                    <p class="price"></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            <!-- ------------------------------ ILUSTRASI ------------------------------ -->
+                            <li id="blog-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/ilustrasi/eskrim.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Adobe Illustrator</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">Icey</p>
+                                    <p class="price"></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="blog-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/ilustrasi/foto1.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Adobe Illustrator</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">Jeruk</p>
+                                    <p class="price"></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="blog-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/ilustrasi/FIRE.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Adobe Illustrator</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">Fire</p>
+                                    <p class="price"></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="blog-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/ilustrasi/Jamur.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Adobe Illustrator</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">Musrom</p>
+                                    <p class="price"></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+            <!-- ------------------------------ WEB ------------------------------ -->
+                            <li id="web-portfolio" class="product-item">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/web/web1.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="https://nugraa21.github.io/Belajar-HTML/" class="product-action-link">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Website</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">Modul html dasar</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="web-portfolio" class="product-item">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/web/web2.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="https://nugraa21.github.io/Himadigi/" class="product-action-link">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Website</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">Tugas teman</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="web-portfolio" class="product-item">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/web/web3.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="https://nugraa21.github.io/Game-ular/" class="product-action-link">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Website</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">Game web</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="web-portfolio" class="product-item">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/web/web4.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="https://nugraa21.github.io/HIMATEK/" class="product-action-link">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Website</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">Himatek</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="web-portfolio" class="product-item">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/web/web5.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="https://nugraa21.github.io/Bisnis-Digital/" class="product-action-link">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Website</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">Tugas teman</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            <!-- ------------------------------ RENDHER ------------------------------ -->
+                            <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/Rebdher/nugra1.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                  <div class="card-badge">
+                                    <span class="span">new</span>
+                                  </div>
+                                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">rendher c4D</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img id="img1" src="assets/media/img/Rebdher/nugra2.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">rendher c4D</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/Rebdher/nugra3.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">rendher c4D</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/Rebdher/nugra4.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">rendher c4D</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/Rebdher/nugra5.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">rendher c4D</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/Rebdher/nugra6.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">rendher c4D</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/Rebdher/11.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">rendher c4D</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/Rebdher/12.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">rendher c4D</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/Rebdher/13.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">rendher c4D</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/Rebdher/14.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">rendher c4D</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/Rebdher/15.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">rendher c4D</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/Rebdher/16.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">rendher c4D</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/Rebdher/17.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">rendher c4D</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/Rebdher/18.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">rendher c4D</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="rendhermc-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                    <img src="assets/media/img/Rebdher/19.png" width="600" height="600" alt="product" class="img-cover">
+                                  </figure>
+                                  <ul class="product-action-list">
+                                    <li class="product-action-item">
+                                      <a href="#" class="product-action-link product-action-link-popup">
+                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                      </a>
+                                    </li>
+            
+                                  </ul>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rendher Minecraft</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">rendher c4D</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            <!-- ------------------------------ INTRO ------------------------------ -->
+                            <li id="intro-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600; position: relative;">
+                                    <img class="sampul" src="assets/media/img/tumnail-intro/nugrta.jpg" alt="Sampul Video 1" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="openModal('assets/media/video/n21.mp4');">
+                                  </figure>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Nugra21</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">After effect</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                  
+                            <li id="intro-portfolio-2" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600; position: relative;">
+                                    <img class="sampul" src="assets/media/img/tumnail-intro/ragh.jpg" alt="Sampul Video 2" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="openModal('assets/media/video/n22.mp4');">
+                                  </figure>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Ragh2D</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">After effect</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                  
+                            <li id="intro-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600; position: relative;">
+                                    <img class="sampul" src="assets/media/img/tumnail-intro/rere.jpg" alt="Sampul Video 2" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="openModal('assets/media/video/n23.mp4');">
+                                  </figure>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rere</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">AM</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="intro-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600; position: relative;">
+                                    <img class="sampul" src="assets/media/img/tumnail-intro/rafi.png" alt="Sampul Video 2" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="openModal('assets/media/video/n24.mp4');">
+                                  </figure>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Rafi</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">C4D & AE</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="intro-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600; position: relative;">
+                                    <img class="sampul" src="assets/media/img/tumnail-intro/riski.jpg" alt="Sampul Video 2" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="openModal('assets/media/video/n25.mp4');">
+                                  </figure>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Riski Pang</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">AM & AVU</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+                            <li id="intro-portfolio" class="product-item" style="display:none;">
+                              <div class="product-card">
+                                <div class="card-banner-box">
+                                  <figure class="card-banner img-holder" style="--width: 600; --height: 600; position: relative;">
+                                    <img class="sampul" src="assets/media/img/tumnail-intro/ardi.jpg" alt="Sampul Video 2" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="openModal('assets/media/video/n26.mp4');">
+                                  </figure>
+                                </div>
+                                <div class="card-content">
+                                <div class="card-badge">
+                                  <span class="span">new</span>
+                                </div>
+                                  <h4 class="h4 card-title">Ardi</h4>
+                                  <div class="price-wrapper">
+                                    <p class="price">C4D & AM</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            
+            <!-- ------------------------------ PORTFOLIO END ------------------------------ -->
+            
+                          </ul>
+                        </div>
+                      </div>
+                  
+                    </div>
+                  </section>
+              
+                  <!-- 
+                    - #FETARUED PRODUCTS  ----------------------------------===--------------------
+                  -->
+              
+                  <!-- <section class="section product-2 product feature-product">
+                    <div class="container">
+              
+                      <h2 class="h2 section-title">Featured Products</h2>
+              
+                      <ul class="product-list">
+              
+                        <li class="product-item-1">
+              
+                          <div class="product-card">
+              
+                            <div class="card-banner-box">
+                              <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                <img src="./assets/images/feature-product-1.png" width="600" height="600" loading="lazy"
+                                  alt="product svg" class="img-cover">
+                              </figure>
+              
+                              <ul class="product-action-list">
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                              </ul>
+                            </div>
+              
+                            <div class="card-content">
+                              <div class="card-badge">
+                                <span class="span">new</span>
+                              </div>
+              
+                              <div class="rating-wrapper">
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                              </div>
+              
+                              <h4 class="h4 card-title">Carrots Group Scal</h4>
+              
+                              <div class="price-wrapper">
+                                <p class="price">$32.00</p>
+              
+                                <strike class="strike">$46.00</strike>
+                              </div>
+                            </div>
+              
+                          </div>
+              
+                        </li>
+              
+                        <li class="product-item-1">
+              
+                          <div class="product-card">
+              
+                            <div class="card-banner-box">
+                              <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                <img src="./assets/images/feature-product-2.png" width="600" height="600" loading="lazy"
+                                  alt="product svg" class="img-cover">
+                              </figure>
+              
+                              <ul class="product-action-list">
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                              </ul>
+                            </div>
+              
+                            <div class="card-content">
+                              <div class="card-badge">
+                                <span class="span">new</span>
+                              </div>
+              
+                              <div class="rating-wrapper">
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                              </div>
+              
+                              <h4 class="h4 card-title">Red Not Tomato</h4>
+              
+                              <div class="price-wrapper">
+                                <p class="price">$25.00</p>
+              
+                                <strike class="strike">$35.00</strike>
+                              </div>
+                            </div>
+              
+                          </div>
+              
+                        </li>
+              
+                        <li class="product-item-1">
+              
+                          <div class="product-card">
+              
+                            <div class="card-banner-box">
+                              <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                <img src="./assets/images/feature-product-3.png" width="600" height="600" loading="lazy"
+                                  alt="product svg" class="img-cover">
+                              </figure>
+              
+                              <ul class="product-action-list">
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                              </ul>
+                            </div>
+              
+                            <div class="card-content">
+                              <div class="card-badge">
+                                <span class="span">new</span>
+                              </div>
+              
+                              <div class="rating-wrapper">
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                              </div>
+              
+                              <h4 class="h4 card-title">Orange Fresh Juice</h4>
+              
+                              <div class="price-wrapper">
+                                <p class="price">$75.00</p>
+              
+                                <strike class="strike">$92.00</strike>
+                              </div>
+                            </div>
+              
+                          </div>
+              
+                        </li>
+              
+                        <li class="product-item-1">
+              
+                          <div class="product-card">
+              
+                            <div class="card-banner-box">
+                              <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                <img src="./assets/images/feature-product-4.png" width="600" height="600" loading="lazy"
+                                  alt="product svg" class="img-cover">
+                              </figure>
+              
+                              <ul class="product-action-list">
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                              </ul>
+                            </div>
+              
+                            <div class="card-content">
+                              <div class="card-badge">
+                                <span class="span">new</span>
+                              </div>
+              
+                              <div class="rating-wrapper">
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                              </div>
+              
+                              <h4 class="h4 card-title">Poltry Farm Meat</h4>
+              
+                              <div class="price-wrapper">
+                                <p class="price">$78.00</p>
+              
+                                <strike class="strike">$85.00</strike>
+                              </div>
+                            </div>
+              
+                          </div>
+              
+                        </li>
+              
+                        <li class="product-item-1">
+              
+                          <div class="product-card">
+              
+                            <div class="card-banner-box">
+                              <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                <img src="./assets/images/feature-product-5.png" width="600" height="600" loading="lazy"
+                                  alt="product svg" class="img-cover">
+                              </figure>
+              
+                              <ul class="product-action-list">
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                              </ul>
+                            </div>
+              
+                            <div class="card-content">
+                              <div class="card-badge">
+                                <span class="span">new</span>
+                              </div>
+              
+                              <div class="rating-wrapper">
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                              </div>
+              
+                              <h4 class="h4 card-title">Frash Butter Cake</h4>
+              
+                              <div class="price-wrapper">
+                                <p class="price">$150.00</p>
+              
+                                <strike class="strike">$180.00</strike>
+                              </div>
+                            </div>
+              
+                          </div>
+              
+                        </li>
+              
+                        <li class="product-item-1">
+              
+                          <div class="product-card">
+              
+                            <div class="card-banner-box">
+                              <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                <img src="./assets/images/feature-product-6.png" width="600" height="600" loading="lazy"
+                                  alt="product svg" class="img-cover">
+                              </figure>
+              
+                              <ul class="product-action-list">
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                              </ul>
+                            </div>
+              
+                            <div class="card-content">
+                              <div class="card-badge">
+                                <span class="span">new</span>
+                              </div>
+              
+                              <div class="rating-wrapper">
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                              </div>
+              
+                              <h4 class="h4 card-title">Orange Sliced Mix</h4>
+              
+                              <div class="price-wrapper">
+                                <p class="price">$150.00</p>
+              
+                                <strike class="strike">$180.00</strike>
+                              </div>
+                            </div>
+              
+                          </div>
+              
+                        </li>
+              
+                        <li class="product-item-1">
+              
+                          <div class="product-card">
+              
+                            <div class="card-banner-box">
+                              <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                <img src="./assets/images/product-2.png" width="600" height="600" loading="lazy" alt="product svg"
+                                  class="img-cover">
+                              </figure>
+              
+                              <ul class="product-action-list">
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                              </ul>
+                            </div>
+              
+                            <div class="card-content">
+                              <div class="card-badge">
+                                <span class="span">new</span>
+                              </div>
+              
+                              <div class="rating-wrapper">
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                              </div>
+              
+                              <h4 class="h4 card-title">Orange Sliced Mix</h4>
+              
+                              <div class="price-wrapper">
+                                <p class="price">$75.00</p>
+              
+                                <strike class="strike">$92.00</strike>
+                              </div>
+                            </div>
+              
+                          </div>
+              
+                        </li>
+              
+                        <li class="product-item-1">
+              
+                          <div class="product-card">
+              
+                            <div class="card-banner-box">
+                              <figure class="card-banner img-holder" style="--width: 600; --height: 600;">
+                                <img src="./assets/images/product-4.png" width="600" height="600" loading="lazy" alt="product svg"
+                                  class="img-cover">
+                              </figure>
+              
+                              <ul class="product-action-list">
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="cart" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                                <li class="product-action-item">
+                                  <a href="#" class="product-action-link">
+                                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                                  </a>
+                                </li>
+              
+                              </ul>
+                            </div>
+              
+                            <div class="card-content">
+                              <div class="card-badge">
+                                <span class="span">new</span>
+                              </div>
+              
+                              <div class="rating-wrapper">
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                              </div>
+              
+                              <h4 class="h4 card-title">Poltry Farm Meat</h4>
+              
+                              <div class="price-wrapper">
+                                <p class="price">$100.00</p>
+              
+                                <strike class="strike">$140.00</strike>
+                              </div>
+                            </div>
+              
+                          </div>
+              
+                        </li>
+              
+                      </ul>
+              
+                    </div>
+                  </section> -->
+              
+              
+              
+              
+              
+                  <!-- 
+                    - #CONTACT  ----------------------------------===--------------------
+                  -->
+              
+                  <!-- <section id="pesan" class="section contact" style="background-image: url(assets/media/img/eskrim.png)">
+                    <div class="container">
+              
+                      <figure class="contact-banner-1 img-holder" style="--width: 631; --height: 500;">
+                        <img src="assets/media/img/Rebdher/nugra1.png" width="631" height="500" loading="lazy" alt="contact banner"
+                          class="img-cover-fotter">
+                      </figure>
+              
+                      <div class="contact-content">
+                        <p class="contact-subtitle">Mau beli Intro.Rendher,& Website</p>
+              
+                        <h2 class="h2 section-title">Nugra21</h2>
+              
+                        <div class="contact-btn-wrapper">
+                          <button class="btn btn-primary">
+                            <a href="pesan.html"><span class="span">Shop</span></a>
+                          </button>
+              
+                          <button class="btn btn-secondary">
+                            <a href="404.html"><span class="span">Contact us</span></a>
+                          </button>
+                        </div>
+              
+                      </div>
+              
+                      <figure class="contact-banner-2 img-holder" style="--width: 514; --height: 597;">
+                        <img src="assets/media/img/Rebdher/nugra2.png" width="514" height="597" loading="lazy" alt="contact banner"
+                          class="img-cover-fotter">
+                      </figure>
+              
+                    </div>
+                  </section> -->
+              
+              
+              
+              
+              
+                  <!-- 
+                    - #BLOG  ----------------------------------===--------------------
+                  -->
+                  <!--  -->
+                  <section class="section blog">
+                    <div class="container">  
+                      <div class="contact-content">
+                        <h2 data-aos="fade-up" class="h2 section-title">Tutorial Youtube</h2><!-- Webanimasi -->
+                        <div class="contact-btn-wrapper">
+                          <button class="btn btn-primary">
+                            <a href="tutorial.html"><span class="span">Lihat yang lain</span></a>
+                          </button>
+                      </div>
+                        <div class="contact-content">
+                        <p class="contact-subtitle">-----------</p>
+                        
+                        
+                      </div>
+                      <ul class="blog-list slider-list">
+              
+                        <li class="blog-item slider-item">
+              
+                          <div class="blog-card">
+                            <figure class="card-banner img-holder" style="--width: 800; --height: 562;">
+                              <img src="./assets/media/berita/docker1.png.jpg" width="800" height="562" loading="lazy" alt="blog banner"
+                                class="img-cover">
+                            </figure>
+              
+                            <div class="card-content">
+              
+                              <ul class="blog-meta-list">
+              
+                                <li>
+                                  <a href="" class="blog-author">
+                                    <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+              
+                                    <span class="span">by: Nugra21</span>
+                                  </a>
+                                </li>
+              
+                                <li>
+                                  <a href="https://youtu.be/--IZaVqQkyk?si=Sd0c3tjsTfbn2Gf-" class="blog-author">
+                                    <ion-icon name="pricetags" aria-hidden="true"></ion-icon>
+              
+                                    <span class="span">Tutorial Youtube</span>
+                                  </a>
+                                </li>
+              
+                              </ul>
+              
+                              <h4 class="h4 card-title">Cara menggunakan docker untuk deployments Web dengan Xginx</h4>
+              
+                              <div class="blog-wrapper">
+                                <div class="date">
+                                  <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+              
+                                  <span class="span">June 12, 2024</span>
+                                </div>
+              
+                                <button class="detail-btn">Download Assets</button>
+                              </div>
+              
+                            </div>
+                          </div>
+              
+                        </li>
+                        <li class="blog-item slider-item">
+              
+                          <div class="blog-card">
+                            <figure class="card-banner img-holder" style="--width: 800; --height: 562;">
+                              <img src="./assets/media/berita/docker1.png.jpg" width="800" height="562" loading="lazy" alt="blog banner"
+                                class="img-cover">
+                            </figure>
+              
+                            <div class="card-content">
+              
+                              <ul class="blog-meta-list">
+              
+                                <li>
+                                  <a href="" class="blog-author">
+                                    <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+              
+                                    <span class="span">by: Nugra21</span>
+                                  </a>
+                                </li>
+              
+                                <li>
+                                  <a href="https://youtu.be/--IZaVqQkyk?si=Sd0c3tjsTfbn2Gf-" class="blog-author">
+                                    <ion-icon name="pricetags" aria-hidden="true"></ion-icon>
+              
+                                    <span class="span">Tutorial Youtube</span>
+                                  </a>
+                                </li>
+              
+                              </ul>
+              
+                              <h4 class="h4 card-title">Cara menggunakan docker untuk deployments Web dengan Xginx</h4>
+              
+                              <div class="blog-wrapper">
+                                <div class="date">
+                                  <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+              
+                                  <span class="span">June 12, 2024</span>
+                                </div>
+              
+                                <button class="detail-btn">Download Assets</button>
+                              </div>
+              
+                            </div>
+                          </div>
+              
+                        </li>
+                        <li class="blog-item slider-item">
+              
+                          <div class="blog-card">
+                            <figure class="card-banner img-holder" style="--width: 800; --height: 562;">
+                              <img src="./assets/media/berita/docker1.png.jpg" width="800" height="562" loading="lazy" alt="blog banner"
+                                class="img-cover">
+                            </figure>
+              
+                            <div class="card-content">
+              
+                              <ul class="blog-meta-list">
+              
+                                <li>
+                                  <a href="" class="blog-author">
+                                    <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+              
+                                    <span class="span">by: Nugra21</span>
+                                  </a>
+                                </li>
+              
+                                <li>
+                                  <a href="https://youtu.be/--IZaVqQkyk?si=Sd0c3tjsTfbn2Gf-" class="blog-author">
+                                    <ion-icon name="pricetags" aria-hidden="true"></ion-icon>
+              
+                                    <span class="span">Tutorial Youtube</span>
+                                  </a>
+                                </li>
+              
+                              </ul>
+              
+                              <h4 class="h4 card-title">Cara menggunakan docker untuk deployments Web dengan Xginx</h4>
+              
+                              <div class="blog-wrapper">
+                                <div class="date">
+                                  <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+              
+                                  <span class="span">June 12, 2024</span>
+                                </div>
+              
+                                <button class="detail-btn">Download Assets</button>
+                              </div>
+              
+                            </div>
+                          </div>
+              
+                        </li>
+              
+                      </ul>
+              
+                    </div>
+                  </section>
+                  <div id="pesan"></div>
+                  
+                  <!-- ---------------------------- SHOP ---------------------------- -->
+                  <section id="pesan" class="section contact" style="background-image: url(assets/media/img/eskrim.png)">
+                    <div class="container">
+              
+                      <figure class="contact-banner-1 img-holder" style="--width: 631; --height: 500;">
+                        <img src="assets/media/img/Rebdher/nugra1.png" width="631" height="500" loading="lazy" alt="contact banner"
+                          class="img-cover-fotter">
+                      </figure>
+              
+                      <div class="contact-content">
+                        <p class="contact-subtitle">Mau beli Intro.Rendher,& Website</p>
+              
+                        <h2 class="h2 section-title">Nugra21</h2>
+              
+                        <div class="contact-btn-wrapper">
+                          <button class="btn btn-primary">
+                            <a href="pesan.html"><span class="span">Shop</span></a>
+                          </button>
+              
+                          <button class="btn btn-secondary">
+                            <a href="404.html"><span class="span">Contact us</span></a>
+                          </button>
+                        </div>
+              
+                      </div>
+              
+                      <figure class="contact-banner-2 img-holder" style="--width: 514; --height: 597;">
+                        <img src="assets/media/img/Rebdher/nugra2.png" width="514" height="597" loading="lazy" alt="contact banner"
+                          class="img-cover-fotter">
+                      </figure>
+              
+                    </div>
+                  </section>
+                  <!-- ---------------------------- SERVICE ---------------------------- -->
+                  <section class="section service" >
+                    <div class="container">
+              
+                      <ul class="service-list">
+              
+                        <li>
+              
+                          <div class="service-card">
+                            <figure class="card-banner img-holder" style="--width: 51; --height: 50;">
+                              <img src="./assets/images/service-1.png" width="51" height="50" loading="lazy" alt="service card banner"
+                                class="img-cover">
+                            </figure>
+              
+                            <div class="card-content">
+                              <h4 class="h4 card-title">Rendher Minecraft</h4>
+              
+                              <p class="card-text">Rendher minecraft Backgroung transparan 10k <br> Rendher GFX (  tidak tersedia )</p>
+                            </div>
+                          </div>
+              
+                        </li>
+              
+                        <li>
+              
+                          <div class="service-card service-card-before">
+                            <figure class="card-banner img-holder" style="--width: 51; --height: 50;">
+                              <img src="./assets/images/service-2.png" width="51" height="50" loading="lazy" alt="service card banner"
+                                class="img-cover">
+                            </figure>
+              
+                            <div class="card-content">
+                              <h4 class="h4 card-title">Intro / Outro</h4>
+              
+                              <p class="card-text">
+                                Intro biasa 15k <br>
+                                Intro Premium 20k <br>
+                                Outro biasa / premium 10k <br>
+                                Overlay / animasi promosi 10k <br>
+                              </p>
+                            </div>
+                          </div>
+              
+                        </li>
+              
+                        <li>
+              
+                          <div class="service-card">
+                            <figure class="card-banner img-holder" style="--width: 51; --height: 50;">
+                              <img src="./assets/images/service-3.png" width="51" height="50" loading="lazy" alt="service card banner"
+                                class="img-cover">
+                            </figure>
+              
+                            <div class="card-content">
+                              <h4 class="h4 card-title">Website</h4>
+                              <p class="card-text">FrontEnd tergantung style biasanya 100k - 200k ( 200k FulsStak ) <br> FullStak & Hosting web 400K / Tahun</p>
+                            </div>
+                          </div>
+              
+                        </li>
+              
+                        <li>
+              
+                          <div class="service-card service-card-before">
+                            <figure class="card-banner img-holder" style="--width: 51; --height: 38;">
+                              <img src="./assets/images/service-4.png" width="51" height="38" loading="lazy" alt="service card banner"
+                                class="img-cover">
+                            </figure>
+              
+                            <div class="card-content">
+                              <h4 class="h4 card-title">Estimasi</h4>
+              
+                              <p class="card-text">
+                                Rendher : 1-3 Hari <br>
+                                Intro dll : 1-3 Hari <br>
+                                Website : 1 Bulan + Upload + Ddomain ( yorname.my.id ) <br>
+            
+            
+                              </p>
+                            </div>
+                          </div>
+              
+                        </li>
+              
+                      </ul>
+              
+                    </div>
+                  </section>
+                  <!-- ------------------------------ <> ------------------------------ -->
+                </main> 
     </div>
 
     <script>
         window.onload = function() {
             const loader = document.getElementById('loader');
             const pageContent = document.getElementById('pageContent');
-            
-            // Sembunyikan loader dan tampilkan konten setelah halaman selesai dimuat
-            loader.style.display = 'none';
-            pageContent.style.display = 'block';
+            const images = document.querySelectorAll('img');
+            let loadedImages = 0;
+
+            images.forEach((img) => {
+                if (img.complete) {
+                    incrementLoadedImages();
+                } else {
+                    img.onload = incrementLoadedImages;
+                    img.onerror = incrementLoadedImages;
+                }
+            });
+
+            function incrementLoadedImages() {
+                loadedImages++;
+                if (loadedImages === images.length) {
+                    loader.style.display = 'none'; // Sembunyikan loader
+                    pageContent.style.display = 'block'; // Tampilkan konten setelah semua gambar dimuat
+                }
+            }
         };
     </script>
 </body>

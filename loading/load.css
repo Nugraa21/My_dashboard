@@ -1,10 +1,13 @@
+/* Sembunyikan konten sampai halaman selesai dimuat */
 .page-content {
     display: none;
 }
 
+
+
 .loader {
-    border: 8px solid #f3f3f3; /* Warna abu-abu muda */
-    border-top: 8px solid #3498db; /* Warna biru */
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -18,9 +21,4 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-.page-content {
-    text-align: center;
-    margin-top: 20px;
 }
