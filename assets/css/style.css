@@ -121,8 +121,8 @@
   html {
     font-family: var(--fontFamily_Open_Sans_sans-serif);
     font-size: 10px;
-    scroll-behavior: unset;
-    /* scroll-behavior: smooth; */
+    /* scroll-behavior: unset; */
+    scroll-behavior: smooth;
   }
   
   body {
@@ -667,7 +667,7 @@
   .hero { 
     background: linear-gradient(to top, 
     rgb(193, 253, 255),
-    rgba(255, 255, 255, 0.733)
+    rgba(255, 255, 255, 0.548)
      );
   }
   
@@ -687,7 +687,13 @@
   
 /* ====================  FEATURE ==================== */
 
-  
+  .feature{
+    /* background: linear-gradient(to top, 
+    rgb(193, 253, 255),
+    rgb(255, 255, 255)
+     ); */
+     background-color:rgb(193, 253, 255);
+  }  
   .feature .container {
     padding-block-end: 0; 
     z-index: 100;
