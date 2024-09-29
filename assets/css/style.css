@@ -240,7 +240,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--white);
+    background-color: rgb(255, 94, 0);
     transform: translateX(-100%);
     transition: var(--transition-1);
     z-index: 1;
@@ -667,7 +667,7 @@
   .hero { 
     background: linear-gradient(to top, 
     rgb(193, 253, 255),
-    rgb(255, 255, 255)
+    rgba(255, 255, 255, 0.733)
      );
   }
   
@@ -748,7 +748,7 @@
   
   .about-content .span { 
     font-size: var(--fs-14);
-    margin-block-end: 20px;
+    /* margin-block-end: 20px; */
   }
   
   .about-author {

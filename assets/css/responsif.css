@@ -261,7 +261,9 @@
     .feature-list {
       display: flex;
       flex-wrap: wrap;
-      background-color: rgb(193, 253, 255);
+      /* background-color: rgba(193, 253, 255, 0.144); */
+      box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.158);
+      border-radius: 1rem;
     }
   
   /* ====================  ABOUT ==================== */
