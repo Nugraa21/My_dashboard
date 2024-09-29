@@ -31,7 +31,7 @@ document.getElementById('2faForm').addEventListener('submit', function(event) {
     const errorMessage = document.getElementById('errorMessage');
 
     if (code === '081328') {
-        window.location.href = 'web.html'; // Redirect to dashboard after 2FA success
+        window.location.href = 'back up/devlopmen.html'; // Redirect to dashboard after 2FA success
     } else {
         errorMessage.textContent = 'Kode verifikasi salah.';
     }

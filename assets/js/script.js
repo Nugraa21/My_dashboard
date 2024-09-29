@@ -25,9 +25,7 @@ const toggleNavbar = function () {
 addEventOnElements(navToggler, "click", toggleNavbar);
 
 
-/**
- * back top btn
- */
+//  ============== TOMBOL NAIK KE ATAS ==============
 
 const BackTopBtn = document.querySelector("[data-back-to-top]");
 
@@ -44,8 +42,7 @@ const activeElem = function () {
 
 window.addEventListener("scroll", activeElem);
 
-//------------------------
-
+//  ============== KEY CODE ==============
         // Prevent various actions like F12, Ctrl+U, right-click, etc.
         document.addEventListener('keydown', function(event) {
           if (event.key === 'F12' || (event.ctrlKey && event.key === 'u')) {
@@ -76,7 +73,8 @@ window.addEventListener("scroll", activeElem);
       });
 
 
-//-----------------------Selec Porfolio
+//  ============== MEMILIH PORFOLIO ==============
+
 function showCategory(category) {
   // Menyembunyikan semua kategori
   const items = document.querySelectorAll('.product-item');

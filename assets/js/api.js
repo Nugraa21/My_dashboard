@@ -19,7 +19,7 @@ function sendChat() {
 
         // Redirect to another webpage for "/masuk"
         if (userMessage.trim().toLowerCase() === '/masuk') {
-            window.location.href = '../web.html'; // Replace with the desired URL
+            window.location.href = '../index.html'; // Replace with the desired URL
             return; // Exit the function
         }
 

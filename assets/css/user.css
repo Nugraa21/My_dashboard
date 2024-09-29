@@ -1,6 +1,6 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: #ecf0f5;
+    background-color: #f5ecec;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ body {
     padding: 20px;
     border-top: 0;
     color: #666;
-    border-top: 3px solid #3c8dbc; /* Border color */
+    border-top: 3px solid #bc3c3c; /* Border color */
     border-radius: 10px; /* Round corners */
     background-color: #f9f9f9; /* Light background color */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
@@ -99,12 +99,12 @@ body {
 }
 
 .btn-primary {
-    background-color: #3c8dbc;
+    background-color: #bc3c3c;
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #367fa9;
+    background-color: #a93636;
 }
 
 .error-message {
@@ -114,7 +114,7 @@ body {
 }
 
 a {
-    color: #3c8dbc;
+    color: #bc3c3c;
     text-decoration: none;
 }
 
@@ -129,7 +129,7 @@ a:hover {
     top: 50%; /* 56 */
     left: 50%; /* 70 */
     transform: translate(-50%, -50%); /* Offset to truly center */
-    border: 2px solid #3c8dbc; /* Border color */
+    border: 2px solid #bc3c3c; /* Border color */
     border-radius: 10px; /* Round corners */
     background-color: #f9f9f9; /* Light background color */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
@@ -139,7 +139,7 @@ a:hover {
 }
 
 .chat-header {
-    background-color: #3c8dbc; /* Retain original color */
+    background-color: #bc3c3c; /* Retain original color */
     color: white;
     padding: 12px; /* Increase padding */
     border-top-left-radius: 10px; /* Match new border radius */
@@ -158,8 +158,8 @@ a:hover {
 }
 
 .chat-messages div.user {
-    background-color: #d6f2ff; /* Light blue for user messages */
-    border-bottom: 2px solid #3c8dbc; /* Border color */
+    background-color: #ffd6d6; /* Light blue for user messages */
+    border-bottom: 2px solid #bc3c3c; /* Border color */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
     align-self: flex-end; /* Align to the right */
 }
@@ -198,8 +198,8 @@ a:hover {
     margin-left: 5px;
     border: none;
     border-radius: 4px;
-    background-color: #3c8dbc;
-    color: white;
+    background-color: #bc3c3c;
+    color: rgb(255, 255, 255);
 }
 .chat-close {
     padding: 10px;
@@ -207,11 +207,11 @@ a:hover {
     border: none;
     border-radius: 4px;
     background-color: #ffffff;
-    color: rgb(0, 162, 255);
+    color: rgb(255, 0, 0);
 }
 
 .chat-input button:hover {
-    background-color: #367fa9;
+    background-color: #a93636;
 }
 
 @media (max-width: 768px) {

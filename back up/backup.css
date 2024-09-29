@@ -1,6 +1,22 @@
-    /* ==================== CSS INDEXT ==================== */
-:root {  
-    /* ==================== WARNA ==================== */
+/*-----------------------------------*\
+  #main.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2023 DuoDevs
+ */
+
+
+
+
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+  
     /* Background Color */
     --white: rgb(255, 255, 255);
     --white-2: rgb(255, 255, 255);
@@ -28,7 +44,11 @@
     --shadow-1: 0 16px 32px 0 rgba(7, 28, 31, 0.1);
     --shadow-2: 0 1px 6px 0 rgba(54, 56, 61, 0.15);
     --shadow-3: 0 16px 32px 0 rgba(7, 28, 31, 0.1);
-    /* ==================== TYPOGRAFI ==================== */
+  
+    /**
+     * TYPOGRAPHY
+     */
+  
     /* Font Family */
      --fontFamily_Open_Sans_sans-serif: 'Open Sans', sans-serif;
      --fontFamily_Rajdhani_sans-serif: 'Rajdhani', sans-serif;
@@ -58,23 +78,53 @@
      --weight-semiBold: 600;
      --weight-bold: 700;
   
-    /* ==================== BORDER RADIUS ==================== */
+  
+    /**
+     * BORDER RADIUS
+     */
+  
     --radius-circle: 50%;
     --radius-leaf: 15px 0px 15px 0px;
-    /* ==================== SECTION PADDING ==================== */
+  
+  
+  
+    /**
+     * SECTION SAPCING
+     */
+  
     --section-padding-1: 115px 70px;
     --section-padding-2: 100px;
-    /* ==================== TRANSISI ==================== */
+    
+  
+  
+    /**
+     * TRANSITION
+     */
+  
     --transition-1: all 0.3s ease 0s;
     --transition-2: all 0.5s ease 0s;
-    /* ==================== HEADER HIGHT ==================== */
+  
+  
+    /**
+     * HEADER HEIGHT
+     */
+  
     --header-height: 220px;
-
+  
+  
+  
   }
   
   
-/* ==================== TYPOGRAFI ==================== */
-
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #RESET
+  \*-----------------------------------*/
+  
   *,
   *::before,
   *::after {
@@ -121,7 +171,7 @@
   html {
     font-family: var(--fontFamily_Open_Sans_sans-serif);
     font-size: 10px;
-    scroll-behavior: unset;
+    scroll-behavior: smooth;
   }
   
   body {
@@ -143,11 +193,17 @@
     border-radius: 12px;
   }
   
-/* ==================== RISET STYLE ==================== */
-
-  .section:not(.feature, .contact) { 
-    contain: content; 
-  }
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #REUSED STYLE
+  \*-----------------------------------*/
+  
+  .section:not(.feature, .contact) {
+     contain: content; 
+    }
   
   .section .container { 
     padding-block: var(--section-padding-1); 
@@ -158,9 +214,7 @@
   .h1,
   .h2,
   .h3,
-  .h4 {
-     font-family: var(--fontFamily_Rajdhani_sans-serif); 
-  }
+  .h4 { font-family: var(--fontFamily_Rajdhani_sans-serif); }
   
   .h1 {
     font-size: var(--fs-30);
@@ -175,13 +229,9 @@
   
   .h4 { font-size: var(--fs-17); }
   
-  :is(.hero .section-title, .about .section-title) { 
-    text-align: left; 
-  }
+  :is(.hero .section-title, .about .section-title) { text-align: left; }
   
-  .section-title { 
-    text-align: center; 
-  }
+  .section-title { text-align: center; }
   
   .section-subtitle {
     font-family: var(--fontFamily_Rajdhani_sans-serif);
@@ -242,17 +292,11 @@
     z-index: 1;
   }
   
-  .btn:is(:hover, :focus-visible).btn::before { 
-    transform: translateX(0); 
-  }
+  .btn:is(:hover, :focus-visible).btn::before { transform: translateX(0); }
   
-  .btn-primary:is(:hover, :focus-visible) { 
-    border-color: var(--black); 
-  }
+  .btn-primary:is(:hover, :focus-visible) { border-color: var(--black); }
   
-  .btn-primary:is(:hover, :focus-visible) .span { 
-    color: var(--black); 
-  }
+  .btn-primary:is(:hover, :focus-visible) .span { color: var(--black); }
   
   .btn-secondary {
     background-color: transparent;
@@ -260,9 +304,7 @@
     color: var(--white);
   }
   
-  .btn-secondary::before { 
-    background-color: var(--apple-green); 
-  }
+  .btn-secondary::before { background-color: var(--apple-green); }
   
   /* .img-holder {
     aspect-ratio: var(--width) / var(--height);
@@ -303,21 +345,13 @@
     transition: var(--transition-1);
   }
   
-  .slider-list::-webkit-scrollbar { 
-    height: 3px; 
-  }
+  .slider-list::-webkit-scrollbar { height: 3px; }
   
-  .slider-list::-webkit-scrollbar-track { 
-    background-color: var(--white); 
-  }
+  .slider-list::-webkit-scrollbar-track { background-color: var(--white); }
   
-  .slider-list::-webkit-scrollbar-thumb { 
-    background-color: var(--apple-green); 
-  }
+  .slider-list::-webkit-scrollbar-thumb { background-color: var(--apple-green); }
   
-  .slider-list::-webkit-scrollbar-button { 
-    min-width: cacl(100% - 30%); 
-  }
+  .slider-list::-webkit-scrollbar-button { min-width: cacl(100% - 30%); }
   
   .slider-item {
     width: 100%;
@@ -336,9 +370,44 @@
     animation: scaleX 0.2s ease-in;
   }
   
-  .w-100 { 
-    width: 100%; 
+  .w-100 { width: 100%; }
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #TOPBAR
+  \*-----------------------------------*/
+  
+  .topbar {
+    border-block-end: 1px solid var(--alice-blue);
+    padding-block: 8px;
   }
+  
+  :is(.topbar-info, .topbar-info-item, .topbar .wrapper, .languages) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .topbar-info-item { padding-inline: 5px; }
+  
+  .topbar-info-item { gap: 8px; }
+  
+  .topbar-info-item ion-icon {
+    color: var(--apple-green);
+    --ionicon-stroke-width: 45px;
+  }
+  
+  .topbar-info-item .span {
+    font-size: var(--fs-13);
+    font-weight: var(--weight-bold);
+    transition: var(--transition-1);
+  }
+  
+  :is(.topbar-info-item .span, .languages .span):is(:hover, :focus-visible) { color: var(--apple-green); }
   
   .wrapper {
     gap: 30px;
@@ -352,9 +421,7 @@
     transition: var(--transition-1);
   }
   
-  .languages ion-icon { 
-    color: var(--apple-green); 
-  }
+  .languages ion-icon { color: var(--apple-green); }
   
   .social-wrapper {
     display: flex;
@@ -363,17 +430,21 @@
     font-size: var(--fs-13);
   }
   
-  .social-item { 
-    transition: var(--transition-1); 
-  }
+  .social-item { transition: var(--transition-1); }
   
   .social-wrapper .social-item:hover {
     color: var(--apple-green);
     cursor: pointer;
   }
   
-/* ====================  HEADER ==================== */
-
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #HEADER
+  \*-----------------------------------*/
+  
   .header {
     position: absolute;
     top: auto;
@@ -452,8 +523,14 @@
     font-size: inherit;
   }
   
-/* ====================  NAVBAR NAVIGASI BAR ==================== */
-
+  
+  
+  
+  
+  /* --------------------------------- *\
+     #NAVBAR
+  \* --------------------------------- */
+  
   .navbar {
     position: fixed;
     top: 0;
@@ -504,13 +581,9 @@
     height: 100%;
   }
   
-  .navbar .container::-webkit-scrollbar { 
-    width: 2px; 
-  }
+  .navbar .container::-webkit-scrollbar { width: 2px; }
   
-  .navbar .container::-webkit-scrollbar-thumb { 
-    background-color: var(--platinum); 
-  }
+  .navbar .container::-webkit-scrollbar-thumb { background-color: var(--platinum); }
   
   .nav-logo-wrapper {
     display: flex;
@@ -521,13 +594,9 @@
     padding-block-end: 15px;
   }
   
-  .navbar .logo { 
-    margin-block-end: 40px; 
-  }
+  .navbar .logo { margin-block-end: 40px; }
   
-  .navbar .logo-dark {
-    padding-block-end: 15px;
-  }
+  .navbar .logo-dark { padding-block-end: 15px;}
   
   .nav-close-btn { padding-inline: 15px; }
   .nav-close-btn ion-icon {
@@ -559,13 +628,9 @@
     font-size: var(--fs-14);
   }
   
-  .input-field:focus { 
-    outline: 1px solid var(--apple-green); 
-  }
+  .input-field:focus { outline: 1px solid var(--apple-green); }
   
-  .navbar-list { 
-    margin-block: 40px; 
-  }
+  .navbar-list { margin-block: 40px; }
   
   .navbar-link {
     display: flex;
@@ -583,9 +648,7 @@
     color: var(--gray);
   }
   
-  .navbar-link:is(:hover, :focus-visible) { 
-    color: var(--apple-green); 
-  }
+  .navbar-link:is(:hover, :focus-visible) { color: var(--apple-green); }
   
   .navbar-action {
     display: grid;
@@ -603,9 +666,7 @@
     transition: var(--transition-1);
   }
   
-  .navbar-action-link:hover { 
-    color: var(--apple-green); 
-  }
+  .navbar-action-link:hover { color: var(--apple-green); }
   
   .action-box {
     position: relative;
@@ -620,9 +681,7 @@
     font-size: var(--fs-12);
   }
   
-  .action-box ion-icon { 
-    font-size: var(--fs-18); 
-  }
+  .action-box ion-icon { font-size: var(--fs-18); }
   
   .nav-icon-wrapper {
     display: flex;
@@ -654,9 +713,15 @@
     opacity: 0.5;
   }
   
-/* ====================  HERO ==================== */
-
-  /* .home { margin-block-start: var(--header-height); } */
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #HERO
+  \*-----------------------------------*/
+  
+  .home { margin-block-start: var(--header-height); }
   
   .hero { 
     background: linear-gradient(to top, 
@@ -679,8 +744,14 @@
   }
   
   
-/* ====================  FEATURE ==================== */
-
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #FEATURES
+  \*-----------------------------------*/
   
   .feature .container {
     padding-block-end: 0; 
@@ -718,8 +789,13 @@
     background-color: rgb(193, 253, 255);
   }
   
-/* ====================  ABOUT ==================== */
-
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #ABOUT
+  \*-----------------------------------*/
   .about-color{
     background: linear-gradient(to top, 
     rgb(255, 255, 255),
@@ -766,8 +842,95 @@
   }
   
   
-/* ====================  PRODUCT ==================== */
-
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #CATEGORIES
+  \*-----------------------------------*/
+  
+  .categories {
+    background-color: var(--floral-white);
+    text-align: center;
+  }
+  
+  .categories .container {
+    padding-block: 200px;
+    padding-block-start: 0;
+    padding-inline: 0;
+    position: relative;
+    max-width: 100%;
+  }
+  
+  .categorie-banner {
+    height: 357px;
+    width: 100%;
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .categorie-content {
+    padding-inline: 15px;
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    max-width: 100%;
+  }
+  
+  .categorie-content .section-title {
+    color: var(--white);
+    margin-block-start: 0;
+  }
+  
+  .categorie-list { margin-block-start: 40px; }
+  
+  .categorie-card {
+    position: relative;
+    padding: 30px 0px 5px;
+    background-color: var(--white);
+    border: 1px solid var(--platinum);
+    overflow: hidden;
+  }
+  
+  .categorie-card::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+  }
+  
+  .categorie-card:is(:hover, :focus-visible).categorie-card::before { transform: translateX(0); }
+  
+  .categorie-card-banner {
+    height: 100px;
+    width: 100px;
+    margin-inline: auto;
+  }
+  
+  .categorie-card .card-content { padding: 15px 20px 5px; }
+  
+  .categorie-data {
+    font-family: var(--fontFamily_Rajdhani_sans-serif);
+    font-size: var(--fs-14);
+    font-weight: var(--weight-bold);
+    margin-block-end: 15px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #PRODUCTS
+  \*-----------------------------------*/
   .download{
     padding: 3px;
     border-radius: 5px;
@@ -855,14 +1018,10 @@
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.091);
   }
   
-  .product-card:is(:hover, :focus-visible) { 
-    box-shadow: var(--shadow-1); 
-  }
+  .product-card:is(:hover, :focus-visible) { box-shadow: var(--shadow-1); }
   
   .product-card,
-  .card-banner-box { 
-    position: relative; 
-  }
+  .card-banner-box { position: relative; }
   
   .product-card:is(:hover, :focus-visible) .product-action-link {
     opacity: 1;
@@ -925,13 +1084,9 @@
     font-size: 10px;
   }
   
-  .rating-wrapper { 
-    margin-block-end: 5px; 
-  }
+  .rating-wrapper { margin-block-end: 5px; }
   
-  .rating-wrapper ion-icon { 
-    color: var(--selective-yellow); 
-  }
+  .rating-wrapper ion-icon { color: var(--selective-yellow); }
   
   .rating-data {
     color: var(--apple-green);
@@ -951,15 +1106,79 @@
   .price { font-size:15px; }
   
   .strike { opacity: 0.6; }
-
-/* ====================  FETARUED PRODUCTS ==================== */
-
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #STATS
+  \*-----------------------------------*/
+  
+  .states {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    text-align: center;
+  }
+  
+  .states::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--rich-black);
+    opacity: 0.7;
+  }
+  
+  .states-list {
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+    display: grid;
+    gap: 50px;
+    margin-block-end: 50px;
+  }
+  
+  .states-card .card-banner {
+    margin-inline: auto;
+    margin-block-end: 20px;
+    height: auto;
+    width: 60px;
+  }
+  
+  .states-card-title {
+    font-size: var(--fs-56);
+    line-height: var(--lineHeight-13);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2px;
+  }
+  
+  .states-card-title .span {
+    font-size: var(--fs-30);
+    margin-block-end: 15px;
+  }
+  
+  .states-subtitle {
+    font-size: var(--fs-14);
+    font-weight: var(--weight-bold);
+  }
+  
+  
+  
+  /* #FETARUED PRODUCTS */
   
   .feature-product .section-title { margin-block-end: 55px; }
   
   
-/* ====================  CONTACT ==================== */
-
+  
+  
+  /*-----------------------------------*\
+    #CONTACT
+  \*-----------------------------------*/
+  
   .contact {
     background-repeat: no-repeat;
     background-size: cover;
@@ -987,8 +1206,15 @@
   }
   
   
-/* ====================  BLOG ==================== */
-
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #BLOG
+  \*-----------------------------------*/
+  
   .blog {
     background: linear-gradient(to top, 
     rgb(255, 255, 255),
@@ -1075,8 +1301,14 @@
     text-transform: uppercase;
   }
   
-/* ====================  SERVICE ==================== */
-
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #SERVICE
+  \*-----------------------------------*/
   .service{
     background-color: hsla(188, 63%, 7%, 1);
   }
@@ -1110,8 +1342,14 @@
     border-bottom: 2px solid rgb(35, 85, 100);
   }
   
-/* ====================  FUUTER ==================== */
-
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #FOOTER
+  \*-----------------------------------*/
+  
   .footer {
     background-color: var(--rich-black);
     color: var(--white);
@@ -1216,8 +1454,8 @@
     margin-block-end: 10px;
   }
   
-/* ====================  FOOTER BUTTON ==================== */
-
+  
+  /* FOOTER BOTTOM */
   
   .footer-bottom {
     padding: 25px;
@@ -1243,8 +1481,14 @@
   
   .footer-bottom-link:is(:hover, :focus-visible) { color: var(--apple-green); }
   
-/* ====================  TOMBOL KEMBALI KE ATAS ==================== */
-
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #GO TO TOP
+  \*-----------------------------------*/
+  
   .back-top-btn {
     position: fixed;
     bottom: 45px;
@@ -1274,24 +1518,43 @@
   }
   
   
-/* ====================  RESPONFIS ==================== */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* ====================  RESPONFIS ==================== */
-/* == responsive for larger than 550px screen  === */
-
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #RESPONSIVE
+  \*-----------------------------------*/
+  
+  /**
+   * responsive for larger than 550px screen
+   */
+  
   @media (min-width: 550px) {
-
+  
+  
+    /**
+     * CUSTOM PROPERTY
+     */
+  
     :root {
+  
+      /**
+       * TYPOGRAPHY
+       */
+  
       /* font size */
       --fs-24: 3rem;
+  
     }
   
-/* ====================  RISET STYLE ==================== */
+  
+  
+  
+    /**
+     * REUSED STYLE
+     */
   
      .section .container {
       max-width: 540px;
@@ -1302,20 +1565,37 @@
   
     .section-title { font-size: var(--fs-24); }
   
+  
+  
+  
+    /**
+     * TOPBAR & HEADER
+     */
+  
     .header .container { padding-block-end: 42px; }
   
+    .topbar-info-item { padding-inline: 12px; }
   
     .languages { margin-inline-start: 35px; }
   
-/* ====================  NAVBAR NAVUGASI BAR ==================== */
-
+  
+  
+    /**
+     * NAVBAR
+     */
+  
     .navbar {
       max-width: 395px;
       transform: translateX(-395px);
       padding-inline: 40px;
     }
 
-/* ====================  FEATURE ==================== */
+  
+  
+    
+    /**
+     * FEATURE
+     */
   
     .feature-list {
       max-width: 540px;
@@ -1323,8 +1603,33 @@
       place-content: center;
     }
   
-/* ====================  FOOTER ==================== */
-
+  
+  
+    /**
+     * CATEGORIES
+     */
+  
+    .categories .container {
+      padding-inline: 0;
+      max-width: 100%;
+    }
+  
+    .categorie-banner { height: 340px; }
+  
+    .categorie-item { min-width: calc(100% - 53%); }
+  
+  
+  
+    /**
+     * STATES
+     */
+  
+    .states-list { grid-template-columns: 1fr 1fr; }
+  
+    /**
+     * footer
+     */
+  
     .footer-top { grid-template-columns: 1fr 1fr; }
   
     .footer-widget { grid-column: 1 / 3; }
@@ -1335,25 +1640,36 @@
   }
   
   
-/* ====================  RESPONFIS ==================== */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* ====================  RESPONFIS ==================== */
-/* == responsive for larger than 765px screen  === */
+  
+  
+  
+  /**
+   * responsive for larger than 765px screen
+   */
   
   @media (min-width: 765px) {
   
-    :root { 
+  
+    /**
+     * CUSTOM PROPERTY
+     */
+  
+    :root {
+  
+      /**
+       * TYPOGRAPHY
+       */
+  
       /* font size */
       --fs-24: 4.0rem;
       --fs-17: 1.8rem;
       --fs-13: 1.4rem;
       --fs-12: 1.4rem;
-    
+  
+      /**
+       * HEADER HEIGHT
+       */
+  
       --header-height: 140px;
   
     }
@@ -1361,8 +1677,10 @@
   
   
   
-/* ==================== RISET STYLE ==================== */
-
+    /**
+     * REUSED STYLE
+     */
+  
     .section .container {
       max-width: 765px;
       padding-inline: 25px;
@@ -1377,8 +1695,24 @@
       padding: 10px 25px;
     }
   
-/* ==================== HEADER ==================== */
-
+  
+    /**
+     * HEADER
+     */
+  
+     .topbar .container {
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: 20px;
+      max-width: 720px;
+      margin-inline: auto;
+    }
+  
+    .topbar-info { gap: 20px; }
+  
+    .topbar-info-item { padding-inline: 0; }
+  
     .wrapper { margin-block-start: 0; }
   
     .social-wrapper { gap: 16px; }
@@ -1396,8 +1730,12 @@
   
     .navbar .container { display: block; }
   
-/* ==================== HEADER ABOUT ==================== */
-
+  
+  
+    /**
+     * HERO & ABOUT
+     */
+  
     .hero .container { gap: 30px; }
   
     .hero-content { max-width: 440px; }
@@ -1408,8 +1746,30 @@
   
     .about-content .section-text { max-width: 450px; }
   
-/* ==================== PRODUCT & FEATURE PRODUCT ==================== */
- 
+  
+    /**
+     * CATEGORIES
+     */
+  
+    .categories .container {
+      max-width: 100%;
+      padding-inline: 0;
+    }
+  
+    .categorie-banner { height: 387px; }
+  
+    .categorie-content { padding-inline: 25px; }
+  
+    .categorie-list { gap: 28px; }
+   
+    .categorie-item { min-width: calc(100% - 69%); }
+  
+  
+  
+    /**
+     * PRODUCT & FEATURE PRODUCT
+     */
+  
     .product .container { padding-inline: 40px; }
   
     .product-list { grid-template-columns: repeat(2, 1fr); }
@@ -1427,15 +1787,25 @@
       margin-block-end: 50px;
     }
   
-/* ====================  FEATURE LIST ==================== */
-
+  
+  
+    /**
+     * STATS
+     */
+  
+    .states-list { grid-template-columns: repeat(4, 1fr); }
+  
     :is(.feature-list, .service-list) {
       grid-template-columns: 1fr 1fr;
       margin-inline: auto;
       max-width: max-content;
     }
   
-/* ====================  CONTACT & BLOG ==================== */
+  
+  
+    /**
+     * CONTACT & BLOG
+     */
   
     .contact-btn-wrapper { gap: 17px; }
   
@@ -1445,8 +1815,12 @@
       font-size: var(--fs-22);
       line-height: var(--lineHeight-13);
     }
-
-/* ====================  SERVICE ==================== */
+  
+  
+  
+    /**
+     * SERVICE
+     */
   
     .service .container { padding-block-end: 120px; }
   
@@ -1463,7 +1837,11 @@
     opacity: 0.4;
   }
   
-/* ====================  FOOTER ==================== */
+  
+  
+    /**
+     * FOOTER
+     */
   
      .footer-widget { grid-column: 1 / 2; }
   
@@ -1478,16 +1856,14 @@
   
   }
   
-  /* ====================  RESPONFIS ==================== */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* ====================  RESPONFIS ==================== */
-/* == responsive for larger than 1000px screen  === */
-
+  
+  
+  
+  
+  /**
+   * responsive for larger than 1000px screen
+   */
+  
   @media (min-width: 1000px) {
   
     /**
@@ -1495,7 +1871,11 @@
      */
   
     :root {
-
+  
+      /**
+       * TYPOGRAPHY
+       */
+  
       /* font size */
       /* --fs-22: 2.6rem; */
       --fs-24: 5.6rem;
@@ -1507,8 +1887,13 @@
   
     }
   
-  /* ====================  RISET STYLE ==================== */
-
+  
+  
+    /**
+     * REUSED STYLE
+     */
+  
+    .topbar .container,
     .header .container,
     .section .container { max-width: 960px; }
   
@@ -1527,20 +1912,39 @@
       margin-block-start: 30px;
     }
   
-  /* ====================  HERO ==================== */
+  
+    /**
+     * TOPBAR & HEADER
+     */
+  
+    .topbar-info { gap: 30px; }
+  
+  
+  
+    /**
+     * HERO
+     */
   
     .hero-content .section-title { font-size: var(--fs-24); }
   
-  /* ====================  FEATURE ==================== */
-
+  
+  
+    /**
+     * FEATURE
+     */
+  
     .feature-list {
       display: flex;
       flex-wrap: wrap;
       background-color: rgb(193, 253, 255);
     }
   
-  /* ====================  ABOUT ==================== */
-
+  
+  
+    /**
+     * ABOUT
+     */
+  
     .about .container {
       gap: 60px;
       padding-block: 120px;
@@ -1552,16 +1956,38 @@
     }
   
   
-  /* ====================  PRODUCT & FEATURE PRODUCT ==================== */
-
+    /**
+     * CATEGORIES
+     */
+  
+    .categories .container {
+      margin-inline: 0;
+      padding-inline: 0;
+      max-width: 100%;
+    }
+  
+    .categorie-card { padding: 50px 15px 25px; }
+  
+    .categorie-card .card-title { font-size: var(--fs-18); }
+  
+  
+  
+    /**
+     * PRODUCT & FEATURE PRODUCT
+     */
+  
     .product-navbar-list { padding-inline: 25px; }
   
     .product-list { grid-template-columns: repeat(3, 1fr); }
   
     .feature-product .product-list { grid-template-columns: repeat(4, 1fr); }
   
-  /* ====================  CONTACT ==================== */
-
+    
+  
+    /**
+     * CONTACT
+     */
+  
     .contact .container {
       position: relative;
       display: grid;
@@ -1589,11 +2015,19 @@
       z-index: 1;
     }
   
-   /* ====================  BLOG ==================== */
+    
+  
+    /**
+     * BLOG
+     */
   
     .blog-card .card-title { font-size: var(--fs-26); }
   
-  /* ====================  FOOTER ==================== */
+  
+  
+    /**
+     * FOOTER
+     */
   
     .footer-text { font-size: var(--fs-16); }
   
@@ -1616,28 +2050,40 @@
       margin-inline: 15px;
     }
   
+  
+  
   }
   
-  /* ====================  RESPONFIS ==================== */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* ====================  RESPONFIS ==================== */
-/* == responsive for larger than 1200px screen  === */
-
+  
+  
+  
+  
+  /**
+   * responsive for larger than 1200px screen
+   */
+  
   @media (min-width: 1200px) {
-
+  
+    /**
+     * CUSTOM PROPERTY
+     */
+  
     :root {
-
+  
+      /**
+       * HEADER HEIGHT
+       */
+  
       --header-height: 104px;
   
     }
   
-  /* ====================  RISET STYLE ==================== */
-
+  
+    /**
+     * REUSED STYLE
+     */
+  
+    .topbar .container,
     .header .container,
     .section .container { max-width: 1200px; }
   
@@ -1647,7 +2093,11 @@
   
     .slider-list::-webkit-scrollbar { display: none; }
     
-  /* ====================  HEADER ==================== */
+  
+  
+    /**
+     * TOPBAR & HEADER
+     */
   
     .header.active {
       position: fixed;
@@ -1716,7 +2166,10 @@
   
     .header-btn:is(:hover, :focus-visible) { background-color: hsl(78, 96%, 30%); }
   
-  /* ====================  HOME FEATURE ==================== */
+  
+    /**
+     * HOME & FEATURE
+     */
   
     .home { position: relative; }
   
@@ -1744,12 +2197,26 @@
   
     .feature-list { min-width: 1200px; }
   
-  /* ====================  ABOUT ==================== */
-
+  
+    /**
+     * ABOUT & CATEGORIES
+     */
+  
     .about .container { margin-block-start: 70px; }
   
-  /* ====================  PRODUCT & FEATURE PRODUCTS ==================== */
-
+    .categorie-item { min-width: calc(100% - 77%); }
+  
+    .categories .container { max-width: 100%; }
+  
+    .categorie-banner .img-cover { height: 616px; }
+  
+    .categorie-card { padding: 50px 35px 25px; }
+  
+  
+    /**
+     * PRODUCT & FEATURE PRODUCTS
+     */
+  
     .product-list { grid-template-columns: repeat(4, 1fr); }
   
     .feature-product .product-list { grid-template-columns: repeat(5, 1fr); }
@@ -1757,8 +2224,16 @@
     .product-action-link { padding: 16px; }
   
     :is(.price, .strike) { font-size:13px; }
-
-  /* ====================  CPNTACT ==================== */
+  
+    
+    /* STATES */
+  
+    .states-card-title { --fs-56: 7.2rem; }
+  
+  
+    /**
+     * CONTACT
+     */
   
     .contact .container {
       padding-block: 20px;
@@ -1775,7 +2250,10 @@
       right: -32px;
     }
   
-  /* ====================  BLOG SERVICE ==================== */
+     
+     /**
+      * BLOG & SERVICE 
+      */
   
     .blog-list { gap: 24px; }
   
@@ -1783,7 +2261,10 @@
   
     .service-list { grid-template-columns: repeat(4, 1fr); }
   
-  /* ====================  FOOTER ==================== */
+  
+    /**
+     * FOOTER
+     */
   
     .footer-top { grid-template-columns: 1fr 0.5fr 0.7fr 0.6fr 0.5fr; }
   
@@ -1804,38 +2285,54 @@
     
   }
   
-  /* ====================  RESPONFIS ==================== */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* =                                                  = */
-/* ====================  RESPONFIS ==================== */
-/* == responsive for larger than 1200px screen  === */
-
+  
+  
+  
+  
+  /**
+   * responsive for larger than 1400px screen
+   */
+  
   @media (min-width: 1400px) {
-
+  
+  
+    /**
+     * CUSTOM PROPERTY
+     */
+  
     :root {
+  
      /* font size */
     --fs-50: 72px;
   
     }
   
-  /* ====================  RISET STYLE ==================== */
+  
+  
+    /**
+     * REUSED STYLE
+     */
   
     .section-title { font-size: var(--fs-50); }
   
-  /* ====================  HEADER ==================== */
-
+  
+  
+    /**
+     * HEADER & TOPBAR
+     */
+  
     .header { padding-block: 28px; }
   
     .logo .img { margin-inline-start: 25px; }
   
     .header-btn { margin-block: 0; }
   
-  /* ====================  HOME ABOUT ==================== */
-
+  
+  
+    /**
+     * HOME & ABOUT
+     */
+  
     .hero { height: 800px; }
   
     .hero-banner {
@@ -1854,8 +2351,12 @@
   
     .author-subtitle { font-size: var(--fs-12); }
   
-  /* ====================  FEATURE PRODUCT & CONTACT ==================== */
-
+  
+  
+    /**
+     * FEATURE PRODUCT & CONTACT
+     */
+  
     .feature-product .product-list { grid-template-columns: repeat(4, 1fr); }
   
     .contact { overflow: inherit; }
@@ -1877,15 +2378,23 @@
     }
   
     .contact-content { margin-block-start: 50px; }
-
-  /* ====================  SERVICE ==================== */
-
+  
+  
+  
+    /**
+     * SERVICE
+     */
+  
     .service .container {
       padding-block-start: 0;
       max-width: 1400px;
     }
   
-  /* ====================  FOOTER ==================== */
+  
+  
+    /**
+     * FOOTER
+     */
   
     .footer-top { padding: 92px 80px 75px; }
   
@@ -1901,6 +2410,3 @@
   
   
   }
-
-  /* ====================  END CSS ==================== */
-  /* ====================  CSS TAMBAHAN ==================== */

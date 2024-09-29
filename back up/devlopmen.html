@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #282c34;
+            color: #ffffff;
+        }
+
+        /* Header */
+        .header {
+            background-color: #282c34;
+            padding: 4px 20px;
+            color: #f80000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #551010;
+        }
+
+        .header .title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .header .file-tabs {
+            display: flex;
+            background-color: #1c1e22;
+            padding: 8px;
+            border-radius: 5px;
+            color: #ccc;
+        }
+
+        .header .file-tabs span {
+            margin-right: 15px;
+            cursor: pointer;
+            padding: 6px 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .header .file-tabs span:hover {
+            background-color: #621313;
+        }
+
+        .header .file-tabs span.active {
+            background-color: #891616;
+            color: #ffffff;
+        }
+
+        /* Container */
+        .container {
+            display: flex;
+            flex-grow: 1;
+            width: 100%;
+            flex-direction: row;
+        }
+
+        /* Sidebar Kiri (File Explorer) */
+        .sidebar {
+            width: 20%;
+            background-color: #21252b;
+            padding: 15px;
+            overflow-y: auto;
+            border-right: 2px solid #aa0000;
+        }
+
+        .sidebar h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #ff0000;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            font-size: 14px;
+        }
+
+        .sidebar ul li:hover {
+            background-color: #3c4043;
+        }
+
+        /* Area Editor dan Preview */
+        .editor-preview {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background-color: #282c34;
+            flex-direction: row;
+        }
+
+        /* Kiri: Area Editor */
+        .editor {
+            width: 50%;
+            padding: 20px;
+            background-color: #21252b;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100%;
+            background-color: #21252b;
+            color: #ffffff;
+            border: none;
+            font-size: 16px;
+            resize: none;
+            outline: none;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Kanan: Tampilan Preview */
+        .preview {
+            width: 100%;
+            background-color: #ffffff;
+            padding: 20px;
+            border-left: 2px solid #61dafb;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Status Bar */
+        .status-bar {
+            background-color: #fb6161;
+            color: #282c34;
+            display: flex;
+            justify-content: space-between;
+            padding: 1px 20px;
+            font-size: 12px;
+            border-top: 2px solid #f12121;
+        }
+
+        .status-bar div {
+            display: flex;
+            align-items: center;
+        }
+
+        .status-bar div span {
+            margin-right: 10px;
+        }
+
+        /* Hoverable effect for status-bar */
+        .status-bar div span:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Pesan untuk layar kecil */
+        .small-screen-message {
+            display: none;
+            color: #ff6b6b;
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+            background-color: #282c34;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        /* Tombol Stylish */
+        .toggle-btn {
+            background-color: #ff0000;
+            color: #282c34;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            background-color: #f12121;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Code Style Editor</title>
+</head>
+<body>
+    <!-- Pesan untuk layar kecil -->
+    <div class="small-screen-message" id="smallScreenMessage">Maaf, mode ini tidak bisa dibuka di hp.</div>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="title">My Dashboard - Nugra21</div>
+        <div class="file-tabs" id="fileTabs">
+            <!-- Tab akan ditambahkan secara dinamis -->
+        </div>
+        <button class="toggle-btn" id="toggleSidebar">☰</button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar Kiri (File Explorer) -->
+        <div class="sidebar" id="sidebar">
+            <h3>Data</h3>
+            <ul>
+                <li onclick="openFile('API')"><span>📄</span> API</li>
+                <li onclick="openFile('INDEX')"><span>📄</span> INDEX</li>
+                <li onclick="openFile('USER')"><span>📄</span> USER</li>
+                <li onclick="openFile('CONSOLE')"><span>📄</span> CONSOLE</li>
+            </ul>
+            <h3>DNS</h3>
+            <ul>
+                <li onclick="openFile('API')"><span>📄</span>DNS</li>
+                <li onclick="openFile('INDEX')"><span>📄</span>IP</li>
+                <li onclick="openFile('USER')"><span>📄</span>Subnet Mask</li>
+                <li onclick="openFile('CONSOLE')"><span>📄</span>Gateway</li>
+            </ul>
+        </div>
+
+        <!-- Area Editor dan Preview -->
+        <div class="editor-preview">
+            <!-- Kiri: Area Editor -->
+            <div class="editor">
+                <textarea id="htmlEditor" placeholder="Type your code here..."></textarea>
+            </div>
+
+            <!-- Kanan: Tampilan Hasil -->
+            <div class="preview">
+                <iframe id="outputFrame"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <div>
+            <span>Ln 1, Col 1</span>
+            <span>Spaces: 4</span>
+            <span>UTF-8</span>
+        </div>
+        <div>
+            <span>HTML</span>
+            <span>Port: 3000</span>
+            <button class="toggle-btn" id="runButton">Run</button>
+        </div>
+    </div>
+
+    <script>
+        const htmlEditor = document.getElementById('htmlEditor');
+        const outputFrame = document.getElementById('outputFrame');
+        const fileTabs = document.getElementById('fileTabs');
+        const sidebar = document.getElementById('sidebar');
+        const toggleSidebarBtn = document.getElementById('toggleSidebar');
+        const runButton = document.getElementById('runButton');
+        const smallScreenMessage = document.getElementById('smallScreenMessage');
+
+        // Cek ukuran layar
+        if (window.innerWidth <= 768) {
+            document.body.style.display = 'none'; // Menyembunyikan konten
+            smallScreenMessage.style.display = 'block'; // Menampilkan pesan
+        } else {
+            document.body.style.display = 'flex'; // Menampilkan konten jika tidak di hp
+            smallScreenMessage.style.display = 'none'; // Menyembunyikan pesan
+        }
+
+        // Fungsi untuk memperbarui tampilan iframe saat pengguna mengetik
+        htmlEditor.addEventListener('input', function () {
+            const htmlContent = htmlEditor.value;
+            outputFrame.srcdoc = htmlContent;
+        });
+
+        // Fungsi untuk membuka file baru dan menambahkannya sebagai tab
+        function openFile(fileName) {
+            // Cek apakah tab sudah ada
+            const existingTab = document.getElementById(fileName);
+            if (!existingTab) {
+                // Jika tab belum ada, buat tab baru
+                const newTab = document.createElement('span');
+                newTab.id = fileName;
+                newTab.innerText = fileName;
+                newTab.classList.add('active');
+                newTab.onclick = () => activateTab(fileName);
+                fileTabs.appendChild(newTab);
+
+                // Buat konten untuk editor (misalnya hanya menambahkan nama file)
+                htmlEditor.value = `/* ${fileName} content */\n`;
+                outputFrame.srcdoc = htmlEditor.value;
+            }
+        }
+
+        // Fungsi untuk mengaktifkan tab
+        function activateTab(fileName) {
+            const tabs = document.querySelectorAll('.file-tabs span');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(fileName).classList.add('active');
+            htmlEditor.value = `/* ${fileName} content */\n`;
+            outputFrame.srcdoc = htmlEditor.value;
+        }
+
+        // Event listener untuk tombol run
+        runButton.addEventListener('click', function () {
+            const htmlContent = htmlEditor.value;
+            outputFrame.srcdoc = htmlContent;
+        });
+
+        // Toggle sidebar
+        toggleSidebarBtn.addEventListener('click', function () {
+            if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+                sidebar.style.display = 'block';
+            } else {
+                sidebar.style.display = 'none';
+            }
+        });
+
+        // Cek ukuran layar saat diubah
+        window.addEventListener('resize', function () {
+            if (window.innerWidth <= 768) {
+                document.body.style.display = 'none';
+                smallScreenMessage.style.display = 'block';
+            } else {
+                document.body.style.display = 'flex';
+                smallScreenMessage.style.display = 'none';
+            }
+        });
+        
+    </script>
+    <script src="assets/js/usr.js"></script>
+</body>
+</html>
