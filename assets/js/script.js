@@ -56,10 +56,10 @@ window.addEventListener("scroll", activeElem);
           showAlert();
       });
 
-      document.addEventListener('selectstart', function(event) {
-          event.preventDefault();
-          showAlert();
-      });
+      // document.addEventListener('selectstart', function(event) {
+      //     event.preventDefault();
+      //     showAlert();
+      // });
 
       document.addEventListener('copy', function(event) {
           event.preventDefault();
@@ -111,12 +111,12 @@ images.forEach(image => {
   });
 });
 
-// Menutup pop-up saat mengklik di luar gambar
-document.getElementById('image-popup').addEventListener('click', function(event) {
-  if (event.target === this) { // Pastikan klik di luar gambar
-    closePopup(); // Panggil fungsi untuk menutup pop-up
-  }
-});
+// // Menutup pop-up saat mengklik di luar gambar
+// document.getElementById('image-popup').addEventListener('click', function(event) {
+//   if (event.target === this) { // Pastikan klik di luar gambar
+//     closePopup(); // Panggil fungsi untuk menutup pop-up
+//   }
+// });
 
 function closePopup() {
   document.getElementById('image-popup').style.display = 'none'; // Sembunyikan pop-up
