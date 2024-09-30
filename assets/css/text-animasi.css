@@ -24,3 +24,58 @@
     from { border-color: transparent; }
     to { border-color: black; }
 }
+/* animasi text 2 */
+
+.cmd::before {
+    content: attr(data-cmd);
+    position: relative;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: transparent;
+    animation: inputs 8s steps(40) infinite; /* Sesuaikan steps dengan panjang teks */
+  }
+  
+  .cmd::after {
+    content: "";
+    position: relative;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    border-right: 0.15em solid #e34ba9;
+    animation: cursor 0.5s step-end infinite alternate, blinking 0.5s infinite;
+  }
+  
+  @keyframes blinking {
+    20%,
+    80% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0);
+    }
+  }
+  
+  @keyframes cursor {
+    50% {
+      border-right-color: transparent;
+    }
+  }
+  
+  @keyframes inputs {
+    0%,
+    100% {
+      width: 0;
+    }
+    10%,
+    90% {
+      width: 120px; /* Adjust width to fit the full content */
+    }
+    30%,
+    70% {
+      width: 350px; /* Ensure it shows the full text smoothly */
+      max-width: max-content;
+    }
+  }
+  
