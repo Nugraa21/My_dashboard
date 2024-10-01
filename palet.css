@@ -1,0 +1,26 @@
+:root {
+    --animation: #131d23;
+    --animation: #0a0d0f;
+    --green: #1c331d;
+  /* Palet Kehijauan */
+  --green-background-main: #0A0F0D;
+  --green-card-box: #1A2A24;
+  --green-text-main: #E2F0E9;
+  --green-text-secondary: #A8C3B4;
+  --green-button-main: #2F6355;
+  --green-button-hover: #3C7B6B;
+  --green-border-line: #425F4F;
+  --green-highlight-accent: #5FC39D;
+
+  /* Palet Gelap Umum */
+  --dark-background-main: #121212;
+  --dark-card-box: #1E1E1E;
+  --dark-text-main: #E0E0E0;
+  --dark-text-secondary: #B3B3B3;
+  --dark-button-main: #BB86FC;
+  --dark-button-hover: #3700B3;
+  --dark-link-color: #03DAC6;
+  --dark-border-line: #292929;
+  --dark-highlight-accent: #FF8C00;
+  }
+  
