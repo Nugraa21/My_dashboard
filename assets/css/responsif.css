@@ -112,7 +112,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-block: 22px;
+      padding-block: 0px;
       max-width: 710px;
       margin-inline: auto;
     }
@@ -555,7 +555,7 @@
   
   /* ====================  HEADER ==================== */
 
-    .header { padding-block: 28px; }
+    /* .header { padding-block: 28px; } */
   
     .logo .img { margin-inline-start: 25px; }
   
