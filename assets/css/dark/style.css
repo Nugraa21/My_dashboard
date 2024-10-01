@@ -542,7 +542,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-block-end: 1px solid var(--antiflash-white);
+    border-block-end: 1px solid var(--green-button-hover);
     margin-block-end: 35px;
     padding-block-end: 15px;
   }
@@ -617,7 +617,7 @@
     display: grid;
     gap: 20px;
     padding-block: 16px;
-    border-block: 2px solid var(--antiflash-white-3);
+    border-block: 2px solid var(--green-button-hover);
   }
   
   .navbar-action-link {
@@ -636,7 +636,7 @@
   .action-box {
     position: relative;
       padding: 15px;
-      border: 2px solid var(--antiflash-white-3);
+      border: 2px solid var(--green-button-hover);
   }
   
   .action-box .span {

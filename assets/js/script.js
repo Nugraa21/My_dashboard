@@ -22,7 +22,25 @@ const toggleNavbar = function () {
   document.body.classList.toggle("nav-active");
 }
 
+const closeNavbar = function (event) {
+  // Jika klik terjadi di luar navbar, navToggler, dan navbar sedang aktif
+  const isClickInsideNavbar = navbar.contains(event.target);
+  const isClickOnToggler = Array.from(navToggler).some(toggler => toggler.contains(event.target));
+  
+  if (!isClickInsideNavbar && !isClickOnToggler && navbar.classList.contains("active")) {
+    navbar.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("nav-active");
+  }
+}
+
+// Toggle navbar ketika tombol navbar di klik
 addEventOnElements(navToggler, "click", toggleNavbar);
+
+// Tutup navbar ketika klik di luar navbar
+overlay.addEventListener("click", closeNavbar);
+document.addEventListener("click", closeNavbar);
+
 
 
 //  ============== TOMBOL NAIK KE ATAS ==============
