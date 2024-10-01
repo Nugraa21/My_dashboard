@@ -414,14 +414,14 @@
   .nav-open-btn {
     padding: 15px;
     background-color: var(--white);
-    /* box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.115); */
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.145);
     color: var(--sea-green);
     font-size: var(--fs-22);
     --ionicon-stroke-width: 40px;
     transition: var(--transition-1);
     position: relative;
-    border-radius: 1rem;
-    border-bottom: 1px solid rgba(0, 153, 255, 0.411);
+    border-radius: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
   }
 
   
