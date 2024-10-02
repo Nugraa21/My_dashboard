@@ -103,7 +103,9 @@
   }
 
 /* ==================== HEADER ==================== */
-
+.header{
+  width: 100%;
+}
   .wrapper { margin-block-start: 0; }
 
   .social-wrapper { gap: 16px; }
