@@ -139,3 +139,37 @@ images.forEach(image => {
 function closePopup() {
   document.getElementById('image-popup').style.display = 'none'; // Sembunyikan pop-up
 }
+
+
+// light dark
+const toggleSwitch = document.getElementById('toggleSwitch');
+
+// Fungsi untuk menerapkan mode berdasarkan localStorage
+function applyTheme(theme) {
+    if (theme === 'dark') {
+        document.body.classList.remove('light-mode');
+        document.body.classList.add('dark-mode');
+        toggleSwitch.checked = true; // Toggle switch akan tercentang untuk mode dark
+    } else {
+        document.body.classList.remove('dark-mode');
+        document.body.classList.add('light-mode');
+        toggleSwitch.checked = false; // Toggle switch tidak tercentang untuk mode light
+    }
+}
+
+// Event listener untuk perubahan toggle
+toggleSwitch.addEventListener('change', () => {
+    if (toggleSwitch.checked) {
+        document.body.classList.remove('light-mode');
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark'); // Simpan pilihan mode dark di localStorage
+    } else {
+        document.body.classList.remove('dark-mode');
+        document.body.classList.add('light-mode');
+        localStorage.setItem('theme', 'light'); // Simpan pilihan mode light di localStorage
+    }
+});
+
+// Set default mode berdasarkan nilai yang tersimpan di localStorage
+const savedTheme = localStorage.getItem('theme') || 'light'; // Default 'light' jika belum ada nilai tersimpan
+applyTheme(savedTheme);

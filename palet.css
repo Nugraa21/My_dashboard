@@ -1,4 +1,10 @@
 :root {
+  --loading: rgb(0, 3, 49);
+  --background-gradient-shadow: linear-gradient(to top, #0a0d0f, #3a1e1e);
+  --background-gradient-bawah: linear-gradient(to top, #0a0d0f, #1e2f3a);
+  --background-gradient-atas: linear-gradient(to top, #1e2f3a, #0a0d0f);
+  --background-gradient: linear-gradient(to top,  #0a0d0f);
+
     --animation: #131d23;
     --animation: #0a0d0f;
     --green: #1c331d;

@@ -4,7 +4,7 @@
 ---
 ---
 
-![Copyright Logo](assets\media\n21.png)  
+![CopyrightLogo](assets\media\n21.png)  
 **Copyright © Nugra21 2024-2025**
 
 ---
