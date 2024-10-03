@@ -21,5 +21,10 @@
         "terminal.ansiRed": "#D73737",
         "terminal.ansiWhite": "#A6A28C",
         "terminal.ansiYellow": "#AE9513"
-    }
+    },
+    "vscode-pets.throwBallWithMouse": true,
+    "vscode-pets.theme": "none",
+    "vscode-pets.position": "explorer",
+    "vscode-pets.petColor": "green",
+    "vscode-pets.petSize": "large"
 }
