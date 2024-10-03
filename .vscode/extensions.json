@@ -1,6 +1,8 @@
 {
     "recommendations": [
         "vsls-contrib.codetour",
-        "illixion.vscode-vibrancy-continued"
+        "illixion.vscode-vibrancy-continued",
+        "alexowl.transparent-color-theme",
+        "piyush-bhatt.base16-terminal"
     ]
 }

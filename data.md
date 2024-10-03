@@ -1,4 +1,6 @@
+<!-- Code acces-in dc -->
 
+```
 let wpRequire;
 window.webpackChunkdiscord_app.push([[ Math.random() ], {}, (req) => { wpRequire = req; }]);
 
@@ -110,19 +112,4 @@ if(!isApp) {
 		console.log("Remember that you need at least 1 other person to be in the vc!")
 	}
 }
-code.txt
-Menampilkan code.txt.
-
-const element = document.querySelector('.header');  // Memilih elemen dengan class "header"
-console.dir(element);  // Menampilkan properti dari elemen tersebut
-
-const links = document.querySelectorAll('a');  // Memilih semua elemen <a>
-links.forEach(link => console.log(link.href));  // Menampilkan URL dari setiap link
-
-const insecureContent = Array.from(document.querySelectorAll("img[src^='http:'], script[src^='http:']"));
-if (insecureContent.length > 0) {
-    console.log("Konten tidak aman terdeteksi:");
-    insecureContent.forEach(item => console.log(item.src));
-} else {
-    console.log("Semua konten dimuat dengan aman melalui HTTPS.");
-}
+```
