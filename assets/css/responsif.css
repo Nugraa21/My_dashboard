@@ -10,7 +10,9 @@
 /* == responsive for larger than 550px screen  === */
 
 @media (min-width: 550px) {
-
+    .pop-nav {
+        display: block; /* Tampilkan pop-up pada layar kecil */
+    }
   :root {
     /* font size */
     --fs-24: 3rem;
@@ -71,7 +73,9 @@
 /* == responsive for larger than 765px screen  === */
 
 @media (min-width: 765px) {
-
+    .pop-nav {
+        display: block; /* Tampilkan pop-up pada layar kecil */
+    }
   :root { 
     /* font size */
     --fs-24: 4.0rem;
@@ -216,7 +220,9 @@
 /* == responsive for larger than 1000px screen  === */
 
 @media (min-width: 1000px) {
-
+    .pop-nav {
+        display: block; /* Tampilkan pop-up pada layar kecil */
+    }
   /**
    * CUSTOM PROPERTY
    */
@@ -358,7 +364,9 @@
 /* == responsive for larger than 1200px screen  === */
 
 @media (min-width: 1200px) {
-
+    .pop-nav {
+        display: none; /* Tampilkan pop-up pada layar kecil */
+    }
   :root {
 
     --header-height: 104px;
@@ -544,7 +552,9 @@
 /* == responsive for larger than 1200px screen  === */
 
 @media (min-width: 1400px) {
-
+    .pop-nav {
+        display: none; /* Tampilkan pop-up pada layar kecil */
+    }
   :root {
    /* font size */
   --fs-50: 72px;

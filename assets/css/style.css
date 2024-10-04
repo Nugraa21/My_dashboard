@@ -575,6 +575,22 @@
   }
   
 /* ====================  HEADER ==================== */
+.pop-nav {
+  display: flex; /* Menyusun elemen di dalam pop-nav secara fleksibel */
+  flex-direction: column; /* Menu akan ditumpuk secara vertikal */
+  align-items: center; /* Pusatkan item secara horizontal */
+  position: fixed;
+  bottom: 20px; /* Jarak dari bawah */
+  left: 50%; /* Pusatkan secara horizontal */
+  transform: translateX(-50%); /* Offset elemen untuk benar-benar berada di tengah */
+  padding: 1px;
+  background-color: var(--green-card-box);
+  border-bottom: 3px solid var(--green-button-main); 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.269); 
+  border-radius: 20px;
+  z-index: 1200;
+}
+
 
   .header {
     position: relative;
@@ -613,6 +629,18 @@
     padding: 15px;
     background-color: var(--green-card-box);
     box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.145);
+    color: var(--white);
+    font-size: var(--fs-22);
+    --ionicon-stroke-width: 40px;
+    transition: var(--transition-1);
+    position: relative;
+    border-radius: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+  }
+  .nav-open-btn-menu {
+    padding: 15px;
+    background-color: var(--green-card-box);
+    /* box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.145); */
     color: var(--white);
     font-size: var(--fs-22);
     --ionicon-stroke-width: 40px;
