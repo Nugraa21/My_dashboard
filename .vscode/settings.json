@@ -1,5 +1,5 @@
 {
-    "livePreview.defaultPreviewPath": "/web.html",
+    "livePreview.defaultPreviewPath": "/index.html",
     "workbench.colorCustomizations": {
         "terminal.background": "#151516",
         "terminal.foreground": "#d2ffd5",
