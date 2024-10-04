@@ -1308,7 +1308,7 @@
 /* ====================  FUUTER ==================== */
 
   .footer {
-    background-color: var(--green-card-box);
+    background-color: var(--background-carts);
     color: var(--white);
   }
   

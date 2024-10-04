@@ -23,9 +23,9 @@
         "terminal.ansiYellow": "#AE9513"
     },
     "vscode-pets.throwBallWithMouse": true,
-    "vscode-pets.theme": "forest",
     "vscode-pets.position": "explorer",
     "vscode-pets.petColor": "green",
     "vscode-pets.petSize": "medium",
-    "vscode-pets.petType": "chicken"
+    "vscode-pets.petType": "chicken",
+    "vscode-pets.theme": "none"
 }
