@@ -1,4 +1,5 @@
 .light-mode {  
+  --suport-me: #0077ff;
   --animasi-title: rgb(255, 174, 0);
   --section-subtitle: rgb(0, 140, 255);
   --loading: rgb(0, 3, 49);
@@ -61,6 +62,7 @@
 
 /* ==================== CSS INDEXT ==================== */
 .dark-mode {
+  --suport-me: #ff9900;
   --animasi-title: rgb(0, 8, 255);
   --section-subtitle: rgb(195, 255, 0);
   --loading: rgb(229, 230, 255);
@@ -509,7 +511,7 @@
   }
   
   .btn-secondary {
-    background-color: var(--section-subtitle) ;
+    background-color: var(--suport-me) ;
     border-color: var(--white);
     color: var(--white);
   }
