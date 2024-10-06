@@ -679,6 +679,7 @@
   .header-btn { display: none; }
   
   .icon-wrapper {
+    flex-wrap: wrap;
     display: flex;
     justify-content: center;
     align-items: center;
