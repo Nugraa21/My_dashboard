@@ -27,7 +27,7 @@
 
   .btn { margin-block-start: 40px; }
 
-  .section-title { font-size: var(--fs-24); }
+  .section-title { font-weight: 700; font-size: var(--fs-24); }
 
   .header .container { padding-block-end: 42px; }
 
@@ -135,7 +135,7 @@
 
   .about-banner { max-width: 565px; }
 
-  .about-content .section-title { max-width: 290px; }
+  .about-content .section-title { font-weight: 700; max-width: 290px; }
 
   .about-content .section-text { max-width: 450px; }
 
@@ -249,7 +249,7 @@
 
   .contact-subtitle { margin-block-start: -35px; }
 
-  .section-title { font-size: var(--fs-50); }
+  .section-title { font-weight: 700; font-size: var(--fs-50); }
 
   :is(.hero .container, .about .container) {
     grid-template-columns: 1fr 1fr; 
@@ -262,7 +262,7 @@
 
 /* ====================  HERO ==================== */
 
-  .hero-content .section-title { font-size: var(--fs-24); }
+  .hero-content .section-title { font-weight: 700; font-size: var(--fs-24); }
 
 /* ====================  FEATURE ==================== */
 
@@ -281,7 +281,7 @@
     padding-block: 120px;
   }
 
-  .about-content .section-title {
+  .about-content .section-title { font-weight: 700;
     max-width: unset;
     padding-inline-end: 85px;
   }
@@ -378,7 +378,7 @@
   .header .container,
   .section .container { max-width: 1200px; }
 
-  .section-title { font-size: var(--fs-24); }
+  .section-title { font-weight: 700; font-size: var(--fs-24); }
 
   .section-text { padding-inline-start: 30px; }
 
@@ -469,7 +469,7 @@
     right: 60px;
   }
 
-  .hero-content .section-title { font-size: var(--fs-50); }
+  .hero-content .section-title { font-weight: 700; font-size: var(--fs-50); }
 
   .feature .container {
     padding: 0;
@@ -563,7 +563,7 @@
 
 /* ====================  RISET STYLE ==================== */
 
-  .section-title { font-size: var(--fs-50); }
+  .section-title { font-weight: 700; font-size: var(--fs-50); }
 
 /* ====================  HEADER ==================== */
 

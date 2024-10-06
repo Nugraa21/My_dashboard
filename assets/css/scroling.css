@@ -16,7 +16,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 10px;
+    width: 5px;
     height: 0; /* Updated initial height to 0 */
     background: linear-gradient(to top , #ff0000 , #ffe100 );
     animation: animate 2s linear infinite;
@@ -29,7 +29,7 @@
     }
     50%
     {
-        filter: hue-rotate(360deg);
+        filter: hue-rotate(60deg);
     }
 }
 #progresbar::before
