@@ -1,5 +1,7 @@
-    // Tunggu sampai gambar dimuat
-    const imgCoverLogo = document.querySelector('.img-cover-logo');
+// Tunggu sampai semua gambar dengan kelas yang ditentukan dimuat
+const imgCoverLogos = document.querySelectorAll('.img-cover-logo ,img-holder');
+
+imgCoverLogos.forEach((imgCoverLogo) => {
     imgCoverLogo.onload = function() {
         setTimeout(function() {
             document.getElementById('loader-container').style.display = 'none';
@@ -11,3 +13,4 @@
     if (imgCoverLogo.complete) {
         imgCoverLogo.onload();
     }
+});
