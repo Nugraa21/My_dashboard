@@ -389,7 +389,8 @@
         2px 2px 0px var(--animasi-title),
         3px 3px 0px var(--animasi-title),
         4px 4px 0px var(--animasi-title),
-        5px 5px 0px var(--animasi-title);
+        5px 5px 0px var(--suport-me),
+        6px 6px 0px var(--suport-me);
     color: var(--white); /* Warna teks menggunakan variabel */
     font-weight: bold;
     animation: fadeInMove 1s ease-in-out infinite; /* Animasi looping */

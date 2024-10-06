@@ -131,7 +131,7 @@
 
   .hero .container { gap: 30px; }
 
-  .hero-content { max-width: 440px; }
+  .hero-content { font-weight: 700; max-width: 440px; }
 
   .about-banner { max-width: 565px; }
 
@@ -586,7 +586,7 @@
   
   .hero .container { padding-block: 200px; }
 
-  .hero-content { max-width: 1200px; }
+  .hero-content { font-weight: 700; max-width: 1200px; }
 
   .hero-content .section-text { padding-inline-end: 100px; } 
   
