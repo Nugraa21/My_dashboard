@@ -25,8 +25,8 @@
     display: flex;
     justify-content: center; /* Memusatkan video secara horizontal */
     align-items: center;
-    border-bottom: 5px solid rgb(86, 201, 255);
-    border-left: 5px solid rgb(86, 201, 255);
+    border-bottom: 5px solid rgb(255, 255, 255);
+    border-left: 5px solid rgb(255, 255, 255);
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
     border-radius: 20px;
 }
@@ -64,15 +64,15 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background: rgba(39, 183, 255, 0.151); /* Latar belakang putih untuk konten pop-up */
+    background: rgba(255, 255, 255, 0.151); /* Latar belakang putih untuk konten pop-up */
     border-radius: 10px; /* Sudut melengkung */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.438); /* Bayangan untuk efek kedalaman */
     padding: 20px; /* Jarak dalam pop-up */
     max-width: 90%; /* Lebar maksimum pop-up */
     max-height: 90%; /* Tinggi maksimum pop-up */
     overflow: hidden; /* Mencegah gambar keluar dari batas */
-    border-bottom: 2px solid #56e6ff;
-    border-left: 2px solid #56e6ff;
+    border-bottom: 2px solid #ffe856;
+    border-left: 2px solid #ffc156;
 }
 
 .popup img {
@@ -86,7 +86,7 @@
 .cinematic-text {
     font-size: 20px; /* Ukuran font */
     font-weight: bold; /* Ketebalan font */
-    color: #56e6ff; /* Warna teks putih */
+    color: #ffffff; /* Warna teks putih */
     text-align: center; /* Pusatkan teks */
     margin-top: 15px; /* Jarak atas dari gambar */
     padding: 0px; /* Ruang dalam */
@@ -94,7 +94,7 @@
     opacity: 0; /* Awalnya tidak terlihat */
     animation: fadeIn 1s forwards; /* Animasi muncul */
     border-top: 2px solid rgba(77, 193, 255, 0);
-    background-color: #56e6ff;
+    background-color: #b8b8b8;
 }
 
 @keyframes fadeIn {

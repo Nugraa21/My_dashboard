@@ -1,12 +1,76 @@
 .light-mode {  
+  --animasi-title: rgb(255, 174, 0);
+  --section-subtitle: rgb(0, 140, 255);
+  --loading: rgb(0, 3, 49);
+  --background-gradient-shadow: linear-gradient(to top, #ffffff, #ffffff);
+  --background-gradient-bawah: linear-gradient(to top, #ffffff, #ffffff);
+  --background-gradient-atas: linear-gradient(to top, #ffffff, #ffffff);
+  --background-gradient: #151c24;
+  --background-carts:#fff9e3;
+  /* Palet Kehijauan */
+  --green-background-main: #ffffff;
+  --green-card-box: #ffffff;
+  --green-text-main: #f0e9e2;
+  --green-text-secondary: #c3baa8;
+  --green-button-main: #ffeec4;
+  --green-button-hover: #ffaa21;
+  --green-border-line: #ffae43;
+  --green-highlight-accent: #ffe41a;
+  
+  /* Palet Gelap Umum */
+  --dark-background-main: #ffffff;
+  --dark-card-box: #ffffff;
+  --dark-text-main: #ffffff;
+  --dark-text-secondary: #B3B3B3;
+  --dark-button-main: #fccd86;
+  --dark-button-hover: #ffc788;
+  --dark-link-color: #ffda69;
+  --dark-border-line: #ffffff;
+  --dark-highlight-accent: #FF8C00;
+  /* ==================== WARNA ==================== */
+  /* Background Color */
+  --white: rgb(0, 0, 0);
+  --white-2: rgb(255, 255, 255);
+  --floral-white: #ffffff;
+  --apple-green: rgb(255, 255, 255);
+  --apple-green-alpha: hsla(0, 0%, 100%, 0.721);
+  --gray: rgb(0, 0, 0);
+  --rich-black: hsla(188, 63%, 7%, 1);
+  --azure-web: hsl(0, 0%, 0%);
+  
+  /* Text Color */
+  --selective-yellow: hsla(43, 100%, 50%, 1);
+  --black: hsla(0, 0%, 0%, 1);
+  --sea-green: hsl(188, 63%, 7%);
+  
+  /* Border Color */
+  --antiflash-white: hsla(0, 0%, 93%, 1);
+  --antiflash-white-3: hsla(207, 21%, 92%, 1);
+  --alice-blue: hsla(206, 35%, 92%, 1);
+  --platinum: hsla(0, 0%, 87%, 1);
+  --dim-gray: hsla(188, 8%, 37%, 1);
+  --delft-blue: hsla(220, 46%, 25%, 1);
+  
+    /* Box Shadow */
+    --shadow-1: 0 16px 32px 0 rgba(7, 28, 31, 0.1);
+    --shadow-2: 0 1px 6px 0 rgba(54, 56, 61, 0.15);
+    --shadow-3: 0 16px 32px 0 rgba(7, 28, 31, 0.1);
+    /* ==================== TYPOGRAFI ==================== */
+
+}
+
+/* ==================== CSS INDEXT ==================== */
+.dark-mode {
+  --animasi-title: rgb(0, 8, 255);
+  --section-subtitle: rgb(195, 255, 0);
   --loading: rgb(229, 230, 255);
-  --background-gradient-shadow: linear-gradient(to top, #0a0d0f, #0000006c);
-  --background-gradient-bawah: linear-gradient(to top, #0a0d0f, #0a0d0f);
-  --background-gradient-atas: linear-gradient(to top, #0a0d0f, #0a0d0f);
+  --background-gradient-shadow: linear-gradient(to top, #1E1E1E, #1E1E1E);
+  --background-gradient-bawah: linear-gradient(to top, #1E1E1E, #1E1E1E);
+  --background-gradient-atas: linear-gradient(to top, #1E1E1E, #1E1E1E);
   --background-gradient: #0a0d0f;
   --background-carts:#20292f;
   /* Palet Kehijauan */
-  --green-background-main: #0a0d0f;
+  --green-background-main: #1E1E1E;
   --green-card-box: #161d21;
   --green-text-main: #e2eaf0;
   --green-text-secondary: #a8b2c3;
@@ -54,66 +118,6 @@
   --shadow-2: 0 1px 6px 0 rgba(54, 56, 61, 0.15);
   --shadow-3: 0 16px 32px 0 rgba(7, 28, 31, 0.1);
   /* ==================== TYPOGRAFI ==================== */
-}
-
-/* ==================== CSS INDEXT ==================== */
-.dark-mode { 
-  --loading: rgb(0, 3, 49);
-  --background-gradient-shadow: linear-gradient(to top, #ffffff, #ffffff65);
-  --background-gradient-bawah: linear-gradient(to top, #ffffff, #c7e9ff);
-  --background-gradient-atas: linear-gradient(to top, #c7e9ff, #ffffff);
-  --background-gradient: #151c24;
-  --background-carts:#e3eaff;
-  /* Palet Kehijauan */
-  --green-background-main: #ffffff;
-  --green-card-box: #ffffff;
-  --green-text-main: #e2eaf0;
-  --green-text-secondary: #a8b2c3;
-  --green-button-main: #c4e4ff;
-  --green-button-hover: #216eff;
-  --green-border-line: #43c3ff;
-  --green-highlight-accent: #1aabff;
-
-  /* Palet Gelap Umum */
-  --dark-background-main: #ffffff;
-  --dark-card-box: #ffffff;
-  --dark-text-main: #ffffff;
-  --dark-text-secondary: #B3B3B3;
-  --dark-button-main: #BB86FC;
-  --dark-button-hover: #88aeff;
-  --dark-link-color: #69b1ff;
-  --dark-border-line: #ffffff;
-  --dark-highlight-accent: #FF8C00;
-  /* ==================== WARNA ==================== */
-  /* Background Color */
-  --white: rgb(0, 0, 0);
-  --white-2: rgb(255, 255, 255);
-  --floral-white: #ffffff;
-  --apple-green: rgb(255, 255, 255);
-  --apple-green-alpha: hsla(0, 0%, 100%, 0.721);
-  --gray: rgb(0, 0, 0);
-  --rich-black: hsla(188, 63%, 7%, 1);
-  --azure-web: hsl(0, 0%, 0%);
-
-  /* Text Color */
-  --selective-yellow: hsla(43, 100%, 50%, 1);
-  --black: hsla(0, 0%, 0%, 1);
-  --sea-green: hsl(188, 63%, 7%);
-
-  /* Border Color */
-  --antiflash-white: hsla(0, 0%, 93%, 1);
-  --antiflash-white-3: hsla(207, 21%, 92%, 1);
-  --alice-blue: hsla(206, 35%, 92%, 1);
-  --platinum: hsla(0, 0%, 87%, 1);
-  --dim-gray: hsla(188, 8%, 37%, 1);
-  --delft-blue: hsla(220, 46%, 25%, 1);
-
-    /* Box Shadow */
-    --shadow-1: 0 16px 32px 0 rgba(7, 28, 31, 0.1);
-    --shadow-2: 0 1px 6px 0 rgba(54, 56, 61, 0.15);
-    --shadow-3: 0 16px 32px 0 rgba(7, 28, 31, 0.1);
-    /* ==================== TYPOGRAFI ==================== */
-
   }
   
 :root{
@@ -372,17 +376,71 @@
     text-align: left; 
   }
   
-  .section-title { 
-    text-align: center; 
-  }
+  .section-title {
+    text-align: center;
+}
+
+.char {
+    display: inline-block;
+    text-shadow: 
+        1px 1px 0px var(--animasi-title), /* Menggunakan warna dari variabel */
+        2px 2px 0px var(--animasi-title),
+        3px 3px 0px var(--animasi-title),
+        4px 4px 0px var(--animasi-title),
+        5px 5px 0px var(--animasi-title);
+    color: var(--white); /* Warna teks menggunakan variabel */
+    font-weight: bold;
+    animation: fadeInMove 1s ease-in-out infinite; /* Animasi looping */
+}
+
+/* Animasikan huruf satu per satu dengan penundaan */
+.char:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.char:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.char:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.char:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.char:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.char:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.char:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+/* Definisi animasi */
+@keyframes fadeInMove {
+    0%, 100% {
+        transform: translateY(0); /* Posisi awal dan akhir stabil */
+    }
+    50% {
+        transform: translateY(-10px); /* Gerakan naik kecil */
+    }
+}
+
   
   .section-subtitle {
     font-family: var(--fontFamily_Rajdhani_sans-serif);
     display: flex;
     align-items: center;
     gap: 10px;
-    color: rgb(0, 102, 255);
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.267);
+    color: var(--section-subtitle);
+    font-weight: 40px;
+    text-shadow: 1px 1px 0px rgb(255, 0, 0);
   }
   
   .section-text {
@@ -451,7 +509,7 @@
   }
   
   .btn-secondary {
-    background-color: transparent;
+    background-color: var(--section-subtitle) ;
     border-color: var(--white);
     color: var(--white);
   }
@@ -477,8 +535,8 @@
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
-    border-right: 2px solid  hwb(194 0% 30% / 0.721);
-    border-top: 2px solid  hwb(194 72% 0% / 0.721);
+    border-right: 2px solid  var(--green-border-line);
+    /* border-top: 2px solid  hwb(194 72% 0% / 0.721); */
   }
   .img-cover-1 {
     height: 100%;
@@ -584,8 +642,8 @@
   left: 50%; /* Pusatkan secara horizontal */
   transform: translateX(-50%); /* Offset elemen untuk benar-benar berada di tengah */
   padding: 1px;
-  background-color: var(--green-card-box);
-  border-bottom: 3px solid var(--green-button-main); 
+  /* background-color: var(--green-card-box); */
+  /* border-bottom: 3px solid var(--green-button-main);  */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.269); 
   border-radius: 20px;
   z-index: 1200;
@@ -601,7 +659,7 @@
     /* height: var(--header-height); */
     /* background-color: var(--white); */
     background-color: var(--dark-card-box);
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.119);
+    /* box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.119); */
     transition: var(--transition-1);
     z-index: 1000;
   }
@@ -637,10 +695,10 @@
     border-radius: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
   }
-  .nav-open-btn-menu {
+  /* .nav-open-btn-menu {
     padding: 15px;
     background-color: var(--green-card-box);
-    /* box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.145); */
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.145);
     color: var(--white);
     font-size: var(--fs-22);
     --ionicon-stroke-width: 40px;
@@ -648,8 +706,122 @@
     position: relative;
     border-radius: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
+  } */
+/* ------------------- */
+/* From Uiverse.io by abrahamcalsin */ 
+.chek-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--green-button-hover);
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+.chek-button:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #ffd401;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.chek-button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.chek-button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 5px 15px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.chek-button:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+}
+/* ----- list  */
+.porfolio-chek-button {
+  /* border-bottom: 2px solid black; */
+  color: var(--white);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--green-button-hover);
+  font-family: "Montserrat", sans-serif;
+  /* box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2); */
+  overflow: hidden;
+  cursor: pointer;
+  border-left: 2px solid var(--dark-link-color);
+}
+
+.porfolio-chek-button:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #ffd401;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.porfolio-chek-button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.porfolio-chek-button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 0px 15px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.porfolio-chek-button:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
   }
 
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ------------------- */
   
   .icon-box .span {
     position: absolute;
@@ -1004,15 +1176,14 @@
 /* ====================  PRODUCT ==================== */
 
   .download{
-    padding: 3px;
+    padding: 0px 3px;
     border-radius: 5px;
-    background-color: var(--green-button-main);
-    border-bottom:2px solid #36e43c;
+    background-color: var(--dark-highlight-accent);
+    border-bottom:2px solid var(--dark-button-hover);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.274);
     color: white;
   }
   .download:hover{
-    padding: 3px;
     border-radius: 5px;
     background-color: #ff410c;
     border-bottom:2px solid #e4368d;
@@ -1041,7 +1212,7 @@
   
   .product-nav-item { position: relative; }
   
-  .product-nav-item:not(:last-child)::before {
+  /* .product-nav-item:not(:last-child)::before {
     position: absolute;
     content: "";
     right: 0;
@@ -1050,11 +1221,11 @@
     height: 15px;
     width: 2px;
     background-color:rgb(120, 120, 120);
-  }
+  } */
   
   .product-nav-link {
     margin: 0 5px 10px 0;
-    padding: 15px 25px;
+    /* padding: 15px 25px; */
     max-width: max-content;
     font-size: var(--fs-14);
     font-weight: 700;
@@ -1232,9 +1403,12 @@
     }
   
   .blog-card {
-    box-shadow: var(--shadow-1);
+    /* box-shadow: var(--shadow-1); */
     overflow: hidden;
     height: 100%;
+    border: 2px solid var(--green-border-line);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.272);
   }
   
   .blog-card:is(:hover, :focus-visible) .card-banner .img-cover { transform: scale(1.1); }
