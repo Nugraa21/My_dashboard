@@ -866,7 +866,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    /* width: 100%; */
     max-width: 300px;
     height: 100vh;
     transform: translateX(-300px);
