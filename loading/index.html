@@ -1,40 +1,150 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <style>
-    :root {
-    --color-bg: white;
-    --color-text: black;
-}
-
-.dark-mode {
-    --color-bg: black;
-    --color-text: white;
-}
-
-body {
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    transition: background-color 0.5s, color 0.5s;
-}
-
-  </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Mode Gelap dan Terang</title>
+    <title>Manajemen Profil Pengguna</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        #editForm {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            display: none;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #4cae4c;
+        }
+        
+        .profile {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
-    <button id="toggleMode">Ganti Mode</button>
-    <h1>Selamat datang di website saya!</h1>
+    <nav>
+        <ul>
+            <li><a href="#" id="openEditForm">Tambah Profil</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Daftar Profil Pengguna</h1>
+        <div id="profilesContainer"></div>
+        
+        <div id="editForm">
+            <h2>Tambah/Edit Profil</h2>
+            <input type="text" id="newName" placeholder="Nama">
+            <input type="text" id="newStatus" placeholder="Status">
+            <button id="saveChanges">Simpan Profil</button>
+        </div>
+    </div>
     <script>
-      const toggleButton = document.getElementById('toggleMode');
+        let profiles = []; // Array untuk menyimpan profil
 
-toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    toggleButton.textContent = document.body.classList.contains('dark-mode') ? 'Ganti ke Mode Terang' : 'Ganti ke Mode Gelap';
-});
+        document.getElementById('openEditForm').addEventListener('click', function() {
+            document.getElementById('editForm').style.display = 'block';
+        });
 
+        document.getElementById('saveChanges').addEventListener('click', function() {
+            const newName = document.getElementById('newName').value;
+            const newStatus = document.getElementById('newStatus').value;
+
+            if (newName && newStatus) {
+                profiles.push({ name: newName, status: newStatus }); // Tambah profil baru ke array
+                updateProfilesDisplay(); // Perbarui tampilan daftar profil
+            }
+
+            // Kosongkan input setelah menyimpan perubahan
+            document.getElementById('newName').value = '';
+            document.getElementById('newStatus').value = '';
+
+            // Sembunyikan form setelah menyimpan perubahan
+            document.getElementById('editForm').style.display = 'none';
+        });
+
+        function updateProfilesDisplay() {
+            const container = document.getElementById('profilesContainer');
+            container.innerHTML = ''; // Kosongkan tampilan sebelumnya
+
+            profiles.forEach((profile, index) => {
+                const profileDiv = document.createElement('div');
+                profileDiv.className = 'profile';
+                profileDiv.innerHTML = `
+                    <p>Nama: ${profile.name}</p>
+                    <p>Status: ${profile.status}</p>
+                    <button onclick="deleteProfile(${index})">Hapus</button>
+                `;
+                container.appendChild(profileDiv);
+            });
+        }
+
+        function deleteProfile(index) {
+            profiles.splice(index, 1); // Hapus profil dari array
+            updateProfilesDisplay(); // Perbarui tampilan daftar profil
+        }
     </script>
 </body>
 </html>
