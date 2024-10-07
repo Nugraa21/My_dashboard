@@ -1305,6 +1305,7 @@
     text-align: center;
   }
   
+  /* Animasi NEW */
   .card-badge {
     position: absolute;
     top: 10px;
@@ -1316,7 +1317,34 @@
     text-transform: uppercase;
     padding: 0 10px;
     border-radius: var(--radius-leaf);
-  }
+    overflow: hidden;
+    box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.459);
+    border-left: 2px solid var(--green-highlight-accent);
+}
+
+.card-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, #ffffff, transparent);
+    animation: smooth-shine 2s ease-in-out infinite;
+}
+
+@keyframes smooth-shine {
+    0% {
+        left: -150%;
+    }
+    /* 50% {
+        left: 0%;
+    } */
+    100% {
+        left: 150%;
+    }
+}
+/* Animasi end */
   
   .rating-wrapper,
   .price-wrapper {
