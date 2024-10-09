@@ -79,3 +79,16 @@
     }
   }
   
+
+
+
+
+  .project-section {
+    max-height: 250px; /* Batas tinggi awal sebelum tombol diklik */
+    overflow: auto;
+    transition: max-height 0.5s ease;
+}
+
+.expanded {
+    max-height: 100%; /* Tinggi yang cukup besar untuk menampilkan semua project */
+}

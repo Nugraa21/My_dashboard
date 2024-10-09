@@ -173,3 +173,19 @@ toggleSwitch.addEventListener('change', () => {
 // Set default mode berdasarkan nilai yang tersimpan di localStorage
 const savedTheme = localStorage.getItem('theme') || 'light'; // Default 'light' jika belum ada nilai tersimpan
 applyTheme(savedTheme);
+
+
+//  show-all 
+
+const toggleButton = document.getElementById('toggleButton');
+const projectsSection = document.getElementById('projects');
+
+toggleButton.addEventListener('click', function() {
+    if (projectsSection.classList.contains('expanded')) {
+        projectsSection.classList.remove('expanded');
+        // toggleButton.textContent = "Show All"; // Ganti teks tombol
+    } else {
+        projectsSection.classList.add('expanded');
+        // toggleButton.textContent = "Hide All"; // Ganti teks tombol
+    }
+});

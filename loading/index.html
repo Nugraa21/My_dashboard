@@ -1,150 +1,50 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manajemen Profil Pengguna</title>
+    <title>Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
+        .project-section {
+            max-height: 100px; /* Batas tinggi sebelum tombol diklik */
+            overflow: auto;    /* Tambahkan scroll saat konten melebihi batas tinggi */
+            transition: max-height 0.5s ease;
         }
-        
-        nav {
-            background-color: #333;
-            padding: 10px;
-        }
-        
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        h1 {
-            text-align: center;
-        }
-        
-        #editForm {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ccc;
-            display: none;
-        }
-        
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        
-        button {
-            width: 100%;
-            padding: 10px;
-            background: #5cb85c;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        
-        button:hover {
-            background: #4cae4c;
-        }
-        
-        .profile {
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background: #f9f9f9;
+
+        .expanded {
+            max-height: 1000px; /* Tinggi yang cukup besar untuk menampilkan semua project */
         }
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#" id="openEditForm">Tambah Profil</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <h1>Daftar Profil Pengguna</h1>
-        <div id="profilesContainer"></div>
-        
-        <div id="editForm">
-            <h2>Tambah/Edit Profil</h2>
-            <input type="text" id="newName" placeholder="Nama">
-            <input type="text" id="newStatus" placeholder="Status">
-            <button id="saveChanges">Simpan Profil</button>
+    <div class="cart">
+        <h1>My Projects</h1>
+        <!-- Isi cart, misalnya foto dan project -->
+        <div class="project-section" id="projects">
+            <p>Project 1</p>
+            <p>Project 2</p>
+            <p>Project 3</p>
+            <p>Project 4</p>
+            <p>Project 5</p>
+            <p>Project 6</p>
+            <p>Project 7</p>
         </div>
+        <button id="toggleButton">Show All</button>
     </div>
+
     <script>
-        let profiles = []; // Array untuk menyimpan profil
+        const toggleButton = document.getElementById('toggleButton');
+        const projectsSection = document.getElementById('projects');
 
-        document.getElementById('openEditForm').addEventListener('click', function() {
-            document.getElementById('editForm').style.display = 'block';
-        });
-
-        document.getElementById('saveChanges').addEventListener('click', function() {
-            const newName = document.getElementById('newName').value;
-            const newStatus = document.getElementById('newStatus').value;
-
-            if (newName && newStatus) {
-                profiles.push({ name: newName, status: newStatus }); // Tambah profil baru ke array
-                updateProfilesDisplay(); // Perbarui tampilan daftar profil
+        toggleButton.addEventListener('click', function() {
+            if (projectsSection.classList.contains('expanded')) {
+                projectsSection.classList.remove('expanded');
+                toggleButton.textContent = "Show All"; // Ganti teks tombol
+            } else {
+                projectsSection.classList.add('expanded');
+                toggleButton.textContent = "Hide All"; // Ganti teks tombol
             }
-
-            // Kosongkan input setelah menyimpan perubahan
-            document.getElementById('newName').value = '';
-            document.getElementById('newStatus').value = '';
-
-            // Sembunyikan form setelah menyimpan perubahan
-            document.getElementById('editForm').style.display = 'none';
         });
-
-        function updateProfilesDisplay() {
-            const container = document.getElementById('profilesContainer');
-            container.innerHTML = ''; // Kosongkan tampilan sebelumnya
-
-            profiles.forEach((profile, index) => {
-                const profileDiv = document.createElement('div');
-                profileDiv.className = 'profile';
-                profileDiv.innerHTML = `
-                    <p>Nama: ${profile.name}</p>
-                    <p>Status: ${profile.status}</p>
-                    <button onclick="deleteProfile(${index})">Hapus</button>
-                `;
-                container.appendChild(profileDiv);
-            });
-        }
-
-        function deleteProfile(index) {
-            profiles.splice(index, 1); // Hapus profil dari array
-            updateProfilesDisplay(); // Perbarui tampilan daftar profil
-        }
     </script>
 </body>
 </html>
