@@ -1917,6 +1917,145 @@
               </div>
   
             </li>
+            <li class="blog-item slider-item">
+  
+              <div class="blog-card">
+                <figure class="card-banner img-holder" style="--width: 800; --height: 562;">
+                  <img loading="lazy" src="./assets/media/berita/docker1.png.jpg" width="800" height="562" loading="lazy" alt="blog banner"
+                    class="img-cover">
+                </figure>
+  
+                <div class="card-content">
+  
+                  <ul class="blog-meta-list">
+  
+                    <li>
+                      <a href="" class="blog-author">
+                        <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+  
+                        <span class="span">by: Nugra21</span>
+                      </a>
+                    </li>
+  
+                    <li>
+                      <a href="https://youtu.be/--IZaVqQkyk?si=Sd0c3tjsTfbn2Gf-" class="blog-author">
+                        <ion-icon name="pricetags" aria-hidden="true"></ion-icon>
+  
+                        <span class="span">Tutorial Youtube</span>
+                      </a>
+                    </li>
+  
+                  </ul>
+  
+                  <h4 class="h4 card-title">Cara menggunakan docker untuk deployments Web dengan Xginx</h4>
+  
+                  <div class="blog-wrapper">
+                    <div class="date">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+  
+                      <span class="span">June 12, 2024</span>
+                    </div>
+  
+                    <button class="detail-btn">Download Assets</button>
+                  </div>
+  
+                </div>
+              </div>
+  
+            </li>
+            <li class="blog-item slider-item">
+  
+              <div class="blog-card">
+                <figure class="card-banner img-holder" style="--width: 800; --height: 562;">
+                  <img loading="lazy" src="./assets/media/berita/docker1.png.jpg" width="800" height="562" loading="lazy" alt="blog banner"
+                    class="img-cover">
+                </figure>
+  
+                <div class="card-content">
+  
+                  <ul class="blog-meta-list">
+  
+                    <li>
+                      <a href="" class="blog-author">
+                        <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+  
+                        <span class="span">by: Nugra21</span>
+                      </a>
+                    </li>
+  
+                    <li>
+                      <a href="https://youtu.be/--IZaVqQkyk?si=Sd0c3tjsTfbn2Gf-" class="blog-author">
+                        <ion-icon name="pricetags" aria-hidden="true"></ion-icon>
+  
+                        <span class="span">Tutorial Youtube</span>
+                      </a>
+                    </li>
+  
+                  </ul>
+  
+                  <h4 class="h4 card-title">Cara menggunakan docker untuk deployments Web dengan Xginx</h4>
+  
+                  <div class="blog-wrapper">
+                    <div class="date">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+  
+                      <span class="span">June 12, 2024</span>
+                    </div>
+  
+                    <button class="detail-btn">Download Assets</button>
+                  </div>
+  
+                </div>
+              </div>
+  
+            </li>
+            <li class="blog-item slider-item">
+  
+              <div class="blog-card">
+                <figure class="card-banner img-holder" style="--width: 800; --height: 562;">
+                  <img loading="lazy" src="./assets/media/berita/docker1.png.jpg" width="800" height="562" loading="lazy" alt="blog banner"
+                    class="img-cover">
+                </figure>
+  
+                <div class="card-content">
+  
+                  <ul class="blog-meta-list">
+  
+                    <li>
+                      <a href="" class="blog-author">
+                        <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+  
+                        <span class="span">by: Nugra21</span>
+                      </a>
+                    </li>
+  
+                    <li>
+                      <a href="https://youtu.be/--IZaVqQkyk?si=Sd0c3tjsTfbn2Gf-" class="blog-author">
+                        <ion-icon name="pricetags" aria-hidden="true"></ion-icon>
+  
+                        <span class="span">Tutorial Youtube</span>
+                      </a>
+                    </li>
+  
+                  </ul>
+  
+                  <h4 class="h4 card-title">Cara menggunakan docker untuk deployments Web dengan Xginx</h4>
+  
+                  <div class="blog-wrapper">
+                    <div class="date">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+  
+                      <span class="span">June 12, 2024</span>
+                    </div>
+  
+                    <button class="detail-btn">Download Assets</button>
+                    
+                  </div>
+  
+                </div>
+              </div>
+  
+            </li>
   
           </ul>
   
@@ -2464,5 +2603,58 @@
   <script src="assets/js/text-animasi.js"></script>
   <script src="assets/js/env.js"></script>
   <script src="loading/loading.js"></script>
+  <script>
+    
+// Function to clear chat messages
+function clearChat() {
+    const chatMessages = document.getElementById('chatMessages');
+    chatMessages.innerHTML = ''; // Clear all chat messages
+}
+
+// Prevent right-click and other actions
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'F12' || (event.ctrlKey && event.key === 'u')) {
+        event.preventDefault();
+    }
+});
+document.addEventListener('keydown', function(event) {
+    // Mencegah Ctrl + Shift + I
+    if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+        event.preventDefault();
+    }
+    // Mencegah Ctrl + Shift + C
+    if (event.ctrlKey && event.shiftKey && event.key === 'C') {
+        event.preventDefault();
+    }
+    // Mencegah F12
+    if (event.key === 'F12') {
+        event.preventDefault();
+    }
+});
+
+
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
+
+document.addEventListener('selectstart', function(event) {
+    event.preventDefault();
+});
+
+document.addEventListener('copy', function(event) {
+    event.preventDefault();
+});
+
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 's') {
+        event.preventDefault();
+    }
+});
+
+  </script>
 </body>
 </html>
