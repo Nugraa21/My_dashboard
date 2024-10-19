@@ -546,6 +546,11 @@
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
+    filter:
+       drop-shadow(5px 5px 0px var(--dark-link-color))
+       drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.295))
+       
+       ; /* Gunakan filter drop-shadow */
   }
   
   .img-cover-fotter {
@@ -672,6 +677,10 @@
     display: grid;
     place-items: center;
     padding: 10px 15px;
+  }
+  
+  .header .title-wrapper {
+    display: block;
   }
   
   .logo .img { margin: 10px 0 30px; }
