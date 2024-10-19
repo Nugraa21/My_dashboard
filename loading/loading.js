@@ -11,7 +11,7 @@ imgCoverLogo.onload = function() {
             loaderContainer.style.display = 'none'; // Hide the container after transition
             document.getElementById('content').style.display = 'block'; // Show the main content
         });
-    }, 1000); // Adjust this time as needed
+    }, 0); // Adjust this time as needed
 };
 
 // Jika gambar sudah dalam cache, panggil fungsi langsung
