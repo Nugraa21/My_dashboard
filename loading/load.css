@@ -11,8 +11,8 @@
   align-items: center;
   z-index: 9999;
   transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Add shadow */
-  border-bottom: 5px solid rgba(0, 42, 255, 0.8); /* Add border */
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); Add shadow */
+  /* border-bottom: 5px solid rgba(0, 42, 255, 0.8); Add border */
 }
 
 /* Class to hide the loader with a slide effect */

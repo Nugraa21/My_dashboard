@@ -647,7 +647,7 @@
   align-items: center; /* Pusatkan item secara horizontal */
   position: fixed;
   bottom: 20px; /* Jarak dari bawah */
-  left: 50%; /* Pusatkan secara horizontal */
+  left: 50%; 
   transform: translateX(-50%); /* Offset elemen untuk benar-benar berada di tengah */
   padding: 1px;
   /* background-color: var(--green-card-box); */
@@ -1147,7 +1147,7 @@
     background: var(--background-gradient-atas);
   }
   .about .container {
-    /* padding-block-end: 120px; */
+    padding-block-end: 120px;
     display: grid;
     gap: 40px;
   }
@@ -1716,3 +1716,90 @@
     color: var(--green-card-box);
   }
 /* Test css =================== EROR */
+
+
+/*-----------------------------------*\
+ * #SKILLS
+\*-----------------------------------*/
+
+.skills { padding-block: var(--section-padding); }
+
+.skills-content { margin-bottom: 50px; }
+
+.skills-toggle {
+  top: 30px;
+  border-bottom: 2px solid var(--dark-link-color);
+  position: relative;
+  width: max-content;
+  /* margin-inline: auto; */
+  display: flex;
+  /* align-items: center; */
+  padding: 5px;
+  border-radius: 100px;
+  box-shadow: var(--shadow-1);
+  z-index: 1;
+}
+
+
+
+.toggle-btn {
+  color: var(--dark-link-color);
+  padding: 5px 25px;
+  transition: var(--transition-1);
+}
+
+.toggle-btn.active { color: var(--white); }
+
+.skills-box.active .skills-list,
+.skills-box .tools-list { display: none; }
+
+.skills-box .skills-list,
+.skills-box.active .tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+
+}
+
+.skill-card {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  border-radius:20px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.192);
+  cursor: pointer;
+}
+
+.skill-card:hover .tooltip {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+.tooltip {
+  position: absolute;
+  top: -40px;
+  min-width: max-content;
+  color: var(--white);
+  font-size: 15px;
+  font-weight: var(--fw-700);
+  padding: 5px 10px;
+  border-radius: 20px;
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-1);
+  z-index: 1;
+}
