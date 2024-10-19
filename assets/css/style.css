@@ -380,6 +380,10 @@
   
   .section-title {
     text-align: center;
+    filter: grayscale(60%); 
+}
+  .section-title:hover {
+    filter: grayscale(0%); 
 }
 
 .char {
