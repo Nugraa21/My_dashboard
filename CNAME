@@ -1,1 +1,13 @@
-nugra.online
+### Domain  ( Mode  On )
+```
+    nugra.online
+```
+### Localhost ( Mode off )
+```
+    Local       | Listen
+                |
+    172.0.0.1   | 300
+```
+### Log data 
+```
+```
