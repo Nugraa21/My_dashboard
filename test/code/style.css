@@ -1,0 +1,12 @@
+/*  ------- Refrace laiout ------- */
+*,*:before ,*:after {
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*  ------- Main css  ------- */
