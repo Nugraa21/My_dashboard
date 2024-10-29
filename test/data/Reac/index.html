@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nugra Online - Demo with Loading</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Placeholder untuk loading -->
+    <div id="navbar">
+        <div class="loading">Loading Navbar...</div>
+    </div>
+    <div id="about">
+        <div class="loading">Loading About...</div>
+    </div>
+    <div id="contact">
+        <div class="loading">Loading Contact...</div>
+    </div>
+    <div id="footer">
+        <div class="loading">Loading Footer...</div>
+    </div>
+
+    <script>
+        // Fungsi untuk memuat setiap komponen dengan efek loading
+        async function loadComponent(id, file) {
+            try {
+                const response = await fetch(file);
+                if (response.ok) {
+                    const content = await response.text();
+                    document.getElementById(id).innerHTML = content;
+                } else {
+                    document.getElementById(id).innerHTML = `<div class="error">Gagal memuat ${id}</div>`;
+                }
+            } catch (error) {
+                document.getElementById(id).innerHTML = `<div class="error">Error: ${error}</div>`;
+            }
+        }
+
+        // Memuat setiap komponen
+        loadComponent("navbar", "navbar.html");
+        loadComponent("about", "about.html");
+        loadComponent("contact", "contact.html");
+        loadComponent("footer", "footer.html");
+    </script>
+</body>
+</html>

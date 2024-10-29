@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+nav, section, footer {
+    margin: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Style untuk skeleton loading */
+.skeleton {
+    background-color: #e0e0e0; /* Warna dasar skeleton */
+    border-radius: 4px; /* Sudut membulat */
+    overflow: hidden;
+    position: relative;
+    animation: shimmer 1.5s infinite; /* Animasi shimmer */
+}
+
+.navbar-skeleton {
+    height: 50px; /* Tinggi navbar */
+}
+
+.about-skeleton, .contact-skeleton, .footer-skeleton {
+    padding: 20px; /* Padding untuk skeleton */
+}
+
+.skeleton-title {
+    width: 30%; /* Lebar judul skeleton */
+    height: 20px; /* Tinggi judul skeleton */
+    margin-bottom: 10px; /* Jarak bawah */
+}
+
+.skeleton-text {
+    width: 80%; /* Lebar teks skeleton */
+    height: 15px; /* Tinggi teks skeleton */
+    margin-bottom: 10px; /* Jarak bawah */
+}
+
+/* Animasi shimmer */
+@keyframes shimmer {
+    0% {
+        background-position: -100px 0; /* Posisi awal */
+    }
+    100% {
+        background-position: 100px 0; /* Posisi akhir */
+    }
+}
+
+.error {
+    color: red; /* Warna teks error */
+    text-align: center; /* Rata tengah */
+    padding: 20px; /* Padding untuk error */
+}
