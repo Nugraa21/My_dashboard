@@ -1,6 +1,4 @@
-<!-- Code acces-in dc -->
 
-```
 let wpRequire;
 window.webpackChunkdiscord_app.push([[ Math.random() ], {}, (req) => { wpRequire = req; }]);
 
@@ -112,4 +110,3 @@ if(!isApp) {
 		console.log("Remember that you need at least 1 other person to be in the vc!")
 	}
 }
-```
