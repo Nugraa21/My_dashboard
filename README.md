@@ -7,6 +7,8 @@
 ![CopyrightLogo](assets\media\n21.png)  
 **Copyright © Nugra21 2024-2025**
 
+https://nugraa21.github.io/My_dashboard/
+
 ---
 
 # 🌐 **Selamat Datang di Nugra21**
