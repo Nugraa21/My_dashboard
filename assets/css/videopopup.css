@@ -1,0 +1,141 @@
+.modal {
+    display: none; /* Sembunyikan modal secara default */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Latar belakang semi-transparan */
+    backdrop-filter: blur(10px);
+
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 900px; /* Lebar maksimum modal */
+    top: 50%;
+    transform: translateY(-50%); /* Pindahkan modal ke atas untuk memusatkan */
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; /* Memusatkan video secara horizontal */
+    align-items: center;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    border-left: 5px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    border-radius: 20px;
+}
+.video-container video {
+    border-radius: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* ------- */
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: rgba(255, 255, 255, 0.151); /* Latar belakang putih untuk konten pop-up */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.438); /* Bayangan untuk efek kedalaman */
+    padding: 20px; /* Jarak dalam pop-up */
+    max-width: 90%; /* Lebar maksimum pop-up */
+    max-height: 90%; /* Tinggi maksimum pop-up */
+    overflow: hidden; /* Mencegah gambar keluar dari batas */
+    border-bottom: 2px solid #ffe856;
+    border-left: 2px solid #ffc156;
+}
+
+.popup img {
+    max-width: 100%; /* Gambar menyesuaikan lebar pop-up */
+    max-height: 60vh; /* Tinggi maksimum gambar */
+    border-radius: 8px; /* Sudut melengkung pada gambar */
+    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.356)); /* Bayangan mengikuti bentuk gambar */
+
+}
+
+.cinematic-text {
+    font-size: 20px; /* Ukuran font */
+    font-weight: bold; /* Ketebalan font */
+    color: #ffffff; /* Warna teks putih */
+    text-align: center; /* Pusatkan teks */
+    margin-top: 15px; /* Jarak atas dari gambar */
+    padding: 0px; /* Ruang dalam */
+    width: 100%; /* Lebar 100% untuk memanjang */
+    opacity: 0; /* Awalnya tidak terlihat */
+    animation: fadeIn 1s forwards; /* Animasi muncul */
+    border-top: 2px solid rgba(77, 193, 255, 0);
+    background-color: #b8b8b8;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Akhir animasi menjadi terlihat */
+    }
+}
+
+.close-button {
+    z-index: 99999;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    color: white;
+    background-color: red; /* Latar belakang merah untuk tombol close */
+    border: none; /* Menghilangkan border */
+    border-radius: 50%; /* Bentuk bulat */
+    width: 40px; /* Lebar tombol */
+    height: 40px; /* Tinggi tombol */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s; /* Efek transisi */
+}
+
+.close-button:hover {
+    background-color: darkred; /* Mengubah warna saat hover */
+    transform: scale(1.1); /* Membesarkan tombol saat hover */
+}
+
+/* Media Query untuk Responsivitas */
+@media (max-width: 600px) {
+    .cinematic-text {
+        font-size: 18px; /* Ukuran font lebih kecil di perangkat seluler */
+    }
+
+    .close-button {
+        font-size: 24px; /* Ukuran tombol lebih kecil di perangkat seluler */
+        width: 35px; /* Lebar tombol */
+        height: 35px; /* Tinggi tombol */
+    }
+}
