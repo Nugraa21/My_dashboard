@@ -407,7 +407,9 @@
 
   .navbar,
   .navbar-list { all: unset; }
-
+  .icon-wrapper {
+    display: flex;
+  }
   .logo-dar,
   .nav-close-btn,
   .header .input-wrapper,
